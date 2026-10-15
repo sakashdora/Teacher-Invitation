@@ -1,0 +1,7 @@
+Faculty Member #06
+========================================
+Name        : Dr. Susmita Parija
+Designation : Trainning Head, Associate Professor
+Email       : drsusmita@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

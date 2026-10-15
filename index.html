@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#650c28">
+  <meta name="description" content="TEJAS ’26 — The Fresh Bloom. Join the MCA freshers’ celebration on 30 October 2026 at JRD Tata Hall, Srusti Academy of Management & Technology. Meet our esteemed teachers and explore the programme.">
+  <title>TEJAS ’26 — The Fresh Bloom | Srusti Academy</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/entrance.css">
+  <link rel="stylesheet" href="assets/css/soundtrack.css">
+  <script>document.documentElement.classList.add('entrance-pending');</script>
+  <script src="data/faculty.js" defer></script>
+  <script src="data/event.js" defer></script>
+  <script src="assets/js/faculty-match.js" defer></script>
+  <script src="assets/js/entrance.js" defer></script>
+  <script src="assets/js/soundtrack.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <dialog class="welcome-intro" id="welcome-intro" aria-labelledby="intro-title" aria-describedby="intro-description">
+    <div class="intro-panel">
+      <p class="eyebrow">Srusti Academy of Management &amp; Technology</p>
+      <span class="intro-ornament" aria-hidden="true">❦</span>
+      <p class="intro-wordmark">TEJAS <span>’26</span></p>
+      <p class="intro-tagline">The Fresh Bloom</p>
+      <div class="intro-rule" aria-hidden="true"><span>✦</span></div>
+      <h2 id="intro-title">A warm welcome,<br>esteemed teacher.</h2>
+      <p id="intro-description">Enter your name for a welcome made just for you.</p>
+      <form id="welcome-form" novalidate>
+        <label for="teacher-name">Your name</label>
+        <input id="teacher-name" name="teacher-name" type="text" placeholder="e.g. Anuradha Mishra" autocomplete="off" maxlength="100" aria-describedby="name-help intro-error" aria-controls="name-suggestions">
+        <p class="name-help" id="name-help">Your first name or full name is enough.</p>
+        <div class="name-suggestions" id="name-suggestions" aria-label="Matching teachers" hidden></div>
+        <p class="intro-error" id="intro-error" role="alert" hidden></p>
+        <button class="button intro-submit" id="enter-celebration" type="submit">Enter the celebration <span aria-hidden="true">↗</span></button>
+      </form>
+      <p class="intro-loading" id="intro-loading" role="status" hidden><span class="intro-spinner" aria-hidden="true"></span>Preparing your welcome…</p>
+      <button class="intro-guest" id="continue-guest" type="button">Continue as a guest <span aria-hidden="true">→</span></button>
+      <p class="intro-date">30 October 2026 <span aria-hidden="true">·</span> JRD Tata Hall</p>
+    </div>
+  </dialog>
+  <a class="skip-link" href="#schedule">Skip to event schedule</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#welcome" aria-label="Srusti Academy — back to welcome">
+        <span class="brand-mark" aria-hidden="true">S<span>✦</span></span>
+        <span class="brand-name"><strong>SRUSTI</strong><span>ACADEMY OF<br>MANAGEMENT &amp;<br>TECHNOLOGY</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#schedule">Event Schedule</a><a href="#faculty">Faculty</a><a href="#celebrations">Celebrations</a><a href="#welcome">Welcome</a><a href="invitation.html?teacher=guest" data-invitation-link>Your Invitation</a>
+      </nav>
+      <p class="header-motto">Together towards a<br>brighter tomorrow <span aria-hidden="true">❧</span></p>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="welcome" aria-labelledby="hero-title">
+      <p class="eyebrow">Department of Computer Applications <span>·</span> Srusti Academy of Management &amp; Technology</p>
+      <div class="hero-copy">
+      <h1 id="hero-title" tabindex="-1">TEJAS <span>’26</span></h1>
+        <p class="hero-subtitle">The Fresh Bloom</p><p class="party-label">Freshers Party</p>
+        <p class="hero-details"><time datetime="2026-10-30">30 October 2026</time><span aria-hidden="true">✦</span> JRD Tata Hall <span aria-hidden="true">✦</span> 10:00 AM</p>
+      </div>
+      <p class="hero-quote">New Faces…<br>New Dreams…<br><span>A New Chapter…</span></p>
+    </section>
+    <section class="faculty-section" id="faculty" aria-labelledby="faculty-heading">
+      <svg class="stage-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 8 C280 130 1000 -25 1440 8 L1440 80 L0 80Z" fill="#a67125"/><path d="M0 17 C330 135 1050 -12 1440 16 L1440 80 L0 80Z" fill="#ffdf94"/><path d="M0 25 C330 140 1060 0 1440 24 L1440 80 L0 80Z" fill="#650c28"/></svg>
+      <div class="stage-inner">
+        <p class="stage-eyebrow">The mentors who make our journey possible</p>
+        <p class="personal-welcome" id="personal-welcome" hidden></p>
+        <p class="sr-only" id="carousel-instructions">Use left and right arrow keys or swipe to browse. Press Space to pause or resume automatic rotation. Rotation pauses while you hover over or focus a portrait.</p>
+        <div class="carousel" id="faculty-carousel" role="region" aria-roledescription="carousel" aria-label="Esteemed teachers" aria-describedby="carousel-instructions" tabindex="0">
+          <div class="stage-halo" aria-hidden="true"></div><div class="faculty-track" id="faculty-track"></div>
+          <div class="stage-platform" aria-hidden="true"></div>
+        </div>
+        <div class="carousel-toolbar">
+          <span class="sr-only" id="faculty-position" aria-live="off" aria-atomic="true"></span>
+          <span class="carousel-hint">Select a portrait to meet your mentor</span>
+          <span class="mobile-carousel-hint">Swipe to meet our teachers</span>
+          <button class="text-button" id="carousel-play" type="button" aria-pressed="false" aria-label="Start automatic rotation"><span aria-hidden="true">▷</span> Auto-play</button>
+        </div>
+      </div>
+      <div class="faculty-badge"><div><h2 id="faculty-heading" tabindex="-1">Esteemed Teachers</h2><p>Guiding, Inspiring, Always Supporting</p></div></div>
+    </section>
+    <div class="faculty-browse"><a class="button invitation-home-link" id="open-invitation" data-invitation-link href="invitation.html?teacher=guest">Open your invitation <span aria-hidden="true">↗</span></a><button class="link-button" id="browse-faculty" type="button">Meet our esteemed teachers <span aria-hidden="true">↗</span></button></div>
+    <section class="schedule section-container" id="schedule" aria-labelledby="schedule-heading">
+      <header class="section-heading">
+        <div class="ornamental-rule" aria-hidden="true"><span>❀</span></div><h2 id="schedule-heading">Event Schedule</h2><p>A Grand Beginning to Our Freshers’ Journey</p>
+        <div class="schedule-meta"><span>Friday, 30 October 2026</span><span class="meta-dot" aria-hidden="true">·</span><span>10:00 AM – 12:45 PM · IST</span><a href="assets/tejas-2026.ics" download>Add to calendar <span aria-hidden="true">↗</span></a></div>
+      </header>
+      <div class="timeline" id="programme-timeline"></div>
+      <noscript><p class="notice">Please enable JavaScript to browse the faculty and programme. The celebration is on 30 October 2026, 10:00 AM–12:45 PM at JRD Tata Hall. <a href="Faculty_Members/faculty_directory.html">View the faculty directory</a>.</p></noscript>
+      <p class="programme-footnote">Please be seated by 10:25 AM for the inaugural ceremony. All times are in India Standard Time.</p>
+    </section>
+    <section class="welcome-note section-container" aria-labelledby="welcome-note-heading">
+      <div class="welcome-note-ornament" aria-hidden="true">❦</div><p class="eyebrow">To the MCA batch of 2026–2028</p><h2 id="welcome-note-heading">Your next chapter starts here.</h2>
+      <p>New friendships. Shared discoveries. A place to belong.<br>Welcome to the Srusti family — let’s make this beginning beautiful.</p><a class="button" href="assets/tejas-2026.ics" download>Save the date <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer class="site-footer section-container"><a class="footer-title" href="#welcome">TEJAS <span>’26</span><small>The Fresh Bloom</small></a><p>Department of Computer Applications<br>Srusti Academy of Management &amp; Technology</p><a href="#welcome" class="back-to-top">Back to top <span aria-hidden="true">↑</span></a></footer>
+  <dialog class="profile-dialog" id="profile-dialog" aria-labelledby="profile-name">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Close faculty profile">×</button>
+    <div class="profile-layout"><img id="profile-photo" alt="" width="380" height="440"><div class="profile-copy"><p class="eyebrow">Esteemed Teacher</p><h2 id="profile-name"></h2><p class="profile-role" id="profile-role"></p><div class="small-rule" aria-hidden="true"></div><p>With sincere gratitude for your guidance, encouragement, and the inspiration you bring to every new beginning.</p><a id="profile-email" class="profile-email"></a><p class="profile-event">TEJAS ’26 · 30 October 2026<br>JRD Tata Hall · 10:00 AM</p></div></div>
+  </dialog>
+  <dialog class="directory-dialog" id="directory-dialog" aria-labelledby="directory-heading">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Close faculty directory">×</button>
+    <p class="eyebrow">Guiding minds. Shaping futures.</p><h2 id="directory-heading">Meet our faculty</h2>
+    <label class="search-label" for="faculty-search">Search by name or designation</label><input id="faculty-search" type="search" placeholder="Search faculty…" autocomplete="off"><p class="search-count" id="search-count" role="status"></p><div class="directory-grid" id="directory-grid"></div><p class="empty-state" id="faculty-empty" hidden>No faculty members match your search. Try a different name or designation.</p>
+  </dialog>
+</body>
+</html>

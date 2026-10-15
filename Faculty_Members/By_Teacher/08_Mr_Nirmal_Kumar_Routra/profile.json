@@ -1,0 +1,16 @@
+{
+  "id": 8,
+  "name": "Mr. Nirmal Kumar Routra",
+  "designation": "Controller of Exam & Assistant Professor",
+  "email": "nirmal@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Mr_Nirmal_Kumar_Routra",
+  "folder_name": "08_Mr_Nirmal_Kumar_Routra",
+  "original_photo_filename": "08_Mr_Nirmal_Kumar_Routra.jpeg",
+  "labeled_photo_filename": "08_Mr_Nirmal_Kumar_Routra.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/08_Mr_Nirmal_Kumar_Routra.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/08_Mr_Nirmal_Kumar_Routra.png",
+    "teacher_folder": "By_Teacher/08_Mr_Nirmal_Kumar_Routra"
+  }
+}

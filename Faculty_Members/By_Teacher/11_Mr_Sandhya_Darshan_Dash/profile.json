@@ -1,0 +1,16 @@
+{
+  "id": 11,
+  "name": "Mr. Sandhya Darshan Dash",
+  "designation": "Assistant Professor",
+  "email": "sandhya@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Mr_Sandhya_Darshan_Dash",
+  "folder_name": "11_Mr_Sandhya_Darshan_Dash",
+  "original_photo_filename": "11_Mr_Sandhya_Darshan_Dash.png",
+  "labeled_photo_filename": "11_Mr_Sandhya_Darshan_Dash.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/11_Mr_Sandhya_Darshan_Dash.png",
+    "labeled_photo": "Photos_With_Name_Overlay/11_Mr_Sandhya_Darshan_Dash.png",
+    "teacher_folder": "By_Teacher/11_Mr_Sandhya_Darshan_Dash"
+  }
+}

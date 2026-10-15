@@ -1,0 +1,17 @@
+.soundtrack-widget { z-index: 80; }
+.soundtrack-widget[data-dock=floating] { position: fixed; right: max(18px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); }
+.soundtrack-widget[data-dock=entrance] { position: absolute; right: 30px; top: 30px; }
+.soundtrack-widget[data-dock=inline] { display: flex; justify-content: flex-start; margin: 0 42px 16px 0; }
+.intro-panel > .soundtrack-widget, .profile-copy > .soundtrack-widget { justify-content: center; margin: 16px 0 0; }
+.soundtrack-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 9px 14px; border: 1px solid #bd986488; border-radius: 24px; background: #fff9ef; color: #68152f; box-shadow: 0 3px 14px #4d18301a; cursor: pointer; font: 500 11px/1.2 'DM Sans', Arial, sans-serif; touch-action: manipulation; white-space: nowrap; }
+.soundtrack-toggle:hover { background: #f4e7d2; }
+.soundtrack-toggle:focus-visible { outline: 2px solid #996b2c; outline-offset: 3px; }
+.soundtrack-toggle svg { width: 17px; height: 17px; flex-shrink: 0; }
+.soundtrack-toggle[data-playing=true] .soundtrack-slash, .soundtrack-toggle[data-playing=false] .soundtrack-waves { display: none; }
+@media (max-width: 560px) {
+  .soundtrack-widget[data-dock=floating] { right: max(12px, env(safe-area-inset-right)); bottom: max(12px, env(safe-area-inset-bottom)); }
+  .soundtrack-widget[data-dock=entrance] { top: auto; bottom: 20px; right: 24px; }
+  .soundtrack-widget[data-dock=entrance] .soundtrack-toggle { width: 44px; padding: 10px; }
+  .soundtrack-widget[data-dock=entrance] .soundtrack-toggle > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+}
+@media print { .soundtrack-widget { display: none !important; } }

@@ -1,0 +1,7 @@
+Faculty Member #01
+========================================
+Name        : Dr. Umakanta Dash
+Designation : Principal & Professor
+Email       : drukdash@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

@@ -1,0 +1,7 @@
+Faculty Member #15
+========================================
+Name        : Mr. Alok Kumar
+Designation : Assistant Professor
+Email       : alokkumar@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

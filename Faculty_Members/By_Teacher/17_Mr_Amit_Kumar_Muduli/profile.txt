@@ -1,0 +1,7 @@
+Faculty Member #17
+========================================
+Name        : Mr. Amit Kumar Muduli
+Designation : Assistant Professor
+Email       : amit@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

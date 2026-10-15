@@ -1,0 +1,7 @@
+Faculty Member #11
+========================================
+Name        : Mr. Sandhya Darshan Dash
+Designation : Assistant Professor
+Email       : sandhya@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

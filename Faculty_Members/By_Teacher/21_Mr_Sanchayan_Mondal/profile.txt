@@ -1,0 +1,7 @@
+Faculty Member #21
+========================================
+Name        : Mr. Sanchayan Mondal
+Designation : Assistant Professor
+Email       : sanchayan@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

@@ -1,0 +1,7 @@
+Faculty Member #09
+========================================
+Name        : Ms. Kalyani Senapati
+Designation : Assistant Professor
+Email       : kalyani@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

@@ -1,0 +1,16 @@
+{
+  "id": 21,
+  "name": "Mr. Sanchayan Mondal",
+  "designation": "Assistant Professor",
+  "email": "sanchayan@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Mr_Sanchayan_Mondal",
+  "folder_name": "21_Mr_Sanchayan_Mondal",
+  "original_photo_filename": "21_Mr_Sanchayan_Mondal.jpeg",
+  "labeled_photo_filename": "21_Mr_Sanchayan_Mondal.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/21_Mr_Sanchayan_Mondal.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/21_Mr_Sanchayan_Mondal.png",
+    "teacher_folder": "By_Teacher/21_Mr_Sanchayan_Mondal"
+  }
+}

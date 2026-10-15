@@ -1,0 +1,7 @@
+Faculty Member #02
+========================================
+Name        : Dr. Gangadhar Mishra
+Designation : Dean (Training and Placement) & Professor
+Email       : placement@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

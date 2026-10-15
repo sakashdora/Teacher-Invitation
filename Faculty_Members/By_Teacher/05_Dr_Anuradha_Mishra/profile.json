@@ -1,0 +1,16 @@
+{
+  "id": 5,
+  "name": "Dr. Anuradha Mishra",
+  "designation": "Associate Professor",
+  "email": "dranuradha@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Dr_Anuradha_Mishra",
+  "folder_name": "05_Dr_Anuradha_Mishra",
+  "original_photo_filename": "05_Dr_Anuradha_Mishra.jpeg",
+  "labeled_photo_filename": "05_Dr_Anuradha_Mishra.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/05_Dr_Anuradha_Mishra.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/05_Dr_Anuradha_Mishra.png",
+    "teacher_folder": "By_Teacher/05_Dr_Anuradha_Mishra"
+  }
+}

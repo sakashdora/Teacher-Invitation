@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "name": "Dr. Umakanta Dash",
+  "designation": "Principal & Professor",
+  "email": "drukdash@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Dr_Umakanta_Dash",
+  "folder_name": "01_Dr_Umakanta_Dash",
+  "original_photo_filename": "01_Dr_Umakanta_Dash.jpeg",
+  "labeled_photo_filename": "01_Dr_Umakanta_Dash.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/01_Dr_Umakanta_Dash.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/01_Dr_Umakanta_Dash.png",
+    "teacher_folder": "By_Teacher/01_Dr_Umakanta_Dash"
+  }
+}

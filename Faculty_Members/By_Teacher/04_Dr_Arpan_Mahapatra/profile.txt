@@ -1,0 +1,7 @@
+Faculty Member #04
+========================================
+Name        : Dr. Arpan Mahapatra
+Designation : Associate Professor
+Email       : drarpan@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

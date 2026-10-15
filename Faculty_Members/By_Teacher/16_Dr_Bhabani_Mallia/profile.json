@@ -1,0 +1,16 @@
+{
+  "id": 16,
+  "name": "Dr. Bhabani Mallia",
+  "designation": "Associate Professor",
+  "email": "drbhabani@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Dr_Bhabani_Mallia",
+  "folder_name": "16_Dr_Bhabani_Mallia",
+  "original_photo_filename": "16_Dr_Bhabani_Mallia.jpeg",
+  "labeled_photo_filename": "16_Dr_Bhabani_Mallia.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/16_Dr_Bhabani_Mallia.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/16_Dr_Bhabani_Mallia.png",
+    "teacher_folder": "By_Teacher/16_Dr_Bhabani_Mallia"
+  }
+}

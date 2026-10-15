@@ -1,0 +1,7 @@
+Faculty Member #08
+========================================
+Name        : Mr. Nirmal Kumar Routra
+Designation : Controller of Exam & Assistant Professor
+Email       : nirmal@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

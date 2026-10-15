@@ -1,0 +1,16 @@
+{
+  "id": 12,
+  "name": "Ms. Saismita Das",
+  "designation": "Assistant Professor",
+  "email": "saismita@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Ms_Saismita_Das",
+  "folder_name": "12_Ms_Saismita_Das",
+  "original_photo_filename": "12_Ms_Saismita_Das.png",
+  "labeled_photo_filename": "12_Ms_Saismita_Das.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/12_Ms_Saismita_Das.png",
+    "labeled_photo": "Photos_With_Name_Overlay/12_Ms_Saismita_Das.png",
+    "teacher_folder": "By_Teacher/12_Ms_Saismita_Das"
+  }
+}

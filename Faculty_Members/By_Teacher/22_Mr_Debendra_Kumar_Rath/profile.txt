@@ -1,0 +1,7 @@
+Faculty Member #22
+========================================
+Name        : Mr. Debendra Kumar Rath
+Designation : Assistant Professor
+Email       : dev@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

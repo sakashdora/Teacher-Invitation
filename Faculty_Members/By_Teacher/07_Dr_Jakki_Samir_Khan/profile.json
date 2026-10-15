@@ -1,0 +1,16 @@
+{
+  "id": 7,
+  "name": "Dr. Jakki Samir Khan",
+  "designation": "Associate Professor",
+  "email": "drjakki@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Dr_Jakki_Samir_Khan",
+  "folder_name": "07_Dr_Jakki_Samir_Khan",
+  "original_photo_filename": "07_Dr_Jakki_Samir_Khan.jpeg",
+  "labeled_photo_filename": "07_Dr_Jakki_Samir_Khan.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/07_Dr_Jakki_Samir_Khan.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/07_Dr_Jakki_Samir_Khan.png",
+    "teacher_folder": "By_Teacher/07_Dr_Jakki_Samir_Khan"
+  }
+}

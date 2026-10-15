@@ -1,0 +1,7 @@
+Faculty Member #05
+========================================
+Name        : Dr. Anuradha Mishra
+Designation : Associate Professor
+Email       : dranuradha@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

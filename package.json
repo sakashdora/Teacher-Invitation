@@ -1,0 +1,6 @@
+{
+  "name": "tejas-26-freshers", "version": "1.0.0", "private": true,
+  "description": "TEJAS 2026 freshers’ celebration — Srusti Academy",
+  "scripts": { "start": "node scripts/serve.mjs", "dev": "node scripts/serve.mjs", "sync:faculty": "node scripts/sync-faculty.mjs", "check": "node --check assets/js/app.js && node --check assets/js/faculty-match.js && node --check assets/js/entrance.js && node --check assets/js/invitation-renderer.js && node --check assets/js/invitation.js && node --check assets/js/soundtrack.js && node --test tests/project.test.mjs" },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,16 @@
+{
+  "id": 15,
+  "name": "Mr. Alok Kumar",
+  "designation": "Assistant Professor",
+  "email": "alokkumar@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Mr_Alok_Kumar",
+  "folder_name": "15_Mr_Alok_Kumar",
+  "original_photo_filename": "15_Mr_Alok_Kumar.jpeg",
+  "labeled_photo_filename": "15_Mr_Alok_Kumar.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/15_Mr_Alok_Kumar.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/15_Mr_Alok_Kumar.png",
+    "teacher_folder": "By_Teacher/15_Mr_Alok_Kumar"
+  }
+}

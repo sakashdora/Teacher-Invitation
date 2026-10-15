@@ -1,0 +1,16 @@
+{
+  "id": 13,
+  "name": "Mr. Nihar Ranjan Swain",
+  "designation": "Assistant Professor",
+  "email": "nihar@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Mr_Nihar_Ranjan_Swain",
+  "folder_name": "13_Mr_Nihar_Ranjan_Swain",
+  "original_photo_filename": "13_Mr_Nihar_Ranjan_Swain.jpeg",
+  "labeled_photo_filename": "13_Mr_Nihar_Ranjan_Swain.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/13_Mr_Nihar_Ranjan_Swain.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/13_Mr_Nihar_Ranjan_Swain.png",
+    "teacher_folder": "By_Teacher/13_Mr_Nihar_Ranjan_Swain"
+  }
+}

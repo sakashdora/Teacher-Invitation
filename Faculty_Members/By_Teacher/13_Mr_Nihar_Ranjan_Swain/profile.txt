@@ -1,0 +1,7 @@
+Faculty Member #13
+========================================
+Name        : Mr. Nihar Ranjan Swain
+Designation : Assistant Professor
+Email       : nihar@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

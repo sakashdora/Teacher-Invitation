@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "name": "Dr. Gangadhar Mishra",
+  "designation": "Dean (Training and Placement) & Professor",
+  "email": "placement@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Dr_Gangadhar_Mishra",
+  "folder_name": "02_Dr_Gangadhar_Mishra",
+  "original_photo_filename": "02_Dr_Gangadhar_Mishra.jpeg",
+  "labeled_photo_filename": "02_Dr_Gangadhar_Mishra.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/02_Dr_Gangadhar_Mishra.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/02_Dr_Gangadhar_Mishra.png",
+    "teacher_folder": "By_Teacher/02_Dr_Gangadhar_Mishra"
+  }
+}

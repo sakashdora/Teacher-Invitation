@@ -1,0 +1,16 @@
+{
+  "id": 4,
+  "name": "Dr. Arpan Mahapatra",
+  "designation": "Associate Professor",
+  "email": "drarpan@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Dr_Arpan_Mahapatra",
+  "folder_name": "04_Dr_Arpan_Mahapatra",
+  "original_photo_filename": "04_Dr_Arpan_Mahapatra.jpeg",
+  "labeled_photo_filename": "04_Dr_Arpan_Mahapatra.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/04_Dr_Arpan_Mahapatra.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/04_Dr_Arpan_Mahapatra.png",
+    "teacher_folder": "By_Teacher/04_Dr_Arpan_Mahapatra"
+  }
+}

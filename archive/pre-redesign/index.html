@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEJAS '26 — The Fresh Bloom · MCA Freshers | Srusti Academy of Management & Technology</title>
+  <meta name="description" content="TEJAS '26 — The Fresh Bloom. Official Freshers Party celebration honoring 22 Esteemed Faculty Members of Srusti Academy of Management & Technology." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,300..600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --c-maroon: #5b0e23;
+      --c-maroon-dark: #380716;
+      --c-maroon-deep: #22030d;
+      --c-crimson: #8c152f;
+      --c-gold: #d4af37;
+      --c-gold-light: #fdebb2;
+      --c-gold-deep: #a8791e;
+      --c-gold-glow: rgba(212, 175, 55, 0.45);
+      --c-bg: #f7f1e6;
+      --c-card-bg: #ffffff;
+      --c-card-alt: #fdfaf5;
+      --c-text-dark: #24050f;
+      --c-text-muted: #6e585f;
+      --font-title: 'Cinzel', serif;
+      --font-display: 'Fraunces', serif;
+      --font-script: 'Alex Brush', cursive;
+      --font-body: 'Outfit', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--c-bg);
+      color: var(--c-text-dark);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+      line-height: 1.5;
+      background-image: 
+        radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 70%),
+        linear-gradient(to bottom, #fdfaf6 0%, #f6efe2 100%);
+    }
+
+    /* ─── TOP NAVIGATION BAR ─── */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253, 250, 245, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-logo-circle {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1.5px solid var(--c-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffffff 0%, #f7ede0 100%);
+      box-shadow: 0 2px 8px rgba(91, 14, 35, 0.1);
+    }
+
+    .brand-logo-circle span {
+      font-family: var(--font-title);
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--c-maroon);
+    }
+
+    .brand-text {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--c-maroon);
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--c-maroon);
+      font-size: 13.5px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--c-gold-deep);
+    }
+
+    .nav-tagline {
+      font-family: var(--font-script);
+      font-size: 20px;
+      color: var(--c-maroon);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-splash {
+      width: 12px;
+      height: 12px;
+      background: var(--c-crimson);
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      display: inline-block;
+    }
+
+    /* ─── HERO HEADER COMPOSITION ─── */
+    .hero-section {
+      position: relative;
+      text-align: center;
+      padding: 40px 20px 20px 20px;
+      overflow: hidden;
+      max-width: 1380px;
+      margin: 0 auto;
+    }
+
+    .hero-decor-left, .hero-decor-right {
+      position: absolute;
+      top: 15px;
+      pointer-events: none;
+      opacity: 0.85;
+      z-index: 1;
+    }
+
+    .hero-decor-left {
+      left: 10px;
+      width: 180px;
+    }
+
+    .hero-decor-right {
+      right: 15px;
+      width: 220px;
+      text-align: right;
+    }
+
+    .script-quote {
+      font-family: var(--font-script);
+      font-size: 24px;
+      color: var(--c-maroon);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-title);
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--c-crimson);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title {
+      font-family: var(--font-title);
+      font-size: clamp(4.5rem, 9vw, 7.8rem);
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      margin: 0;
+      color: var(--c-maroon);
+      text-shadow: 0 4px 18px rgba(91, 14, 35, 0.15);
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title .title-accent {
+      color: var(--c-gold);
+      background: linear-gradient(135deg, #d4af37 0%, #b8860b 60%, #8b6508 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-script);
+      font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+      color: var(--c-maroon);
+      margin-top: -10px;
+      margin-bottom: 14px;
+      font-weight: 500;
+      position: relative;
+      z-index: 2;
+    }
+
+    .pill-freshers {
+      display: inline-block;
+      background: var(--c-maroon);
+      color: #ffffff;
+      padding: 6px 24px;
+      border-radius: 9999px;
+      font-family: var(--font-title);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      border: 1px solid var(--c-gold);
+      box-shadow: 0 4px 12px rgba(91, 14, 35, 0.25);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ─── 3D CURVED PANORAMIC CAROUSEL ─── */
+    .carousel-stage-container {
+      position: relative;
+      width: 100%;
+      max-width: 1280px;
+      margin: 35px auto 10px auto;
+      padding: 20px 0 40px 0;
+      overflow: visible;
+    }
+
+    /* Glowing Circular Ring Base */
+    .glowing-ring-base {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%) rotateX(72deg);
+      width: 92%;
+      max-width: 1080px;
+      height: 380px;
+      border-radius: 50%;
+      border: 3px solid var(--c-gold);
+      box-shadow: 
+        0 0 45px var(--c-gold-glow),
+        0 0 90px rgba(212, 175, 55, 0.25),
+        inset 0 0 35px var(--c-gold-glow);
+      pointer-events: none;
+      z-index: 1;
+      background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.18) 0%, rgba(91, 14, 35, 0.35) 60%, transparent 80%);
+    }
+
+    .carousel-viewport {
+      position: relative;
+      width: 100%;
+      height: 340px;
+      perspective: 1300px;
+      perspective-origin: 50% 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .carousel-card-wrap {
+      position: absolute;
+      width: 175px;
+      height: 250px;
+      border-radius: 12px;
+      transform-style: preserve-3d;
+      transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .faculty-card-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #6b1426 0%, #3a0a14 100%);
+      border: 1.5px solid rgba(212, 175, 55, 0.4);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 12px 30px rgba(34, 3, 13, 0.5);
+      position: relative;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .faculty-card-inner:hover {
+      border-color: var(--c-gold);
+      box-shadow: 0 16px 40px rgba(212, 175, 55, 0.35);
+    }
+
+    .faculty-card-wrap.active .faculty-card-inner {
+      border: 2px solid var(--c-gold);
+      box-shadow: 
+        0 0 35px var(--c-gold-glow),
+        0 20px 50px rgba(34, 3, 13, 0.7);
+    }
+
+    .faculty-card-img {
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      background: #2a050d;
+      filter: contrast(1.05) saturate(1.05);
+    }
+
+    .faculty-card-meta {
+      padding: 8px 10px;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: linear-gradient(180deg, rgba(91, 14, 35, 0.95) 0%, rgba(56, 7, 22, 0.98) 100%);
+    }
+
+    .faculty-card-name {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 12px;
+      color: #ffffff;
+      line-height: 1.25;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .faculty-card-desig {
+      font-size: 9.5px;
+      font-weight: 500;
+      color: var(--c-gold-light);
+      margin-top: 2px;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Esteemed Teachers Badge Under Carousel */
+    .esteemed-badge-wrap {
+      text-align: center;
+      margin-top: 15px;
+      position: relative;
+      z-index: 20;
+    }
+
+    .esteemed-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--c-maroon);
+      border: 1.5px solid var(--c-gold);
+      border-radius: 9999px;
+      padding: 8px 24px;
+      box-shadow: 0 6px 20px rgba(91, 14, 35, 0.35);
+    }
+
+    .esteemed-count {
+      font-family: var(--font-title);
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--c-gold);
+      line-height: 1;
+    }
+
+    .esteemed-text {
+      text-align: left;
+    }
+
+    .esteemed-title {
+      font-family: var(--font-title);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+    }
+
+    .esteemed-sub {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 11px;
+      color: var(--c-gold-light);
+    }
+
+    /* ─── EVENT SCHEDULE SECTION ─── */
+    .schedule-section {
+      max-width: 1180px;
+      margin: 60px auto 100px auto;
+      padding: 0 20px;
+    }
+
+    .mandala-divider {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .mandala-divider svg {
+      width: 32px;
+      height: 32px;
+      fill: var(--c-gold);
+      opacity: 0.85;
+    }
+
+    .schedule-header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .schedule-main-title {
+      font-family: var(--font-title);
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: var(--c-maroon);
+      text-transform: uppercase;
+    }
+
+    .schedule-subtitle {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--c-maroon-dark);
+      margin-top: 4px;
+    }
+
+    /* Timeline Row Layout */
+    .timeline-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: relative;
+    }
+
+    .timeline-row {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 28px;
+      align-items: stretch;
+      position: relative;
+    }
+
+    /* Left Time Pill Card */
+    .time-badge-card {
+      background: var(--c-card-alt);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      border-radius: 16px;
+      padding: 16px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(91, 14, 35, 0.05);
+      position: relative;
+    }
+
+    .time-icon-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--c-maroon);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .time-pill-duration {
+      background: #d4a946;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .time-badge-category {
+      font-family: var(--font-title);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--c-maroon);
+      text-transform: uppercase;
+    }
+
+    /* Right Milestone Card */
+    .milestone-content-card {
+      background: #ffffff;
+      border: 1px solid rgba(91, 14, 35, 0.12);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 6px 22px rgba(36, 5, 15, 0.06);
+      display: grid;
+      grid-template-columns: 1fr 270px;
+      position: relative;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .milestone-content-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(36, 5, 15, 0.1);
+      border-color: rgba(212, 175, 55, 0.6);
+    }
+
+    .milestone-body {
+      padding: 24px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .act-tag {
+      display: inline-block;
+      background: var(--c-maroon);
+      color: #ffffff;
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 4px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      width: fit-content;
+    }
+
+    .flagship-tag {
+      display: inline-block;
+      font-family: var(--font-title);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      color: var(--c-maroon);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .milestone-title {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--c-maroon);
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .milestone-subtitle {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--c-maroon-dark);
+      margin-bottom: 10px;
+    }
+
+    .milestone-desc {
+      font-size: 12.5px;
+      color: var(--c-text-muted);
+      line-height: 1.55;
+      margin-bottom: 14px;
+    }
+
+    .milestone-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 11.5px;
+      color: var(--c-maroon);
+      font-weight: 600;
+    }
+
+    .milestone-tags {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .tag-bullet {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tag-bullet::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--c-gold-deep);
+      display: inline-block;
+    }
+
+    .btn-notes {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 12px;
+      border-radius: 6px;
+      border: 1px solid rgba(91, 14, 35, 0.2);
+      background: rgba(91, 14, 35, 0.03);
+      color: var(--c-maroon);
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-notes:hover {
+      background: var(--c-maroon);
+      color: #ffffff;
+      border-color: var(--c-maroon);
+    }
+
+    .milestone-media-wrap {
+      position: relative;
+      background: #1a030a;
+      overflow: hidden;
+    }
+
+    .milestone-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .milestone-content-card:hover .milestone-img {
+      transform: scale(1.04);
+    }
+
+    .venue-coord-note {
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 3, 10, 0.88);
+      padding: 16px;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 10.5px;
+      line-height: 1.45;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .milestone-media-wrap:hover .venue-coord-note {
+      opacity: 1;
+    }
+
+    .venue-coord-header {
+      font-family: var(--font-title);
+      font-weight: 700;
+      color: var(--c-gold-light);
+      margin-bottom: 4px;
+      letter-spacing: 0.08em;
+    }
+
+    /* ─── TRIBUTE MODAL ─── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(14, 2, 6, 0.85);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: #ffffff;
+      border: 2px solid var(--c-gold);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 520px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+      position: relative;
+      animation: modalPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes modalPop {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(91, 14, 35, 0.1);
+      border: none;
+      font-size: 18px;
+      color: var(--c-maroon);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .modal-close-btn:hover {
+      background: var(--c-maroon);
+      color: #ffffff;
+    }
+
+    .modal-content-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+    }
+
+    .modal-photo {
+      width: 100%;
+      height: 100%;
+      min-height: 250px;
+      object-fit: cover;
+      object-position: top;
+      background: #2b050f;
+    }
+
+    .modal-info {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .modal-badge {
+      display: inline-block;
+      background: var(--c-maroon);
+      color: var(--c-gold-light);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      width: fit-content;
+    }
+
+    .modal-name {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--c-maroon);
+      line-height: 1.2;
+    }
+
+    .modal-desig {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--c-gold-deep);
+      margin-top: 4px;
+    }
+
+    .modal-quote {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 12px;
+      color: var(--c-text-muted);
+      margin-top: 14px;
+      line-height: 1.5;
+      padding-left: 8px;
+      border-left: 2px solid var(--c-gold);
+    }
+
+    .modal-footer {
+      margin-top: 18px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(91, 14, 35, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
+    }
+
+    .modal-email-link {
+      color: var(--c-maroon);
+      font-weight: 600;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .modal-email-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ─── FOOTER SIGN-OFF ─── */
+    .page-footer {
+      background: var(--c-maroon-dark);
+      color: var(--c-gold-light);
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 2px solid var(--c-gold);
+    }
+
+    .footer-title {
+      font-family: var(--font-title);
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .footer-desc {
+      font-size: 12px;
+      opacity: 0.85;
+      max-width: 600px;
+      margin: 0 auto 15px auto;
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 900px) {
+      .timeline-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .milestone-content-card {
+        grid-template-columns: 1fr;
+      }
+      .milestone-media-wrap {
+        height: 180px;
+      }
+      .hero-decor-left, .hero-decor-right {
+        display: none;
+      }
+      .nav-links {
+        display: none;
+      }
+      .modal-content-grid {
+        grid-template-columns: 1fr;
+      }
+      .modal-photo {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. TOP NAVIGATION BAR -->
+  <header class="top-nav">
+    <a href="#" class="nav-brand">
+      <div class="brand-logo-circle">
+        <span>S</span>
+      </div>
+      <div class="brand-text">
+        SRUSTI ACADEMY OF<br />MANAGEMENT &amp; TECHNOLOGY
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#schedule">Event Schedule</a></li>
+      <li><a href="#faculty">Faculty</a></li>
+      <li><a href="#celebrations">Celebrations</a></li>
+      <li><a href="#welcome">Welcome</a></li>
+    </ul>
+
+    <div class="nav-tagline">
+      <span>Together towards a brighter tomorrow</span>
+      <span class="nav-splash" aria-hidden="true"></span>
+    </div>
+  </header>
+
+  <!-- 2. HERO COMPOSITION -->
+  <main>
+    <section class="hero-section" id="welcome">
+      
+      <!-- Left Classical Odissi Sketch Art -->
+      <div class="hero-decor-left">
+        <svg viewBox="0 0 160 220" fill="none" opacity="0.65" style="width:100%; height:auto;">
+          <!-- Stylized classical Indian dancer posture in warm bronze-gold -->
+          <path d="M80,20 C85,20 90,25 90,32 C90,40 82,45 80,48 C78,45 70,40 70,32 C70,25 75,20 80,20 Z" stroke="#a8791e" stroke-width="1.5" />
+          <path d="M78,48 L75,90 L60,130 L45,170 M75,90 L95,130 L110,170" stroke="#a8791e" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M75,65 L40,50 L20,30 M75,65 L115,50 L135,30" stroke="#a8791e" stroke-width="1.5" stroke-linecap="round" />
+          <circle cx="80" cy="18" r="4" fill="#d4af37" />
+          <!-- Flowing scarf ripples -->
+          <path d="M60,85 Q40,110 50,140 Q60,170 80,185 Q100,170 110,140 Q120,110 100,85" stroke="#d4af37" stroke-width="1" stroke-dasharray="3 3" />
+        </svg>
+      </div>
+
+      <!-- Right Graduate Crowd & Script Quote -->
+      <div class="hero-decor-right">
+        <div class="script-quote">
+          New Faces...<br />New Dreams...<br />A New Chapter...
+        </div>
+        <svg viewBox="0 0 200 90" fill="none" opacity="0.65" style="width:100%; height:auto;">
+          <!-- Tossing graduation mortarboards & cheering silhouettes -->
+          <path d="M30,30 L45,22 L60,30 L45,38 Z M45,38 L45,46" stroke="#a8791e" stroke-width="1.2" fill="#5b0e23" />
+          <path d="M110,15 L125,7 L140,15 L125,23 Z M125,23 L125,31" stroke="#a8791e" stroke-width="1.2" fill="#5b0e23" />
+          <path d="M165,32 L178,25 L190,32 L178,39 Z" stroke="#a8791e" stroke-width="1.2" fill="#5b0e23" />
+          <!-- Crowd hands up -->
+          <path d="M10,85 Q20,60 30,85 M40,85 Q50,55 60,85 M70,85 Q85,50 100,85 M120,85 Q135,52 150,85 M160,85 Q175,58 190,85" stroke="#a8791e" stroke-width="2" />
+        </svg>
+      </div>
+
+      <!-- Eyebrow & Master Title -->
+      <p class="hero-eyebrow">DEPARTMENT OF COMPUTER APPLICATIONS &nbsp;·&nbsp; SRUSTI ACADEMY OF MANAGEMENT &amp; TECHNOLOGY</p>
+      
+      <h1 class="hero-title">
+        TEJAS <span class="title-accent">'26</span>
+      </h1>
+
+      <div class="hero-subtitle">The Fresh Bloom</div>
+
+      <div class="pill-freshers">FRESHERS PARTY</div>
+
+      <!-- 3. CENTERPIECE: 3D CURVED PANORAMIC FACULTY CAROUSEL -->
+      <section class="carousel-stage-container" id="faculty" aria-label="Faculty Council Carousel">
+        
+        <!-- Glowing Golden Ring Base -->
+        <div class="glowing-ring-base" aria-hidden="true"></div>
+
+        <!-- 3D Carousel Viewport (Continuous Auto-Carousel) -->
+        <div class="carousel-viewport" id="carouselViewport">
+          <!-- Cards injected by JS -->
+        </div>
+
+        <!-- 22 Esteemed Teachers Badge Under Carousel -->
+        <div class="esteemed-badge-wrap">
+          <div class="esteemed-badge">
+            <span class="esteemed-count">22</span>
+            <div class="esteemed-text">
+              <div class="esteemed-title">Our Esteemed Teachers</div>
+              <div class="esteemed-sub">Guiding, Inspiring, Always Supporting</div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </section>
+
+    <!-- 4. EVENT SCHEDULE SECTION -->
+    <section class="schedule-section" id="schedule" aria-label="Official Event Schedule">
+      
+      <!-- Centered Mandala Floral Divider -->
+      <div class="mandala-divider" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M12,2 L14,7 L19,5 L17,10 L22,12 L17,14 L19,19 L14,17 L12,22 L10,17 L5,19 L7,14 L2,12 L7,10 L5,5 L10,7 Z" />
+          <circle cx="12" cy="12" r="3" fill="#5b0e23" />
+        </svg>
+      </div>
+
+      <div class="schedule-header">
+        <h2 class="schedule-main-title">EVENT SCHEDULE</h2>
+        <p class="schedule-subtitle">A Grand Beginning to Our Freshers' Journey</p>
+      </div>
+
+      <!-- Timeline Items -->
+      <div class="timeline-container">
+        
+        <!-- Item 1: Welcome & Seating -->
+        <div class="timeline-row">
+          <div class="time-badge-card">
+            <div class="time-icon-row">
+              <span>📅 10:00 AM – 10:30 AM</span>
+            </div>
+            <div class="time-pill-duration">30 MIN</div>
+            <div class="time-badge-category">WELCOME &amp; SEATING</div>
+          </div>
+
+          <article class="milestone-content-card">
+            <div class="milestone-body">
+              <span class="act-tag">ACT I</span>
+              <h3 class="milestone-title">Arrival &amp; Batch Reception</h3>
+              <p class="milestone-desc">
+                Doors open at JRD Tata Hall. Badge collection, commemorative welcome kits, guest registration, and hall seating.
+              </p>
+              <div class="milestone-footer">
+                <div class="milestone-tags">
+                  <span class="tag-bullet">Door registration &amp; wristbands</span>
+                </div>
+                <button class="btn-notes" onclick="openNotesModal('Arrival & Batch Reception', 'Attendees are kindly requested to pick up commemorative badges and batch registration wristbands at the foyer before 10:20 AM. VIP seating for respected faculty is reserved in Rows A & B.')">
+                  View event notes &gt;
+                </button>
+              </div>
+            </div>
+            <div class="milestone-media-wrap">
+              <img src="assets/auditorium.jpg" alt="Auditorium Seating at JRD Tata Hall" class="milestone-img" loading="lazy" />
+            </div>
+          </article>
+        </div>
+
+        <!-- Item 2: Traditional Ceremony (Odissi Dance & Lamp Lighting) -->
+        <div class="timeline-row">
+          <div class="time-badge-card">
+            <div class="time-icon-row">
+              <span>📅 10:30 AM – 10:45 AM</span>
+            </div>
+            <div class="time-pill-duration">15 MIN</div>
+            <div class="time-badge-category">TRADITIONAL CEREMONY</div>
+          </div>
+
+          <article class="milestone-content-card">
+            <div class="milestone-body">
+              <div>
+                <span class="act-tag">ACT I</span>
+                <span class="flagship-tag" style="margin-left: 8px;">SACRED TRADITION</span>
+              </div>
+              <h3 class="milestone-title" style="font-size: 1.15rem; text-transform: uppercase;">INAUGURAL LAMP LIGHTING &amp; ODISSI DANCE</h3>
+              <p class="milestone-desc">
+                Sacred invocation &amp; classical cultural benediction. Auspicious Mangalacharan lamp lighting led by department dignitaries, followed by a revered classical Odissi performance welcoming new beginnings.
+              </p>
+              <div class="milestone-footer">
+                <div class="milestone-tags">
+                  <span class="tag-bullet">Classical Odissi invocation recital</span>
+                  <span class="tag-bullet">Dignitary lamp lighting ceremony</span>
+                </div>
+              </div>
+            </div>
+            <div class="milestone-media-wrap">
+              <img src="assets/odissi-dance.jpg" alt="Classical Odissi Blessing Troupe" class="milestone-img" loading="lazy" />
+              <div class="venue-coord-note">
+                <div class="venue-coord-header">VENUE COORDINATION NOTE:</div>
+                <p>Traditional Odissi blessing troupe opens the stage. Attendees are kindly requested to be seated by 10:25 AM.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Item 3: Leadership Speeches -->
+        <div class="timeline-row">
+          <div class="time-badge-card">
+            <div class="time-icon-row">
+              <span>📅 10:45 AM – 11:15 AM</span>
+            </div>
+            <div class="time-pill-duration">30 MIN</div>
+            <div class="time-badge-category">LEADERSHIP SPEECHES</div>
+          </div>
+
+          <article class="milestone-content-card">
+            <div class="milestone-body">
+              <span class="act-tag">ACT I</span>
+              <h3 class="milestone-title">Welcome Addresses &amp; Faculty Blessings</h3>
+              <p class="milestone-desc">
+                Inspiring opening addresses and words of wisdom from esteemed MCA faculty heads, management directors, and senior organizing council.
+              </p>
+              <div class="milestone-footer">
+                <div class="milestone-tags">
+                  <span class="tag-bullet">Inspirational faculty keynotes</span>
+                </div>
+                <button class="btn-notes" onclick="openNotesModal('Welcome Addresses & Faculty Blessings', 'Keynote blessings by Principal Dr. Umakanta Dash, Dean Dr. Gangadhar Mishra, and Vice-Principal Dr. Pragyan Parimita Sarangi on academic ethics, technological innovation, and corporate leadership.')">
+                  View event notes &gt;
+                </button>
+              </div>
+            </div>
+            <div class="milestone-media-wrap">
+              <img src="assets/speaker.jpg" alt="Keynote Address on Podium" class="milestone-img" loading="lazy" />
+            </div>
+          </article>
+        </div>
+
+        <!-- Item 4: Refreshment Prelude -->
+        <div class="timeline-row">
+          <div class="time-badge-card">
+            <div class="time-icon-row">
+              <span>📅 11:15 AM – 11:45 AM</span>
+            </div>
+            <div class="time-pill-duration">30 MIN</div>
+            <div class="time-badge-category" style="font-size: 9.5px;">STAGE RESET &amp; REFRESHMENT</div>
+          </div>
+
+          <article class="milestone-content-card">
+            <div class="milestone-body">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+                <span style="font-size: 20px;">☕</span>
+                <h3 class="milestone-title" style="margin: 0; font-family: var(--font-display); font-style: italic; font-size: 1.3rem;">Enjoy a Refreshment Break</h3>
+              </div>
+              <p class="milestone-desc" style="font-size: 13px; font-weight: 500; color: var(--c-maroon);">
+                Re-energize for the next exciting segment! Light savory refreshments, fruit juices, and high tea served at the auditorium foyer.
+              </p>
+            </div>
+            <div class="milestone-media-wrap">
+              <img src="assets/refreshments.jpg" alt="Refreshment Break at Foyer" class="milestone-img" loading="lazy" />
+            </div>
+          </article>
+        </div>
+
+        <!-- Item 5: Batch Spotlight (Introduction of the Freshers) -->
+        <div class="timeline-row">
+          <div class="time-badge-card">
+            <div class="time-icon-row">
+              <span>📅 11:45 AM – 12:00 PM</span>
+            </div>
+            <div class="time-pill-duration">15 MIN</div>
+            <div class="time-badge-category">BATCH SPOTLIGHT</div>
+          </div>
+
+          <article class="milestone-content-card">
+            <div class="milestone-body">
+              <span class="act-tag">ACT II</span>
+              <h3 class="milestone-title">Introduction of the Freshers</h3>
+              <div class="milestone-subtitle">Welcoming the Incoming MCA Batch (2026–2028)</div>
+              <p class="milestone-desc">
+                The spotlight shines on the incoming juniors. First official stage introductions to fellow batchmates, faculty mentors, and senior leaders.
+              </p>
+              <div class="milestone-footer">
+                <div class="milestone-tags">
+                  <span class="tag-bullet">Junior cohort stage roll-call</span>
+                </div>
+                <button class="btn-notes" onclick="openNotesModal('Introduction of the Freshers', 'Each junior batch section steps onto the stage for personal cohort introductions, memorable freeze frames, and official welcome sash presentation.')">
+                  View event notes &gt;
+                </button>
+              </div>
+            </div>
+            <div class="milestone-media-wrap">
+              <img src="assets/freshers-editorial.png" alt="MCA Freshers Spotlight" class="milestone-img" loading="lazy" />
+            </div>
+          </article>
+        </div>
+
+        <!-- Item 6: Cultural & Fun Activities -->
+        <div class="timeline-row">
+          <div class="time-badge-card">
+            <div class="time-icon-row">
+              <span>📅 12:00 PM – 12:45 PM</span>
+            </div>
+            <div class="time-pill-duration">45 MIN</div>
+            <div class="time-badge-category">CULTURAL &amp; FUN ACTIVITIES</div>
+          </div>
+
+          <article class="milestone-content-card">
+            <div class="milestone-body">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                <span style="color: var(--c-gold); font-size: 20px;">★</span>
+                <h3 class="milestone-title" style="margin: 0; font-family: var(--font-display); font-style: italic; font-size: 1.3rem;">Games · Performances · Memories</h3>
+              </div>
+              <p class="milestone-desc" style="font-size: 13px; font-weight: 500; color: var(--c-maroon);">
+                Let's celebrate, connect and make it memorable! High-energy student band fusion, interactive team icebreakers, comedic drama, and open celebration floor.
+              </p>
+            </div>
+            <div class="milestone-media-wrap">
+              <img src="assets/concert.jpg" alt="Concert and Celebration Floor" class="milestone-img" loading="lazy" />
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- 5. TRIBUTE MODAL POPUP -->
+  <div class="modal-overlay" id="tributeModal" onclick="closeModal(event)">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closeModal()">&times;</button>
+      <div class="modal-content-grid">
+        <img id="modalImg" src="" alt="" class="modal-photo" />
+        <div class="modal-info">
+          <div>
+            <span class="modal-badge" id="modalId">FACULTY MEMBER</span>
+            <h3 class="modal-name" id="modalName"></h3>
+            <p class="modal-desig" id="modalDesig"></p>
+            <p class="modal-quote" id="modalQuote">
+              "Honoring our respected mentor whose guidance fosters intellectual curiosity and shapes future leadership."
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a id="modalEmail" href="" class="modal-email-link"></a>
+            <span style="color: var(--c-gold-deep); font-weight: 700;">★ VIP Guest</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. EVENT NOTES MODAL -->
+  <div class="modal-overlay" id="notesModal" onclick="closeNotesModal(event)">
+    <div class="modal-box" style="max-width: 440px; padding: 24px;" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closeNotesModal()">&times;</button>
+      <span class="modal-badge">SESSION HIGHLIGHT</span>
+      <h3 class="modal-name" id="notesTitle" style="margin-top: 6px;"></h3>
+      <div class="modal-quote" id="notesContent" style="margin-top: 14px; font-style: normal; font-size: 13px; line-height: 1.6;"></div>
+    </div>
+  </div>
+
+  <!-- 7. FOOTER SIGN-OFF -->
+  <footer class="page-footer">
+    <div class="footer-title">TEJAS '26 — THE FRESH BLOOM</div>
+    <p class="footer-desc">
+      Department of Computer Applications · Srusti Academy of Management &amp; Technology<br />
+      Dedicated with sincere respect &amp; reverence to our 22 Esteemed Faculty Mentors.
+    </p>
+    <p style="font-size: 11px; opacity: 0.65; letter-spacing: 0.08em;">
+      DATE: 30 OCTOBER 2026 · VENUE: JRD TATA HALL · BHUBANESWAR
+    </p>
+  </footer>
+
+  <!-- SCRIPT LOGIC: 3D CYLINDRICAL CAROUSEL FOR ALL 22 REAL FACULTY -->
+  <script>
+    const FACULTY_MEMBERS = [
+      { id: 1, name: "Dr. Umakanta Dash", designation: "Principal & Professor", email: "drukdash@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/01_Dr_Umakanta_Dash.jpeg" },
+      { id: 2, name: "Dr. Gangadhar Mishra", designation: "Dean (Training & Placement) & Professor", email: "placement@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/02_Dr_Gangadhar_Mishra.jpeg" },
+      { id: 3, name: "Dr. Pragyan Parimita Sarangi", designation: "Vice-Principal & Associate Professor", email: "drpragyan@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/03_Dr_Pragyan_Parimita_Sarangi.jpeg" },
+      { id: 4, name: "Dr. Arpan Mahapatra", designation: "Associate Professor", email: "drarpan@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/04_Dr_Arpan_Mahapatra.jpeg" },
+      { id: 5, name: "Dr. Anuradha Mishra", designation: "Associate Professor", email: "dranuradha@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/05_Dr_Anuradha_Mishra.jpeg" },
+      { id: 6, name: "Dr. Susmita Parija", designation: "Training Head, Associate Professor", email: "drsusmita@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/06_Dr_Susmita_Parija.png" },
+      { id: 7, name: "Dr. Jakki Samir Khan", designation: "Associate Professor", email: "drjakki@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/07_Dr_Jakki_Samir_Khan.jpeg" },
+      { id: 8, name: "Mr. Nirmal Kumar Routra", designation: "Controller of Exam & Assistant Professor", email: "nirmal@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/08_Mr_Nirmal_Kumar_Routra.jpeg" },
+      { id: 9, name: "Ms. Kalyani Senapati", designation: "Assistant Professor", email: "kalyani@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/09_Ms_Kalyani_Senapati.jpeg" },
+      { id: 10, name: "Mr. Dharma Ku. Rout", designation: "FIC-Placement, Assistant Professor", email: "dharma@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/10_Mr_Dharma_Ku_Rout.jpeg" },
+      { id: 11, name: "Mr. Sandhya Darshan Dash", designation: "Assistant Professor", email: "sandhya@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/11_Mr_Sandhya_Darshan_Dash.png" },
+      { id: 12, name: "Ms. Saismita Das", designation: "Assistant Professor", email: "saismita@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/12_Ms_Saismita_Das.png" },
+      { id: 13, name: "Mr. Nihar Ranjan Swain", designation: "Assistant Professor", email: "nihar@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/13_Mr_Nihar_Ranjan_Swain.jpeg" },
+      { id: 14, name: "Ms. Rosy Barik", designation: "Assistant Professor", email: "rosy@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/14_Ms_Rosy_Barik.jpeg" },
+      { id: 15, name: "Mr. Alok Kumar", designation: "Assistant Professor", email: "alokkumar@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/15_Mr_Alok_Kumar.jpeg" },
+      { id: 16, name: "Dr. Bhabani Mallia", designation: "Associate Professor", email: "drbhabani@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/16_Dr_Bhabani_Mallia.jpeg" },
+      { id: 17, name: "Mr. Amit Kumar Muduli", designation: "Assistant Professor", email: "amit@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/17_Mr_Amit_Kumar_Muduli.png" },
+      { id: 18, name: "Ms. Diptimayee Mishra", designation: "Assistant Professor", email: "diptimayee@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/18_Ms_Diptimayee_Mishra.jpeg" },
+      { id: 19, name: "Mr. Sitikantha Biswal", designation: "Faculty & Research Associate", email: "sitikantha@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/19_Mr_Sitikantha_Biswal.jpeg" },
+      { id: 20, name: "Ms. Chanchal Sharma", designation: "Assistant Professor", email: "chanchal@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/20_Ms_Chanchal_Sharma.jpeg" },
+      { id: 21, name: "Mr. Sanchayan Mondal", designation: "Assistant Professor", email: "sanchayan@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/21_Mr_Sanchayan_Mondal.jpeg" },
+      { id: 22, name: "Mr. Debendra Kumar Rath", designation: "Assistant Professor", email: "dev@srustiacademy.ac.in", photo: "Faculty_Members/Photos_Original/22_Mr_Debendra_Kumar_Rath.png" }
+    ];
+
+    let currentIndex = 0; // Starts at Dr. Umakanta Dash (Principal)
+    const viewport = document.getElementById('carouselViewport');
+
+    function renderCarousel() {
+      viewport.innerHTML = '';
+      const total = FACULTY_MEMBERS.length;
+      const visibleRange = 5; // Show 5 cards on left, center, 5 cards on right
+
+      for (let offset = -visibleRange; offset <= visibleRange; offset++) {
+        let index = (currentIndex + offset + total) % total;
+        const faculty = FACULTY_MEMBERS[index];
+
+        const card = document.createElement('div');
+        card.className = `carousel-card-wrap ${offset === 0 ? 'active' : ''}`;
+        
+        // 3D cylindrical geometry calculation
+        const angle = offset * 14.5; // degrees of curvature
+        const xDist = offset * 142;  // horizontal spacing
+        const zDist = -Math.abs(offset) * 55; // push backwards
+        const scale = offset === 0 ? 1.15 : Math.max(0.68, 1 - Math.abs(offset) * 0.08);
+        const opacity = Math.abs(offset) > 4 ? 0 : Math.max(0.3, 1 - Math.abs(offset) * 0.16);
+        const zIndex = 20 - Math.abs(offset);
+
+        card.style.transform = `translateX(${xDist}px) translateZ(${zDist}px) rotateY(${angle}deg) scale(${scale})`;
+        card.style.zIndex = zIndex;
+        card.style.opacity = opacity;
+
+        card.innerHTML = `
+          <div class="faculty-card-inner">
+            <img src="${faculty.photo}" alt="${faculty.name}" class="faculty-card-img" />
+            <div class="faculty-card-meta">
+              <div class="faculty-card-name">${faculty.name}</div>
+              <div class="faculty-card-desig">${faculty.designation}</div>
+            </div>
+          </div>
+        `;
+
+        card.addEventListener('click', () => {
+          if (offset === 0) {
+            openModal(faculty);
+          } else {
+            currentIndex = index;
+            renderCarousel();
+          }
+        });
+
+        viewport.appendChild(card);
+      }
+    }
+
+    // ─── AUTOMATIC CAROUSEL ENGINE (NO BUTTONS NEEDED) ───
+    let autoCarouselTimer = null;
+    let isHovered = false;
+    let isModalOpen = false;
+
+    function stepNext() {
+      currentIndex = (currentIndex + 1) % FACULTY_MEMBERS.length;
+      renderCarousel();
+    }
+
+    function startAutoCarousel() {
+      stopAutoCarousel();
+      autoCarouselTimer = setInterval(() => {
+        if (!isHovered && !isModalOpen) {
+          stepNext();
+        }
+      }, 2600); // Rotates smoothly every 2.6 seconds
+    }
+
+    function stopAutoCarousel() {
+      if (autoCarouselTimer) {
+        clearInterval(autoCarouselTimer);
+        autoCarouselTimer = null;
+      }
+    }
+
+    // Pause on mouse hover, resume on mouse leave
+    const stageContainer = document.querySelector('.carousel-stage-container');
+    if (stageContainer) {
+      stageContainer.addEventListener('mouseenter', () => {
+        isHovered = true;
+      });
+      stageContainer.addEventListener('mouseleave', () => {
+        isHovered = false;
+      });
+      // Touch pause for mobile
+      stageContainer.addEventListener('touchstart', () => {
+        isHovered = true;
+      }, { passive: true });
+      stageContainer.addEventListener('touchend', () => {
+        setTimeout(() => { isHovered = false; }, 2000);
+      }, { passive: true });
+    }
+
+    // Keyboard navigation
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        currentIndex = (currentIndex - 1 + FACULTY_MEMBERS.length) % FACULTY_MEMBERS.length;
+        renderCarousel();
+      } else if (e.key === 'ArrowRight') {
+        currentIndex = (currentIndex + 1) % FACULTY_MEMBERS.length;
+        renderCarousel();
+      } else if (e.key === 'Escape') {
+        closeModal();
+        closeNotesModal();
+      }
+    });
+
+    // Touch Swipe support
+    let touchStartX = 0;
+    viewport.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    viewport.addEventListener('touchend', (e) => {
+      const diffX = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(diffX) > 40) {
+        if (diffX > 0) {
+          currentIndex = (currentIndex - 1 + FACULTY_MEMBERS.length) % FACULTY_MEMBERS.length;
+        } else {
+          currentIndex = (currentIndex + 1) % FACULTY_MEMBERS.length;
+        }
+        renderCarousel();
+      }
+    }, { passive: true });
+
+    // Tribute Modal
+    function openModal(f) {
+      isModalOpen = true;
+      document.getElementById('modalImg').src = f.photo;
+      document.getElementById('modalId').textContent = `FACULTY #${String(f.id).padStart(2, '0')}`;
+      document.getElementById('modalName').textContent = f.name;
+      document.getElementById('modalDesig').textContent = f.designation;
+      document.getElementById('modalEmail').textContent = `✉️ ${f.email}`;
+      document.getElementById('modalEmail').href = `mailto:${f.email}`;
+      document.getElementById('tributeModal').classList.add('active');
+    }
+
+    function closeModal(e) {
+      isModalOpen = false;
+      document.getElementById('tributeModal').classList.remove('active');
+    }
+
+    // Notes Modal
+    function openNotesModal(title, content) {
+      isModalOpen = true;
+      document.getElementById('notesTitle').textContent = title;
+      document.getElementById('notesContent').textContent = content;
+      document.getElementById('notesModal').classList.add('active');
+    }
+
+    function closeNotesModal(e) {
+      isModalOpen = false;
+      document.getElementById('notesModal').classList.remove('active');
+    }
+
+    // Initialize & Start Continuous Auto-Carousel
+    renderCarousel();
+    startAutoCarousel();
+  </script>
+
+</body>
+</html>

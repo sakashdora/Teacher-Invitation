@@ -1,0 +1,7 @@
+Faculty Member #12
+========================================
+Name        : Ms. Saismita Das
+Designation : Assistant Professor
+Email       : saismita@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

@@ -1,0 +1,16 @@
+{
+  "id": 6,
+  "name": "Dr. Susmita Parija",
+  "designation": "Trainning Head, Associate Professor",
+  "email": "drsusmita@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Dr_Susmita_Parija",
+  "folder_name": "06_Dr_Susmita_Parija",
+  "original_photo_filename": "06_Dr_Susmita_Parija.png",
+  "labeled_photo_filename": "06_Dr_Susmita_Parija.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/06_Dr_Susmita_Parija.png",
+    "labeled_photo": "Photos_With_Name_Overlay/06_Dr_Susmita_Parija.png",
+    "teacher_folder": "By_Teacher/06_Dr_Susmita_Parija"
+  }
+}

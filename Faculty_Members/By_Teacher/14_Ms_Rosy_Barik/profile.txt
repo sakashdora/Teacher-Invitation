@@ -1,0 +1,7 @@
+Faculty Member #14
+========================================
+Name        : Ms. Rosy Barik
+Designation : Assistant Professor
+Email       : rosy@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

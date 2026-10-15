@@ -1,0 +1,16 @@
+{
+  "id": 14,
+  "name": "Ms. Rosy Barik",
+  "designation": "Assistant Professor",
+  "email": "rosy@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Ms_Rosy_Barik",
+  "folder_name": "14_Ms_Rosy_Barik",
+  "original_photo_filename": "14_Ms_Rosy_Barik.jpeg",
+  "labeled_photo_filename": "14_Ms_Rosy_Barik.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/14_Ms_Rosy_Barik.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/14_Ms_Rosy_Barik.png",
+    "teacher_folder": "By_Teacher/14_Ms_Rosy_Barik"
+  }
+}

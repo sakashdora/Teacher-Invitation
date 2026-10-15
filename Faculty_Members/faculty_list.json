@@ -1,0 +1,354 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Umakanta Dash",
+    "designation": "Principal & Professor",
+    "email": "drukdash@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Dr_Umakanta_Dash",
+    "folder_name": "01_Dr_Umakanta_Dash",
+    "original_photo_filename": "01_Dr_Umakanta_Dash.jpeg",
+    "labeled_photo_filename": "01_Dr_Umakanta_Dash.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/01_Dr_Umakanta_Dash.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/01_Dr_Umakanta_Dash.png",
+      "teacher_folder": "By_Teacher/01_Dr_Umakanta_Dash"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Dr. Gangadhar Mishra",
+    "designation": "Dean (Training and Placement) & Professor",
+    "email": "placement@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Dr_Gangadhar_Mishra",
+    "folder_name": "02_Dr_Gangadhar_Mishra",
+    "original_photo_filename": "02_Dr_Gangadhar_Mishra.jpeg",
+    "labeled_photo_filename": "02_Dr_Gangadhar_Mishra.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/02_Dr_Gangadhar_Mishra.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/02_Dr_Gangadhar_Mishra.png",
+      "teacher_folder": "By_Teacher/02_Dr_Gangadhar_Mishra"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Dr. Pragyan Parimita Sarangi",
+    "designation": "Vice- Principal and Associate Professor",
+    "email": "drpragyan@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Dr_Pragyan_Parimita_Sarangi",
+    "folder_name": "03_Dr_Pragyan_Parimita_Sarangi",
+    "original_photo_filename": "03_Dr_Pragyan_Parimita_Sarangi.jpeg",
+    "labeled_photo_filename": "03_Dr_Pragyan_Parimita_Sarangi.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/03_Dr_Pragyan_Parimita_Sarangi.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/03_Dr_Pragyan_Parimita_Sarangi.png",
+      "teacher_folder": "By_Teacher/03_Dr_Pragyan_Parimita_Sarangi"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Dr. Arpan Mahapatra",
+    "designation": "Associate Professor",
+    "email": "drarpan@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Dr_Arpan_Mahapatra",
+    "folder_name": "04_Dr_Arpan_Mahapatra",
+    "original_photo_filename": "04_Dr_Arpan_Mahapatra.jpeg",
+    "labeled_photo_filename": "04_Dr_Arpan_Mahapatra.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/04_Dr_Arpan_Mahapatra.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/04_Dr_Arpan_Mahapatra.png",
+      "teacher_folder": "By_Teacher/04_Dr_Arpan_Mahapatra"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Dr. Anuradha Mishra",
+    "designation": "Associate Professor",
+    "email": "dranuradha@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Dr_Anuradha_Mishra",
+    "folder_name": "05_Dr_Anuradha_Mishra",
+    "original_photo_filename": "05_Dr_Anuradha_Mishra.jpeg",
+    "labeled_photo_filename": "05_Dr_Anuradha_Mishra.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/05_Dr_Anuradha_Mishra.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/05_Dr_Anuradha_Mishra.png",
+      "teacher_folder": "By_Teacher/05_Dr_Anuradha_Mishra"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Dr. Susmita Parija",
+    "designation": "Trainning Head, Associate Professor",
+    "email": "drsusmita@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Dr_Susmita_Parija",
+    "folder_name": "06_Dr_Susmita_Parija",
+    "original_photo_filename": "06_Dr_Susmita_Parija.png",
+    "labeled_photo_filename": "06_Dr_Susmita_Parija.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/06_Dr_Susmita_Parija.png",
+      "labeled_photo": "Photos_With_Name_Overlay/06_Dr_Susmita_Parija.png",
+      "teacher_folder": "By_Teacher/06_Dr_Susmita_Parija"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Dr. Jakki Samir Khan",
+    "designation": "Associate Professor",
+    "email": "drjakki@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Dr_Jakki_Samir_Khan",
+    "folder_name": "07_Dr_Jakki_Samir_Khan",
+    "original_photo_filename": "07_Dr_Jakki_Samir_Khan.jpeg",
+    "labeled_photo_filename": "07_Dr_Jakki_Samir_Khan.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/07_Dr_Jakki_Samir_Khan.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/07_Dr_Jakki_Samir_Khan.png",
+      "teacher_folder": "By_Teacher/07_Dr_Jakki_Samir_Khan"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Mr. Nirmal Kumar Routra",
+    "designation": "Controller of Exam & Assistant Professor",
+    "email": "nirmal@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Mr_Nirmal_Kumar_Routra",
+    "folder_name": "08_Mr_Nirmal_Kumar_Routra",
+    "original_photo_filename": "08_Mr_Nirmal_Kumar_Routra.jpeg",
+    "labeled_photo_filename": "08_Mr_Nirmal_Kumar_Routra.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/08_Mr_Nirmal_Kumar_Routra.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/08_Mr_Nirmal_Kumar_Routra.png",
+      "teacher_folder": "By_Teacher/08_Mr_Nirmal_Kumar_Routra"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Ms. Kalyani Senapati",
+    "designation": "Assistant Professor",
+    "email": "kalyani@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Ms_Kalyani_Senapati",
+    "folder_name": "09_Ms_Kalyani_Senapati",
+    "original_photo_filename": "09_Ms_Kalyani_Senapati.jpeg",
+    "labeled_photo_filename": "09_Ms_Kalyani_Senapati.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/09_Ms_Kalyani_Senapati.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/09_Ms_Kalyani_Senapati.png",
+      "teacher_folder": "By_Teacher/09_Ms_Kalyani_Senapati"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Mr. Dharma Ku. Rout",
+    "designation": "FIC-placement, Assistant Professor",
+    "email": "dharma@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Mr_Dharma_Ku_Rout",
+    "folder_name": "10_Mr_Dharma_Ku_Rout",
+    "original_photo_filename": "10_Mr_Dharma_Ku_Rout.jpeg",
+    "labeled_photo_filename": "10_Mr_Dharma_Ku_Rout.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/10_Mr_Dharma_Ku_Rout.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/10_Mr_Dharma_Ku_Rout.png",
+      "teacher_folder": "By_Teacher/10_Mr_Dharma_Ku_Rout"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Mr. Sandhya Darshan Dash",
+    "designation": "Assistant Professor",
+    "email": "sandhya@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Mr_Sandhya_Darshan_Dash",
+    "folder_name": "11_Mr_Sandhya_Darshan_Dash",
+    "original_photo_filename": "11_Mr_Sandhya_Darshan_Dash.png",
+    "labeled_photo_filename": "11_Mr_Sandhya_Darshan_Dash.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/11_Mr_Sandhya_Darshan_Dash.png",
+      "labeled_photo": "Photos_With_Name_Overlay/11_Mr_Sandhya_Darshan_Dash.png",
+      "teacher_folder": "By_Teacher/11_Mr_Sandhya_Darshan_Dash"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Ms. Saismita Das",
+    "designation": "Assistant Professor",
+    "email": "saismita@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Ms_Saismita_Das",
+    "folder_name": "12_Ms_Saismita_Das",
+    "original_photo_filename": "12_Ms_Saismita_Das.png",
+    "labeled_photo_filename": "12_Ms_Saismita_Das.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/12_Ms_Saismita_Das.png",
+      "labeled_photo": "Photos_With_Name_Overlay/12_Ms_Saismita_Das.png",
+      "teacher_folder": "By_Teacher/12_Ms_Saismita_Das"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Mr. Nihar Ranjan Swain",
+    "designation": "Assistant Professor",
+    "email": "nihar@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Mr_Nihar_Ranjan_Swain",
+    "folder_name": "13_Mr_Nihar_Ranjan_Swain",
+    "original_photo_filename": "13_Mr_Nihar_Ranjan_Swain.jpeg",
+    "labeled_photo_filename": "13_Mr_Nihar_Ranjan_Swain.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/13_Mr_Nihar_Ranjan_Swain.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/13_Mr_Nihar_Ranjan_Swain.png",
+      "teacher_folder": "By_Teacher/13_Mr_Nihar_Ranjan_Swain"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Ms. Rosy Barik",
+    "designation": "Assistant Professor",
+    "email": "rosy@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Ms_Rosy_Barik",
+    "folder_name": "14_Ms_Rosy_Barik",
+    "original_photo_filename": "14_Ms_Rosy_Barik.jpeg",
+    "labeled_photo_filename": "14_Ms_Rosy_Barik.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/14_Ms_Rosy_Barik.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/14_Ms_Rosy_Barik.png",
+      "teacher_folder": "By_Teacher/14_Ms_Rosy_Barik"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Mr. Alok Kumar",
+    "designation": "Assistant Professor",
+    "email": "alokkumar@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Mr_Alok_Kumar",
+    "folder_name": "15_Mr_Alok_Kumar",
+    "original_photo_filename": "15_Mr_Alok_Kumar.jpeg",
+    "labeled_photo_filename": "15_Mr_Alok_Kumar.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/15_Mr_Alok_Kumar.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/15_Mr_Alok_Kumar.png",
+      "teacher_folder": "By_Teacher/15_Mr_Alok_Kumar"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Dr. Bhabani Mallia",
+    "designation": "Associate Professor",
+    "email": "drbhabani@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Dr_Bhabani_Mallia",
+    "folder_name": "16_Dr_Bhabani_Mallia",
+    "original_photo_filename": "16_Dr_Bhabani_Mallia.jpeg",
+    "labeled_photo_filename": "16_Dr_Bhabani_Mallia.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/16_Dr_Bhabani_Mallia.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/16_Dr_Bhabani_Mallia.png",
+      "teacher_folder": "By_Teacher/16_Dr_Bhabani_Mallia"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Mr. Amit Kumar Muduli",
+    "designation": "Assistant Professor",
+    "email": "amit@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Mr_Amit_Kumar_Muduli",
+    "folder_name": "17_Mr_Amit_Kumar_Muduli",
+    "original_photo_filename": "17_Mr_Amit_Kumar_Muduli.png",
+    "labeled_photo_filename": "17_Mr_Amit_Kumar_Muduli.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/17_Mr_Amit_Kumar_Muduli.png",
+      "labeled_photo": "Photos_With_Name_Overlay/17_Mr_Amit_Kumar_Muduli.png",
+      "teacher_folder": "By_Teacher/17_Mr_Amit_Kumar_Muduli"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Ms. Diptimayee Mishra",
+    "designation": "Assistant Professor",
+    "email": "diptimayee@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Ms_Diptimayee_Mishra",
+    "folder_name": "18_Ms_Diptimayee_Mishra",
+    "original_photo_filename": "18_Ms_Diptimayee_Mishra.jpeg",
+    "labeled_photo_filename": "18_Ms_Diptimayee_Mishra.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/18_Ms_Diptimayee_Mishra.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/18_Ms_Diptimayee_Mishra.png",
+      "teacher_folder": "By_Teacher/18_Ms_Diptimayee_Mishra"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Mr. Sitikantha Biswal",
+    "designation": "Faculty & Research Associate",
+    "email": "sitikantha@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Mr_Sitikantha_Biswal",
+    "folder_name": "19_Mr_Sitikantha_Biswal",
+    "original_photo_filename": "19_Mr_Sitikantha_Biswal.jpeg",
+    "labeled_photo_filename": "19_Mr_Sitikantha_Biswal.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/19_Mr_Sitikantha_Biswal.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/19_Mr_Sitikantha_Biswal.png",
+      "teacher_folder": "By_Teacher/19_Mr_Sitikantha_Biswal"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Ms. Chanchal Sharma",
+    "designation": "Assistant Professor",
+    "email": "chanchal@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Ms_Chanchal_Sharma",
+    "folder_name": "20_Ms_Chanchal_Sharma",
+    "original_photo_filename": "20_Ms_Chanchal_Sharma.jpeg",
+    "labeled_photo_filename": "20_Ms_Chanchal_Sharma.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/20_Ms_Chanchal_Sharma.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/20_Ms_Chanchal_Sharma.png",
+      "teacher_folder": "By_Teacher/20_Ms_Chanchal_Sharma"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Mr. Sanchayan Mondal",
+    "designation": "Assistant Professor",
+    "email": "sanchayan@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Mr_Sanchayan_Mondal",
+    "folder_name": "21_Mr_Sanchayan_Mondal",
+    "original_photo_filename": "21_Mr_Sanchayan_Mondal.jpeg",
+    "labeled_photo_filename": "21_Mr_Sanchayan_Mondal.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/21_Mr_Sanchayan_Mondal.jpeg",
+      "labeled_photo": "Photos_With_Name_Overlay/21_Mr_Sanchayan_Mondal.png",
+      "teacher_folder": "By_Teacher/21_Mr_Sanchayan_Mondal"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Mr. Debendra Kumar Rath",
+    "designation": "Assistant Professor",
+    "email": "dev@srustiacademy.ac.in",
+    "institution": "Srusti Academy of Management",
+    "safe_name": "Mr_Debendra_Kumar_Rath",
+    "folder_name": "22_Mr_Debendra_Kumar_Rath",
+    "original_photo_filename": "22_Mr_Debendra_Kumar_Rath.png",
+    "labeled_photo_filename": "22_Mr_Debendra_Kumar_Rath.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/22_Mr_Debendra_Kumar_Rath.png",
+      "labeled_photo": "Photos_With_Name_Overlay/22_Mr_Debendra_Kumar_Rath.png",
+      "teacher_folder": "By_Teacher/22_Mr_Debendra_Kumar_Rath"
+    }
+  }
+]

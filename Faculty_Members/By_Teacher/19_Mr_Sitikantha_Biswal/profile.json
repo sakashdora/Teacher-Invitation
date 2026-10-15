@@ -1,0 +1,16 @@
+{
+  "id": 19,
+  "name": "Mr. Sitikantha Biswal",
+  "designation": "Faculty & Research Associate",
+  "email": "sitikantha@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Mr_Sitikantha_Biswal",
+  "folder_name": "19_Mr_Sitikantha_Biswal",
+  "original_photo_filename": "19_Mr_Sitikantha_Biswal.jpeg",
+  "labeled_photo_filename": "19_Mr_Sitikantha_Biswal.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/19_Mr_Sitikantha_Biswal.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/19_Mr_Sitikantha_Biswal.png",
+    "teacher_folder": "By_Teacher/19_Mr_Sitikantha_Biswal"
+  }
+}

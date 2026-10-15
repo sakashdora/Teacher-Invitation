@@ -1,0 +1,16 @@
+{
+  "id": 18,
+  "name": "Ms. Diptimayee Mishra",
+  "designation": "Assistant Professor",
+  "email": "diptimayee@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Ms_Diptimayee_Mishra",
+  "folder_name": "18_Ms_Diptimayee_Mishra",
+  "original_photo_filename": "18_Ms_Diptimayee_Mishra.jpeg",
+  "labeled_photo_filename": "18_Ms_Diptimayee_Mishra.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/18_Ms_Diptimayee_Mishra.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/18_Ms_Diptimayee_Mishra.png",
+    "teacher_folder": "By_Teacher/18_Ms_Diptimayee_Mishra"
+  }
+}

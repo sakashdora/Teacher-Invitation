@@ -1,0 +1,16 @@
+{
+  "id": 9,
+  "name": "Ms. Kalyani Senapati",
+  "designation": "Assistant Professor",
+  "email": "kalyani@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Ms_Kalyani_Senapati",
+  "folder_name": "09_Ms_Kalyani_Senapati",
+  "original_photo_filename": "09_Ms_Kalyani_Senapati.jpeg",
+  "labeled_photo_filename": "09_Ms_Kalyani_Senapati.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/09_Ms_Kalyani_Senapati.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/09_Ms_Kalyani_Senapati.png",
+    "teacher_folder": "By_Teacher/09_Ms_Kalyani_Senapati"
+  }
+}

@@ -1,0 +1,7 @@
+Faculty Member #20
+========================================
+Name        : Ms. Chanchal Sharma
+Designation : Assistant Professor
+Email       : chanchal@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

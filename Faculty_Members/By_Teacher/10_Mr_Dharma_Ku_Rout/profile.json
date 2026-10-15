@@ -1,0 +1,16 @@
+{
+  "id": 10,
+  "name": "Mr. Dharma Ku. Rout",
+  "designation": "FIC-placement, Assistant Professor",
+  "email": "dharma@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Mr_Dharma_Ku_Rout",
+  "folder_name": "10_Mr_Dharma_Ku_Rout",
+  "original_photo_filename": "10_Mr_Dharma_Ku_Rout.jpeg",
+  "labeled_photo_filename": "10_Mr_Dharma_Ku_Rout.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/10_Mr_Dharma_Ku_Rout.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/10_Mr_Dharma_Ku_Rout.png",
+    "teacher_folder": "By_Teacher/10_Mr_Dharma_Ku_Rout"
+  }
+}

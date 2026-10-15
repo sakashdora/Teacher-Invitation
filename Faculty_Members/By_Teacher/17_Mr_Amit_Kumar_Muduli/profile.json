@@ -1,0 +1,16 @@
+{
+  "id": 17,
+  "name": "Mr. Amit Kumar Muduli",
+  "designation": "Assistant Professor",
+  "email": "amit@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Mr_Amit_Kumar_Muduli",
+  "folder_name": "17_Mr_Amit_Kumar_Muduli",
+  "original_photo_filename": "17_Mr_Amit_Kumar_Muduli.png",
+  "labeled_photo_filename": "17_Mr_Amit_Kumar_Muduli.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/17_Mr_Amit_Kumar_Muduli.png",
+    "labeled_photo": "Photos_With_Name_Overlay/17_Mr_Amit_Kumar_Muduli.png",
+    "teacher_folder": "By_Teacher/17_Mr_Amit_Kumar_Muduli"
+  }
+}

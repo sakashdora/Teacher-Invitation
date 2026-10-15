@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f0e3">
+  <meta name="description" content="A personal invitation to TEJAS ’26 — The Fresh Bloom, 30 October 2026 at JRD Tata Hall.">
+  <title>Your Invitation · TEJAS ’26</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/invitation.css">
+
+  <link rel="stylesheet" href="assets/css/soundtrack.css">
+
+  <script src="data/faculty.js" defer></script>
+  <script src="assets/js/faculty-match.js" defer></script>
+  <script src="data/event.js" defer></script>
+  <script src="assets/js/soundtrack.js" defer></script>
+  <script src="assets/js/invitation-renderer.js" defer></script>
+  <script src="assets/js/invitation.js" defer></script>
+</head>
+<body>
+  <header class="invitation-header">
+    <a class="identity" id="invitation-home" href="index.html" aria-label="TEJAS ’26 celebration home"><span class="identity-emblem" aria-hidden="true">S</span><span><strong>SRUSTI</strong><small>ACADEMY OF MANAGEMENT<br>&amp; TECHNOLOGY</small></span></a>
+    <span class="header-edition">THE FRESH BLOOM <span aria-hidden="true">·</span> 2026</span>
+    <button class="personalize-button" id="personalize-button" type="button">Change recipient <span aria-hidden="true">↗</span></button>
+  </header>
+
+  <main class="invitation-experience" id="invitation-experience">
+    <div class="invitation-page-heading"><a id="back-home" href="index.html?teacher=guest">← Back to home</a><p class="eyebrow">A keepsake, made for you</p><h1 id="letter-heading" tabindex="-1">Your personal invitation.</h1><p id="recipient-caption">Choose your name to include your portrait.</p></div>
+    <section class="opened-invitation" id="opened-invitation" aria-label="Personalised invitation">
+      <div class="invitation-loading" id="invitation-loading" role="status"><span aria-hidden="true">T ’26</span><p>Preparing your invitation…</p></div>
+      <p class="invitation-error" id="invitation-error" role="alert" hidden></p>
+      <button class="secondary-action retry-invitation" id="retry-invitation" type="button" hidden>Try again</button>
+      <figure class="invitation-artwork" id="invitation-artwork" hidden><img id="invitation-preview" width="1500" height="2100" alt=""><figcaption class="sr-only" id="invitation-description"></figcaption></figure>
+      <div class="invitation-actions"><button class="primary-action" id="download-invitation" type="button" disabled>Download invitation <span aria-hidden="true">↓</span></button><button class="secondary-action" id="print-invitation" type="button" disabled>Print / Save PDF <span aria-hidden="true">↗</span></button><a class="secondary-action" href="assets/tejas-2026.ics" download>Save the date</a></div>
+      <p class="download-note">High-resolution PNG · Your name, portrait and event details included</p>
+    </section>
+    <p class="sr-only" id="invitation-status" role="status"></p>
+    <noscript><p class="no-script">Please enable JavaScript to prepare your personalised invitation. TEJAS ’26 is on 30 October 2026, 10:00 AM–12:45 PM at JRD Tata Hall.</p></noscript>
+  </main>
+  <footer class="invitation-footer"><span>MADE OF NEW BEGINNINGS</span><span aria-hidden="true">✦</span><span>30 OCTOBER 2026</span></footer>
+
+  <dialog class="personalize-dialog" id="personalize-dialog" aria-labelledby="personalize-heading">
+    <button class="dialog-close" id="close-personalize" type="button" aria-label="Close personalisation">×</button>
+    <p class="eyebrow">A little more personal</p><h2 id="personalize-heading">Whom shall we invite?</h2>
+    <p>Find your name to add your original faculty portrait and prepare your invitation.</p>
+    <form id="personalize-form" novalidate><label for="invitation-name">Your name</label><input id="invitation-name" type="text" autocomplete="off" placeholder="e.g. Anuradha Mishra" maxlength="100" aria-describedby="personalize-error"><div id="person-matches" class="person-matches" hidden></div><p id="personalize-error" class="form-error" role="alert" hidden></p><button class="primary-action" type="submit">Prepare my invitation <span aria-hidden="true">↗</span></button></form>
+    <a class="reset-name" id="return-home" href="index.html?teacher=guest">Return to home</a>
+  </dialog>
+</body>
+</html>

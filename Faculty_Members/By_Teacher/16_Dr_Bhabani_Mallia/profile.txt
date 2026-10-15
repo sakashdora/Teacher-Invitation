@@ -1,0 +1,7 @@
+Faculty Member #16
+========================================
+Name        : Dr. Bhabani Mallia
+Designation : Associate Professor
+Email       : drbhabani@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

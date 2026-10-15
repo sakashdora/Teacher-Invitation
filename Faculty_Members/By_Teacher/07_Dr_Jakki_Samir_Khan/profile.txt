@@ -1,0 +1,7 @@
+Faculty Member #07
+========================================
+Name        : Dr. Jakki Samir Khan
+Designation : Associate Professor
+Email       : drjakki@srustiacademy.ac.in
+Institution : Srusti Academy of Management
+========================================

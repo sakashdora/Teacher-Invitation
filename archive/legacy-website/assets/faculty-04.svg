@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-label="Illustrated faculty portrait placeholder">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#60818a"/><stop offset="1" stop-color="#e7d6c0"/></linearGradient><radialGradient id="skin"><stop stop-color="#cda68c"/><stop offset="1" stop-color="#cda68c"/></radialGradient><linearGradient id="v" x2="0" y2="1"><stop stop-color="#ffffff" stop-opacity=".12"/><stop offset="1" stop-color="#301b1a" stop-opacity=".2"/></linearGradient></defs>
+<rect width="600" height="800" fill="url(#bg)"/><circle cx="300" cy="345" r="248" fill="none" stroke="#f8dfad" stroke-width="1.3" opacity=".55"/><circle cx="300" cy="345" r="217" fill="#fff5e6" opacity=".13"/>
+<path d="M105 800 Q120 560 241 538 L359 538 Q481 560 496 800Z" fill="#384c43"/><path d="M154 345 Q180 166 300 175 Q438 161 453 346 L442 450 Q401 398 398 304 Q370 239 300 236 Q227 235 205 306 L198 445Z" fill="#352329"/>
+<path d="M265 465 L265 557 Q297 583 331 557 L331 469Z" fill="#cda68c"/><ellipse cx="177" cy="386" rx="21" ry="34" fill="#cda68c"/><ellipse cx="423" cy="386" rx="21" ry="34" fill="#cda68c"/>
+<ellipse cx="300" cy="360" rx="130" ry="153" fill="url(#skin)"/>
+<path d="M186 324 Q180 201 280 186 Q392 158 423 296 Q381 252 349 253 Q246 277 204 327Z" fill="#352329"/>
+<path d="M230 345 Q255 330 279 346 M321 346 Q343 331 369 345" fill="none" stroke="#352329" stroke-width="8" stroke-linecap="round"/>
+<ellipse cx="254" cy="363" rx="7" ry="9" fill="#352f31"/><ellipse cx="346" cy="363" rx="7" ry="9" fill="#352f31"/>
+<path d="M298 366 L290 423 Q300 433 312 422" fill="none" stroke="#a7796a" stroke-width="5" stroke-linecap="round"/>
+<path d="M273 449 Q300 469 328 449 Q300 481 273 449Z" fill="#925c59" opacity=".84"/>
+<circle cx="174" cy="387" r="8" fill="#c9a45b"/><circle cx="426" cy="387" r="8" fill="#c9a45b"/><path d="M195 555 Q241 520 269 530 L300 588 L331 530 Q360 522 407 555 L462 800 H136Z" fill="#384c43"/><path d="M269 529 L300 586 L331 529 L358 561 L300 664 L241 563Z" fill="#efddc3"/>
+<rect width="600" height="800" fill="url(#v)"/>
+<path d="M0 765 Q300 729 600 765" fill="none" stroke="#f2d2a1" stroke-width="1" opacity=".48"/>
+</svg>

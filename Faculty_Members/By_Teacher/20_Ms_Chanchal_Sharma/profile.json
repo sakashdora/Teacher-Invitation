@@ -1,0 +1,16 @@
+{
+  "id": 20,
+  "name": "Ms. Chanchal Sharma",
+  "designation": "Assistant Professor",
+  "email": "chanchal@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Ms_Chanchal_Sharma",
+  "folder_name": "20_Ms_Chanchal_Sharma",
+  "original_photo_filename": "20_Ms_Chanchal_Sharma.jpeg",
+  "labeled_photo_filename": "20_Ms_Chanchal_Sharma.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/20_Ms_Chanchal_Sharma.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/20_Ms_Chanchal_Sharma.png",
+    "teacher_folder": "By_Teacher/20_Ms_Chanchal_Sharma"
+  }
+}

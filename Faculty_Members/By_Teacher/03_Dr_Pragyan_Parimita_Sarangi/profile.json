@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "name": "Dr. Pragyan Parimita Sarangi",
+  "designation": "Vice- Principal and Associate Professor",
+  "email": "drpragyan@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Dr_Pragyan_Parimita_Sarangi",
+  "folder_name": "03_Dr_Pragyan_Parimita_Sarangi",
+  "original_photo_filename": "03_Dr_Pragyan_Parimita_Sarangi.jpeg",
+  "labeled_photo_filename": "03_Dr_Pragyan_Parimita_Sarangi.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/03_Dr_Pragyan_Parimita_Sarangi.jpeg",
+    "labeled_photo": "Photos_With_Name_Overlay/03_Dr_Pragyan_Parimita_Sarangi.png",
+    "teacher_folder": "By_Teacher/03_Dr_Pragyan_Parimita_Sarangi"
+  }
+}

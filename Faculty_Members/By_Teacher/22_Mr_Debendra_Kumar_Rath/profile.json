@@ -1,0 +1,16 @@
+{
+  "id": 22,
+  "name": "Mr. Debendra Kumar Rath",
+  "designation": "Assistant Professor",
+  "email": "dev@srustiacademy.ac.in",
+  "institution": "Srusti Academy of Management",
+  "safe_name": "Mr_Debendra_Kumar_Rath",
+  "folder_name": "22_Mr_Debendra_Kumar_Rath",
+  "original_photo_filename": "22_Mr_Debendra_Kumar_Rath.png",
+  "labeled_photo_filename": "22_Mr_Debendra_Kumar_Rath.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/22_Mr_Debendra_Kumar_Rath.png",
+    "labeled_photo": "Photos_With_Name_Overlay/22_Mr_Debendra_Kumar_Rath.png",
+    "teacher_folder": "By_Teacher/22_Mr_Debendra_Kumar_Rath"
+  }
+}
