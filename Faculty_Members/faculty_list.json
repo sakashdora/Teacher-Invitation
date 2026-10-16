@@ -80,22 +80,6 @@
     }
   },
   {
-    "id": 6,
-    "name": "Dr. Susmita Parija",
-    "designation": "Trainning Head, Associate Professor",
-    "email": "drsusmita@srustiacademy.ac.in",
-    "institution": "Srusti Academy of Management",
-    "safe_name": "Dr_Susmita_Parija",
-    "folder_name": "06_Dr_Susmita_Parija",
-    "original_photo_filename": "06_Dr_Susmita_Parija.png",
-    "labeled_photo_filename": "06_Dr_Susmita_Parija.png",
-    "relative_paths": {
-      "original_photo": "Photos_Original/06_Dr_Susmita_Parija.png",
-      "labeled_photo": "Photos_With_Name_Overlay/06_Dr_Susmita_Parija.png",
-      "teacher_folder": "By_Teacher/06_Dr_Susmita_Parija"
-    }
-  },
-  {
     "id": 7,
     "name": "Dr. Jakki Samir Khan",
     "designation": "Associate Professor",
@@ -350,5 +334,56 @@
       "labeled_photo": "Photos_With_Name_Overlay/22_Mr_Debendra_Kumar_Rath.png",
       "teacher_folder": "By_Teacher/22_Mr_Debendra_Kumar_Rath"
     }
+  },
+  {
+    "id": 23,
+    "name": "Namrata Sahoo",
+    "designation": "Deputy Director – Strategy",
+    "email": "",
+    "institution": "Srusti Academy of Management & Technology",
+    "safe_name": "Namrata_Sahoo",
+    "folder_name": "23_Namrata_Sahoo",
+    "original_photo_filename": "23_Namrata_Sahoo.png",
+    "labeled_photo_filename": null,
+    "relative_paths": {
+      "original_photo": "Photos_Original/23_Namrata_Sahoo.png",
+      "labeled_photo": null,
+      "teacher_folder": "By_Teacher/23_Namrata_Sahoo"
+    },
+    "source": "Name, title and original photograph supplied by the project owner on 16 October 2026."
+  },
+  {
+    "id": 24,
+    "name": "Er. Saroj K. Sahoo",
+    "designation": "Chairman",
+    "email": "",
+    "institution": "Srusti Academy of Management & Technology",
+    "safe_name": "Er_Saroj_K_Sahoo",
+    "folder_name": "24_Er_Saroj_K_Sahoo",
+    "original_photo_filename": "24_Er_Saroj_K_Sahoo.png",
+    "labeled_photo_filename": null,
+    "relative_paths": {
+      "original_photo": "Photos_Original/24_Er_Saroj_K_Sahoo.png",
+      "labeled_photo": null,
+      "teacher_folder": "By_Teacher/24_Er_Saroj_K_Sahoo"
+    },
+    "source": "Name, title and original photograph supplied by the project owner on 16 October 2026."
+  },
+  {
+    "id": 25,
+    "name": "Soumya Ranjan Swain",
+    "designation": "Assistant Professor",
+    "email": "",
+    "institution": "Srusti Academy of Management & Technology",
+    "safe_name": "Soumya_Ranjan_Swain",
+    "folder_name": "25_Soumya_Ranjan_Swain",
+    "original_photo_filename": "25_Soumya_Ranjan_Swain.png",
+    "labeled_photo_filename": null,
+    "relative_paths": {
+      "original_photo": "Photos_Original/25_Soumya_Ranjan_Swain.png",
+      "labeled_photo": null,
+      "teacher_folder": "By_Teacher/25_Soumya_Ranjan_Swain"
+    },
+    "source": "Name, title and original photograph supplied by the project owner on 16 October 2026."
   }
 ]

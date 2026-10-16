@@ -17,7 +17,6 @@ test('Welcome resolves every full faculty name, ignoring titles and letter case'
     assert.equal(matches[0].id, person.id);
   }
   assert.equal(window.TEJAS_NAMES.findMatches('  ANURADHA   MISHRA ', faculty)[0].name, 'Dr. Anuradha Mishra');
-  assert.equal(window.TEJAS_NAMES.findMatches('Susmita', faculty)[0].name, 'Dr. Susmita Parija');
   assert.equal(window.TEJAS_NAMES.findMatches('Prof. Pragyan Parimita Sarangi', faculty)[0].name, 'Dr. Pragyan Parimita Sarangi');
 });
 
@@ -28,10 +27,11 @@ test('Welcome leaves ambiguous and unknown names unresolved instead of guessing'
     assert.equal(window.TEJAS_NAMES.findMatches(input, faculty).length, 0);
   }
 });
-test('All 22 profiles retain source names, emails, roles and portrait paths', async () => {
+test('All profiles retain source names, emails, roles and portrait paths', async () => {
   const source = JSON.parse(await readFile(new URL('Faculty_Members/faculty_list.json', root), 'utf8'));
-  assert.equal(faculty.length, 22);
-  assert.equal(new Set(faculty.map(person => person.id)).size, 22);
+  assert.equal(faculty.length, source.length);
+  assert.deepEqual(Array.from(faculty.filter(person => person.id >= 1 && person.id <= 22), person => person.id), Array.from({length:22}, (_, index) => index + 1).filter(id => id !== 6));
+  assert.equal(new Set(faculty.map(person => person.id)).size, faculty.length);
   for (const person of faculty) {
     const original = source.find(item => item.id === person.id);
     assert.equal(person.name, original.name); assert.equal(person.email, original.email);
@@ -40,22 +40,70 @@ test('All 22 profiles retain source names, emails, roles and portrait paths', as
     await access(new URL(person.photo, root));
   }
 });
-test('Six programme slots are continuous, with correct durations and local images', async () => {
-  const minutes = time => { const [h, m] = time.split(':').map(Number); return h * 60 + m; };
-  assert.equal(event.programme.length, 6);
-  assert.equal(event.date, '2026-10-30'); assert.equal(event.timezone, 'Asia/Kolkata');
-  assert.equal(event.programme[0].start, '10:00'); assert.equal(event.programme.at(-1).end, '12:45');
-  for (const [index, entry] of event.programme.entries()) {
-    assert.equal(minutes(entry.end) - minutes(entry.start), entry.duration);
-    if (index > 0) assert.equal(event.programme[index - 1].end, entry.start);
-    await access(new URL(entry.image, root));
+test('Removed teacher cannot be found or selected by the former profile ID', async () => {
+  assert.equal(faculty.some(person => person.id === 6), false);
+  for (const query of ['Susmita', 'Dr. Susmita Parija', 'Dr.Susmita Parijha', 'Parija']) {
+    assert.equal(window.TEJAS_NAMES.findMatches(query, faculty).length, 0);
   }
-  assert.equal(event.programme.reduce((total, entry) => total + entry.duration, 0), 165);
+  const csv = await readFile(new URL('Faculty_Members/faculty_list.csv', root), 'utf8');
+  assert.doesNotMatch(csv, /Susmita|drsusmita|^6,/im);
 });
-test('Calendar download matches the confirmed date, venue and IST time range', async () => {
+test('Leadership names resolve unambiguously and retain the supplied titles without invented emails', () => {
+  const namrata = window.TEJAS_NAMES.findMatches('Namrata Sahoo', faculty);
+  assert.equal(namrata.length, 1);
+  assert.equal(namrata[0].id, 23);
+  assert.equal(namrata[0].role, 'Deputy Director – Strategy');
+  assert.equal(namrata[0].email, '');
+  for (const query of ['Er. Saroj K. Sahoo', 'Saroj', 'Saroj K Sahoo', 'ER SAROJ K SAHOO']) {
+    const chairman = window.TEJAS_NAMES.findMatches(query, faculty);
+    assert.equal(chairman.length, 1);
+    assert.equal(chairman[0].id, 24);
+    assert.equal(chairman[0].name, 'Er. Saroj K. Sahoo');
+    assert.equal(chairman[0].role, 'Chairman');
+    assert.equal(chairman[0].email, '');
+  }
+  assert.equal(window.TEJAS_NAMES.findMatches('Sahoo', faculty).length, 2);
+  assert.equal(window.TEJAS_NAMES.findMatches('Er.', faculty).length, 0);
+});
+test('Soumya Ranjan Swain resolves to the supplied Assistant Professor profile', () => {
+  for (const query of ['Soumya', 'Soumya Ranjan Swain', 'SOUMYA RANJAN SWAIN', 'Mr. Soumya Ranjan Swain']) {
+    const matches = window.TEJAS_NAMES.findMatches(query, faculty);
+    assert.equal(matches.length, 1);
+    assert.equal(matches[0].id, 25);
+    assert.equal(matches[0].name, 'Soumya Ranjan Swain');
+    assert.equal(matches[0].role, 'Assistant Professor');
+    assert.equal(matches[0].email, '');
+  }
+  assert.equal(window.TEJAS_NAMES.findMatches('Swain', faculty).length, 2);
+});
+test('The eleven agenda items follow the supplied order without times or durations', async () => {
+  assert.deepEqual(Array.from(event.programme, entry => entry.title), [
+    'Introduction of Freshers & Song', 'Fun Games', 'Solo Performance', 'Group / Duo Performances',
+    'Games', 'Solo Performances', 'Games', 'Mimicry', 'Freshers’ Title Announcement', 'Vote of Thanks', 'DJ'
+  ]);
+  assert.equal(new Set(event.programme.map(entry => entry.id)).size, 11);
+  assert.equal(event.date, '2026-10-30'); assert.equal(event.timezone, 'Asia/Kolkata');
+  assert.equal(event.programme[3].subtitle, 'Dance');
+  assert.deepEqual(Array.from(event.programme[1].highlights), ['Guess the Song or Shot', 'Say It First', 'Funny Face']);
+  assert.deepEqual(Array.from(event.programme[4].highlights), ['Dialogue Decoder', 'Hook Step Dance-Off', 'Song']);
+  assert.deepEqual(Array.from(event.programme[6].highlights), ['One Word, One Song', 'Wrong Answers Only', 'Fastest Reaction']);
+  for (const entry of event.programme) {
+    for (const field of ['start', 'end', 'duration']) assert.equal(Object.hasOwn(entry, field), false);
+    if (entry.image) await access(new URL(entry.image, root));
+  }
+});
+test('Calendar saves only the confirmed date and venue without a timed appointment', async () => {
   const calendar = await readFile(new URL('assets/tejas-2026.ics', root), 'utf8');
-  assert.match(calendar, /DTSTART:20261030T043000Z/); assert.match(calendar, /DTEND:20261030T071500Z/);
+  assert.match(calendar, /DTSTART;VALUE=DATE:20261030/); assert.match(calendar, /DTEND;VALUE=DATE:20261031/);
+  assert.doesNotMatch(calendar, /(?:DTSTART|DTEND)[^\r\n]*T\d{6}/);
+  assert.match(calendar, /TRANSP:TRANSPARENT/);
   assert.match(calendar, /LOCATION:JRD Tata Hall/); assert.match(calendar, /BEGIN:VEVENT/); assert.match(calendar, /END:VCALENDAR/);
+});
+test('Live pages and invitation artwork contain no published event times or stale morning instructions', async () => {
+  for (const path of ['index.html', 'invitation.html', 'data/event.js', 'assets/js/invitation.js', 'assets/js/invitation-renderer.js', 'assets/tejas-2026.ics']) {
+    const content = await readFile(new URL(path, root), 'utf8');
+    assert.doesNotMatch(content, /\b\d{1,2}[:.]\d{2}\s*(?:AM|PM)\b|\b(?:morning|be seated by)\b|THE TIME/i, path);
+  }
 });
 test('Page local scripts, stylesheet, favicon and downloads exist', async () => {
   const html = await readFile(new URL('index.html', root), 'utf8');

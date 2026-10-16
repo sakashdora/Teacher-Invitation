@@ -44,8 +44,8 @@
       if (imageURL) URL.revokeObjectURL(imageURL);
       imageURL = URL.createObjectURL(result.blob);
       preview.src = imageURL;
-      preview.alt = `TEJAS ’26 invitation for ${person.name}, with their portrait. ${result.date}, 10:00 AM–12:45 PM IST, ${window.TEJAS_EVENT.venue}.`;
-      byId('invitation-description').textContent = `${person.name}, ${person.role}. You are cordially invited to TEJAS ’26 — The Fresh Bloom. ${result.quote} ${result.date}, 10:00 AM–12:45 PM IST, ${window.TEJAS_EVENT.venue}, Srusti Academy. With warm regards, the TEJAS ’26 Organising Team.`;
+      preview.alt = `TEJAS ’26 invitation for ${person.name}, with their portrait. ${result.date}, ${window.TEJAS_EVENT.venue}.`;
+      byId('invitation-description').textContent = `${person.name}, ${person.role}. You are cordially invited to TEJAS ’26 — The Fresh Bloom. ${result.quote} ${result.date}, ${window.TEJAS_EVENT.venue}, Srusti Academy. With warm regards, the TEJAS ’26 Organising Team.`;
       await preview.decode();
       if (version !== renderVersion) return;
       byId('invitation-loading').hidden = true;

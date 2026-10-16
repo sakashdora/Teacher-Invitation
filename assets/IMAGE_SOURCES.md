@@ -1,10 +1,10 @@
 # Image sources
 
-Faculty portraits use the original files in `Faculty_Members/Photos_Original/`, mapped directly from the supplied document records. These portraits were not generated or altered.
+Faculty portraits use the original files in `Faculty_Members/Photos_Original/`, mapped directly from the supplied document records or the project owner's later additions. The portraits of Namrata Sahoo, Er. Saroj K. Sahoo and Soumya Ranjan Swain were supplied by the owner on 16 October 2026. These portraits were not generated or altered.
 
 The live presentation assets are optimized WebP files in `assets/images/`:
 
-- `faculty-group.webp`: resized from the supplied `FacultyGroup/IMG_20261009_180145572_HDR.jpg.jpeg`.
+- `faculty-group.webp`: resized from the supplied `FacultyGroup/IMG_20261009_180145572_HDR.jpg.jpeg`. The dedicated faculty group section displays this complete 4:3 photograph without cropping and links to the original 4096 × 3072 image.
 - `odissi.webp`: resized from the existing `assets/odissi-dance.jpg`.
 - `freshers.webp`: resized from the existing `assets/freshers-editorial.png`.
 - `celebration.webp`: resized from the existing `assets/sangam-hero.png`.

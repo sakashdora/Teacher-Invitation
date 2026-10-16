@@ -135,8 +135,11 @@
     byId('profile-role').textContent = person.role;
     byId('profile-photo').src = person.photo;
     byId('profile-photo').alt = person.name;
-    byId('profile-email').textContent = person.email;
-    byId('profile-email').href = `mailto:${person.email}`;
+    const emailLink = byId('profile-email');
+    emailLink.hidden = !person.email;
+    emailLink.textContent = person.email || '';
+    if (person.email) emailLink.href = `mailto:${person.email}`;
+    else emailLink.removeAttribute('href');
     openDialog(profileDialog);
   }
   document.querySelectorAll('dialog:not(#welcome-intro)').forEach(dialog => {
@@ -277,17 +280,11 @@
     if (!entering) enterCelebration(null);
   });
 
-  const calendarIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6m10-6v6M3 10h18M7 14h3m4 0h3M7 17h3m4 0h3"/></svg>';
-  const cupIcon = '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 20h25v10c0 8-25 8-25 0V20Zm25 1h3c9 0 8 11-3 11M5 39c8 4 27 4 34 0M18 15c-7-7 6-7 0-14m9 14c-7-7 6-7 0-14"/></svg>';
-  const formatTime = value => {
-    const [hours, minutes] = value.split(':');
-    return `${Number(hours) % 12 || 12}:${minutes} ${Number(hours) >= 12 ? 'PM' : 'AM'}`;
-  };
-  event.programme.forEach(entry => {
-    const row = document.createElement('article');
+  event.programme.forEach((entry, index) => {
+    const row = document.createElement('li');
     row.className = 'timeline-row'; row.id = entry.id;
     row.setAttribute('aria-labelledby', `${entry.id}-title`);
-    row.innerHTML = `<div class="time-card"><div class="time-range">${calendarIcon}<span class="time-text"><time datetime="${event.date}T${entry.start}:00+05:30">${formatTime(entry.start)}</time> – <time datetime="${event.date}T${entry.end}:00+05:30">${formatTime(entry.end)}</time></span></div><span class="duration">${entry.duration} MIN</span><p class="time-category">${escapeHTML(entry.category)}</p></div><div class="event-card${entry.compact ? ' compact' : ''}"><img class="event-image" src="${entry.image}" alt="" loading="lazy" width="600" height="350"><div class="event-copy">${entry.icon ? `<span class="event-icon" aria-hidden="true">${entry.icon === 'cup' ? cupIcon : '★'}</span><div>` : ''}${!entry.compact ? `<span class="act-label">${entry.act}</span>` : ''}<h3 id="${entry.id}-title">${escapeHTML(entry.title)}</h3>${entry.subtitle ? `<p class="event-subtitle">${escapeHTML(entry.subtitle)}</p>` : ''}<p class="event-description">${escapeHTML(entry.description)}</p>${entry.highlights.length ? `<ul class="event-highlights">${entry.highlights.map(item => `<li>${escapeHTML(item)}</li>`).join('')}</ul>` : ''}${entry.notes.length ? `<details class="event-notes"><summary aria-label="Event notes for ${escapeHTML(entry.title)}">View event notes</summary><ul>${entry.notes.map(item => `<li>${escapeHTML(item)}</li>`).join('')}</ul></details>` : ''}${entry.icon ? '</div>' : ''}</div></div>`;
+    row.innerHTML = `<div class="sequence-card"><span class="sequence-number" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span><p class="sequence-category">${escapeHTML(entry.category)}</p></div><div class="event-card${entry.image ? '' : ' no-image'}">${entry.image ? `<img class="event-image" src="${escapeHTML(entry.image)}" alt="" loading="lazy" width="600" height="350">` : ''}<div class="event-copy"><h3 id="${entry.id}-title">${escapeHTML(entry.title)}</h3>${entry.subtitle ? `<p class="event-subtitle">${escapeHTML(entry.subtitle)}</p>` : ''}<p class="event-description">${escapeHTML(entry.description)}</p>${entry.highlights.length ? `<ul class="event-highlights">${entry.highlights.map(item => `<li>${escapeHTML(item)}</li>`).join('')}</ul>` : ''}</div></div>`;
     byId('programme-timeline').append(row);
   });
   const navLinks = [...document.querySelectorAll('.main-nav a')];

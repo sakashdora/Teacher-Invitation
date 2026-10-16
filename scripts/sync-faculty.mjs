@@ -1,7 +1,7 @@
 import { readFile, writeFile, access } from 'node:fs/promises';
 const root = new URL('../', import.meta.url);
 const records = JSON.parse(await readFile(new URL('Faculty_Members/faculty_list.json', root), 'utf8'));
-if (records.length !== 22 || new Set(records.map(item => item.id)).size !== 22) throw new Error('Expected 22 unique faculty records.');
+if (!records.length || records.some(item => !Number.isSafeInteger(item.id) || item.id < 1) || new Set(records.map(item => item.id)).size !== records.length) throw new Error('Expected profiles with unique positive numeric IDs.');
 const faculty = await Promise.all(records.map(async item => {
   const photo = `Faculty_Members/${item.relative_paths.original_photo}`;
   await access(new URL(photo, root));

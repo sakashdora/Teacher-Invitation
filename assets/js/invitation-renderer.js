@@ -111,9 +111,8 @@
 
     ctx.fillStyle = colors.wine; ctx.beginPath(); ctx.roundRect(132, 1470, 1236, 204, 12); ctx.fill();
     const details = [
-      { x: 338, title: 'THE DAY', value: day(), detail: 'Friday' },
-      { x: 750, title: 'THE TIME', value: '10:00 AM', detail: 'to 12:45 PM · IST' },
-      { x: 1162, title: 'THE PLACE', value: window.TEJAS_EVENT.venue, detail: 'Srusti Academy' }
+      { x: 441, title: 'THE DAY', value: day(), detail: 'Friday' },
+      { x: 1059, title: 'THE PLACE', value: window.TEJAS_EVENT.venue, detail: 'Srusti Academy' }
     ];
     details.forEach(({x,title,value,detail}) => {
       text(title, x, 1525, `500 16px ${sans}`, '#e4c38f');
@@ -121,8 +120,8 @@
       text(detail, x, 1627, `20px ${sans}`, '#eedac0');
     });
     ctx.strokeStyle = '#e3bf864a'; ctx.lineWidth = 1;
-    [544, 956].forEach(x => { ctx.beginPath(); ctx.moveTo(x,1510); ctx.lineTo(x,1636); ctx.stroke(); });
-    wrap('Join us for a morning of welcome, tradition and celebration.', 1746, 1100, `31px ${serif}`, colors.muted, 40);
+    ctx.beginPath(); ctx.moveTo(750,1510); ctx.lineTo(750,1636); ctx.stroke();
+    wrap('Join us for music, performances, games and celebration.', 1746, 1100, `31px ${serif}`, colors.muted, 40);
     text('With warm regards,', 750, 1838, `47px ${script}`, colors.muted);
     text('The TEJAS ’26 Organising Team', 750, 1890, `italic 600 36px ${serif}`);
     rule(1945, 425, 1075);

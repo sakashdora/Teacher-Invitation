@@ -277,7 +277,7 @@
   <div class="header">
     <div class="badge">Srusti Academy of Management</div>
     <h1>Faculty Directory & Photo Archive</h1>
-    <p class="subtitle">Complete organized catalog of 22 faculty members with high-resolution portraits & profiles</p>
+    <p class="subtitle">Our esteemed teachers and leadership, with original portraits &amp; profiles</p>
     
     <div class="controls">
       <div class="search-box">
@@ -293,7 +293,7 @@
   </div>
 
   <div class="stats" id="statsBar">
-    Showing <span id="visibleCount">22</span> of 22 faculty members
+    <span id="visibleCount">Our esteemed teachers and leadership</span>
   </div>
 
   <div class="grid" id="facultyGrid"></div>
@@ -342,10 +342,10 @@
         f.email.toLowerCase().includes(query)
       );
 
-      document.getElementById('visibleCount').textContent = filtered.length;
+      document.getElementById('visibleCount').textContent = query ? (filtered.length ? 'Matching profiles' : 'No matching profiles') : 'Our esteemed teachers and leadership';
 
       grid.innerHTML = filtered.map(f => {
-        const imgSrc = currentMode === 'labeled' ? f.relative_paths.labeled_photo : f.relative_paths.original_photo;
+        const imgSrc = currentMode === 'labeled' && f.relative_paths.labeled_photo ? f.relative_paths.labeled_photo : f.relative_paths.original_photo;
         return `
           <div class="card">
             <div class="card-id">#${String(f.id).padStart(2, '0')}</div>
@@ -357,9 +357,9 @@
                 <div class="teacher-name">${f.name}</div>
                 <div class="teacher-desig">${f.designation}</div>
               </div>
-              <a href="mailto:${f.email}" class="teacher-email" title="Click to email">
+              ${f.email ? `<a href="mailto:${f.email}" class="teacher-email" title="Click to email">
                 ✉️ ${f.email}
-              </a>
+              </a>` : ''}
             </div>
           </div>
         `;

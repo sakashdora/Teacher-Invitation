@@ -36,13 +36,6 @@ window.TEJAS_FACULTY = [
     "photo": "Faculty_Members/Photos_Original/05_Dr_Anuradha_Mishra.jpeg"
   },
   {
-    "id": 6,
-    "name": "Dr. Susmita Parija",
-    "role": "Training Head, Associate Professor",
-    "email": "drsusmita@srustiacademy.ac.in",
-    "photo": "Faculty_Members/Photos_Original/06_Dr_Susmita_Parija.png"
-  },
-  {
     "id": 7,
     "name": "Dr. Jakki Samir Khan",
     "role": "Associate Professor",
@@ -153,5 +146,26 @@ window.TEJAS_FACULTY = [
     "role": "Assistant Professor",
     "email": "dev@srustiacademy.ac.in",
     "photo": "Faculty_Members/Photos_Original/22_Mr_Debendra_Kumar_Rath.png"
+  },
+  {
+    "id": 23,
+    "name": "Namrata Sahoo",
+    "role": "Deputy Director – Strategy",
+    "email": "",
+    "photo": "Faculty_Members/Photos_Original/23_Namrata_Sahoo.png"
+  },
+  {
+    "id": 24,
+    "name": "Er. Saroj K. Sahoo",
+    "role": "Chairman",
+    "email": "",
+    "photo": "Faculty_Members/Photos_Original/24_Er_Saroj_K_Sahoo.png"
+  },
+  {
+    "id": 25,
+    "name": "Soumya Ranjan Swain",
+    "role": "Assistant Professor",
+    "email": "",
+    "photo": "Faculty_Members/Photos_Original/25_Soumya_Ranjan_Swain.png"
   }
 ];

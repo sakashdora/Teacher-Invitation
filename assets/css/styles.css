@@ -593,6 +593,70 @@ button {
   margin-left: 5px
 }
 
+/* Full faculty photograph */
+.faculty-memory {
+  max-width: 1000px;
+  margin-block: 48px 56px
+}
+
+.faculty-memory-header {
+  text-align: center;
+  margin-bottom: 24px
+}
+
+.faculty-memory-header h2 {
+  font: 600 clamp(32px,4vw,42px)/1.15 var(--serif);
+  color: var(--maroon);
+  margin: 9px 0
+}
+
+.faculty-memory-header > p:last-child {
+  font-size: 12px;
+  color: var(--muted);
+  max-width: 550px;
+  margin-inline: auto
+}
+
+.faculty-memory-frame {
+  margin: 0;
+  padding: 10px 10px 0;
+  border: 1px solid #c8a36b;
+  border-radius: 16px;
+  background: var(--paper);
+  box-shadow: 0 12px 36px #6b481412
+}
+
+.faculty-memory-photo {
+  display: block;
+  border-radius: 8px
+}
+
+.faculty-memory-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px
+}
+
+.faculty-memory-frame figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 18px;
+  padding: 5px 8px;
+  font-size: 10px;
+  color: var(--muted)
+}
+
+.faculty-memory-frame figcaption a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  color: var(--maroon);
+  text-underline-offset: 4px
+}
+
 /* Event timeline */
 .schedule {
   padding-top: 8px;
@@ -661,7 +725,10 @@ button {
 .timeline {
   position: relative;
   display: grid;
-  gap: 18px
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0
 }
 
 .timeline:before {
@@ -694,7 +761,7 @@ button {
   z-index: 2
 }
 
-.time-card {
+.sequence-card {
   background: linear-gradient(135deg,#f9e8d6,#fcf0e1);
   border: 1px solid #eed2b9;
   border-radius: 19px;
@@ -705,6 +772,14 @@ button {
   align-items: center;
   text-align: center;
   min-height: 149px
+}
+
+.sequence-number {
+  display: block;
+  font: 600 54px/1 var(--serif);
+  color: #ad7d29;
+  margin-bottom: 9px;
+  font-variant-numeric: lining-nums tabular-nums
 }
 
 .time-range {
@@ -737,7 +812,7 @@ button {
   letter-spacing: .02em
 }
 
-.time-category {
+.sequence-category {
   font: 700 15px/1.15 var(--serif);
   color: var(--wine);
   text-transform: uppercase;
@@ -776,9 +851,15 @@ button {
 }
 
 .event-copy {
-  padding: 15px 0 14px 26px;
+  padding: 26px 0 24px 26px;
   grid-column: 1;
-  min-width: 0
+  min-width: 0;
+  align-self: center
+}
+
+.event-card.no-image .event-copy {
+  grid-column: 1/-1;
+  padding-right: 26px
 }
 
 .act-label {
@@ -882,7 +963,7 @@ button {
   min-height: 111px
 }
 
-.timeline-row:has(.compact) .time-card {
+.timeline-row:has(.compact) .sequence-card {
   min-height: 111px;
   padding-block: 14px
 }
@@ -1532,7 +1613,7 @@ dialog::backdrop {
     font-size: 17px;
     gap: 6px
   }
-  .time-category {
+  .sequence-category {
     font-size: 14px
   }
   .event-copy {
@@ -1642,7 +1723,7 @@ dialog::backdrop {
     left: 167px;
     top: 28px
   }
-  .time-card {
+  .sequence-card {
     padding: 16px 8px;
     border-radius: 13px
   }
@@ -1660,7 +1741,7 @@ dialog::backdrop {
     display: block;
     width: 100%
   }
-  .time-category {
+  .sequence-category {
     font-size: 13px
   }
   .event-copy {
@@ -1722,6 +1803,25 @@ dialog::backdrop {
 }
 
 @media(max-width:560px) {
+  .faculty-memory {
+    margin-block: 34px 38px
+  }
+  .faculty-memory-header {
+    margin-bottom: 18px
+  }
+  .faculty-memory-header > p:last-child {
+    font-size: 11px
+  }
+  .faculty-memory-frame {
+    padding: 6px 6px 0;
+    border-radius: 12px
+  }
+  .faculty-memory-frame figcaption {
+    flex-direction: column;
+    padding: 12px 4px 0;
+    text-align: center;
+    font-size: 9px
+  }
   html {
     scroll-padding-top: 20px
   }
@@ -1941,10 +2041,10 @@ dialog::backdrop {
     width: 11px;
     height: 11px
   }
-  .time-card {
+  .sequence-card {
     display: grid;
-    grid-template-columns: minmax(0,1fr) auto;
-    gap: 3px 5px;
+    grid-template-columns: auto minmax(0,1fr);
+    gap: 12px;
     text-align: left;
     align-items: center;
     min-height: 0;
@@ -1952,6 +2052,10 @@ dialog::backdrop {
     border-radius: 12px 12px 0 0;
     border-bottom: none;
     background: linear-gradient(110deg,#f4e1cb,#f9ebdd)
+  }
+  .sequence-number {
+    font-size: 32px;
+    margin: 0
   }
   .time-range {
     flex-wrap: nowrap;
@@ -1974,14 +2078,14 @@ dialog::backdrop {
     margin: 0;
     padding: 4px 7px
   }
-  .time-category {
-    grid-column: 1;
+  .sequence-category {
+    grid-column: 2;
     font-family: var(--sans);
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 600;
     letter-spacing: .03em;
     max-width: none;
-    padding-left: 22px
+    padding-left: 0
   }
   .event-card {
     border-radius: 0 0 12px 12px;
@@ -2023,7 +2127,7 @@ dialog::backdrop {
     padding: 7px 10px;
     min-height: 34px
   }
-  .timeline-row:has(.compact) .time-card {
+  .timeline-row:has(.compact) .sequence-card {
     min-height: 0;
     padding: 10px 12px
   }
@@ -2236,7 +2340,7 @@ dialog::backdrop {
 }
 
 @media print {
-  .site-header,.hero,.faculty-section,.faculty-browse,.welcome-note,.site-footer,.event-notes,.schedule-meta a {
+  .site-header,.hero,.faculty-section,.faculty-browse,.faculty-memory,.welcome-note,.site-footer,.event-notes,.schedule-meta a {
     display: none
   }
   .section-container {
@@ -2245,7 +2349,7 @@ dialog::backdrop {
   .schedule {
     padding: 0
   }
-  .event-card,.time-card {
+  .event-card,.sequence-card {
     break-inside: avoid
   }
   .timeline-row {
@@ -2271,7 +2375,7 @@ dialog::backdrop {
   .timeline-row:before {
     left: 189px
   }
-  .time-card {
+  .sequence-card {
     min-height: 0
   }
   .timeline {

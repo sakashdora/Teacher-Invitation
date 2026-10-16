@@ -7,7 +7,7 @@
     .toLocaleLowerCase('en-IN')
     .replace(/[^\p{L}\p{N}\s]/gu, ' ')
     .trim()
-    .replace(/^(?:(?:dr|doctor|prof|professor|mr|mrs|ms)\s+)+/, '')
+    .replace(/^(?:(?:dr|doctor|prof|professor|mr|mrs|ms|er)\s+)+/, '')
     .replace(/\s+/g, ' ');
 
   function findMatches(query, records) {

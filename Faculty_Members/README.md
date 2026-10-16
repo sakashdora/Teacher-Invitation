@@ -2,6 +2,10 @@
 
 All 22 faculty members from `22 faculty members shown.docx` (Srusti Academy of Management) have been extracted, properly named, organized into structured folders, and processed with high-resolution labeled photo cards.
 
+Namrata Sahoo (Deputy Director – Strategy), Er. Saroj K. Sahoo (Chairman), and Soumya Ranjan Swain (Assistant Professor) were added on 16 October 2026 using the project owner's supplied names, titles and original photographs. These additions have no supplied email addresses or separate labeled photo cards; the directory uses their original photos in both view modes.
+
+The active directory contains 24 profiles. Dr. Susmita Parija (former ID 6) was removed at the project owner's request on 16 October 2026. The source photographs and extracted profile folders remain archived here; only entries in `faculty_list.json` and `faculty_list.csv` belong to the active directory. Other profile IDs are unchanged, and ID 6 is not reassigned.
+
 ---
 
 ## 📁 Directory Structure Overview
@@ -23,7 +27,7 @@ c:\Teacher_Fresher\
     │   ├── 01_Dr_Umakanta_Dash.jpeg
     │   ├── 02_Dr_Gangadhar_Mishra.jpeg
     │   ├── 03_Dr_Pragyan_Parimita_Sarangi.jpeg
-    │   └── ... (22 files)
+    │   └── ... (25 original photos)
     │
     ├── Photos_With_Name_Overlay/           # High-resolution cards with Teacher Name, Role & Email
     │   ├── 01_Dr_Umakanta_Dash.png
@@ -38,12 +42,12 @@ c:\Teacher_Fresher\
         │   ├── profile.txt                 # Formatted profile details
         │   └── profile.json                # JSON profile
         ├── 02_Dr_Gangadhar_Mishra/
-        └── ... (22 teacher folders)
+        └── ... (25 profile folders)
 ```
 
 ---
 
-## 👥 Faculty Members List (22 Members)
+## 👥 Faculty and Leadership
 
 | # | Name | Designation | Email |
 |---|------|-------------|-------|
@@ -52,7 +56,6 @@ c:\Teacher_Fresher\
 | 03 | **Dr. Pragyan Parimita Sarangi** | Vice-Principal and Associate Professor | drpragyan@srustiacademy.ac.in |
 | 04 | **Dr. Arpan Mahapatra** | Associate Professor | drarpan@srustiacademy.ac.in |
 | 05 | **Dr. Anuradha Mishra** | Associate Professor | dranuradha@srustiacademy.ac.in |
-| 06 | **Dr. Susmita Parija** | Training Head, Associate Professor | drsusmita@srustiacademy.ac.in |
 | 07 | **Dr. Jakki Samir Khan** | Associate Professor | drjakki@srustiacademy.ac.in |
 | 08 | **Mr. Nirmal Kumar Routra** | Controller of Exam & Assistant Professor | nirmal@srustiacademy.ac.in |
 | 09 | **Ms. Kalyani Senapati** | Assistant Professor | kalyani@srustiacademy.ac.in |
@@ -69,13 +72,16 @@ c:\Teacher_Fresher\
 | 20 | **Ms. Chanchal Sharma** | Assistant Professor | chanchal@srustiacademy.ac.in |
 | 21 | **Mr. Sanchayan Mondal** | Assistant Professor | sanchayan@srustiacademy.ac.in |
 | 22 | **Mr. Debendra Kumar Rath** | Assistant Professor | dev@srustiacademy.ac.in |
+| 23 | **Namrata Sahoo** | Deputy Director – Strategy | Not supplied |
+| 24 | **Er. Saroj K. Sahoo** | Chairman | Not supplied |
+| 25 | **Soumya Ranjan Swain** | Assistant Professor | Not supplied |
 
 ---
 
 ## 🌟 Features
 
 1. **Original High-Quality Photos (`Photos_Original/`)**:
-   - Preserves exact resolution and format (`.jpeg` / `.png`) directly from the document.
+   - Preserves exact resolution and format (`.jpeg` / `.png`) from the source document or owner-supplied photograph.
    - Clean standardized filenames: `01_Dr_Umakanta_Dash.jpeg`, etc.
 
 2. **Photos With Name Overlay (`Photos_With_Name_Overlay/`)**:
@@ -84,7 +90,7 @@ c:\Teacher_Fresher\
    - Ready for slides, event presentations, certificates, fresher party brochures, and social media.
 
 3. **Individual Folder per Teacher (`By_Teacher/`)**:
-   - Contains original photo, labeled card, `profile.txt`, and `profile.json`.
+   - Contains the original photo, `profile.txt`, and `profile.json`, plus a labeled card where one exists.
 
 4. **Interactive Gallery (`faculty_directory.html`)**:
    - Open in any web browser to view all teachers, search instantly, toggle between Original and Labeled photos, and click to view full size.
