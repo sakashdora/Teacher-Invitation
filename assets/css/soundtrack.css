@@ -1,17 +1,164 @@
-.soundtrack-widget { z-index: 80; }
-.soundtrack-widget[data-dock=floating] { position: fixed; right: max(18px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); }
-.soundtrack-widget[data-dock=entrance] { position: absolute; right: 30px; top: 30px; }
-.soundtrack-widget[data-dock=inline] { display: flex; justify-content: flex-start; margin: 0 42px 16px 0; }
-.intro-panel > .soundtrack-widget, .profile-copy > .soundtrack-widget { justify-content: center; margin: 16px 0 0; }
-.soundtrack-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 9px 14px; border: 1px solid #bd986488; border-radius: 24px; background: #fff9ef; color: #68152f; box-shadow: 0 3px 14px #4d18301a; cursor: pointer; font: 500 11px/1.2 'DM Sans', Arial, sans-serif; touch-action: manipulation; white-space: nowrap; }
-.soundtrack-toggle:hover { background: #f4e7d2; }
-.soundtrack-toggle:focus-visible { outline: 2px solid #996b2c; outline-offset: 3px; }
-.soundtrack-toggle svg { width: 17px; height: 17px; flex-shrink: 0; }
-.soundtrack-toggle[data-playing=true] .soundtrack-slash, .soundtrack-toggle[data-playing=false] .soundtrack-waves { display: none; }
-@media (max-width: 560px) {
-  .soundtrack-widget[data-dock=floating] { right: max(12px, env(safe-area-inset-right)); bottom: max(12px, env(safe-area-inset-bottom)); }
-  .soundtrack-widget[data-dock=entrance] { top: auto; bottom: 20px; right: 24px; }
-  .soundtrack-widget[data-dock=entrance] .soundtrack-toggle { width: 44px; padding: 10px; }
-  .soundtrack-widget[data-dock=entrance] .soundtrack-toggle > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+/* Music on/off soundtrack widget at top-right corner */
+.soundtrack-widget {
+  z-index: 999;
 }
-@media print { .soundtrack-widget { display: none !important; } }
+
+/* Floating on page (top right corner) */
+.soundtrack-widget[data-dock="floating"] {
+  position: fixed;
+  top: max(16px, env(safe-area-inset-top));
+  right: max(20px, env(safe-area-inset-right));
+}
+
+/* On entrance screen (top right corner) */
+.soundtrack-widget[data-dock="entrance"] {
+  position: absolute;
+  top: max(20px, env(safe-area-inset-top));
+  right: max(24px, env(safe-area-inset-right));
+}
+
+/* Inside modals/dialogs (top right corner, offset from close button) */
+.soundtrack-widget[data-dock="dialog"] {
+  position: absolute;
+  top: 12px;
+  right: 56px;
+  z-index: 10;
+}
+
+/* Modals without a close button, e.g. welcome intro */
+#welcome-intro .soundtrack-widget[data-dock="dialog"] {
+  top: max(18px, env(safe-area-inset-top));
+  right: max(20px, env(safe-area-inset-right));
+}
+
+/* Ensure site headers leave ample room so top-right widget never collides */
+@media (min-width: 900px) {
+  .site-header .header-inner {
+    padding-right: 155px;
+  }
+  .invitation-header {
+    padding-right: 155px;
+  }
+}
+
+.soundtrack-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 15px;
+  border: 1px solid rgba(189, 152, 100, 0.45);
+  border-radius: 999px;
+  background: rgba(255, 249, 239, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #68152f;
+  box-shadow: 0 4px 16px rgba(77, 24, 48, 0.12), 0 1px 3px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  font: 600 12px/1.2 'DM Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  letter-spacing: 0.02em;
+  touch-action: manipulation;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  user-select: none;
+}
+
+.soundtrack-toggle:hover {
+  background: #fff3dc;
+  border-color: #ad8245;
+  box-shadow: 0 6px 20px rgba(77, 24, 48, 0.18), 0 2px 4px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.soundtrack-toggle:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.soundtrack-toggle:focus-visible {
+  outline: 2px solid #996b2c;
+  outline-offset: 3px;
+}
+
+.soundtrack-toggle svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.soundtrack-toggle[data-playing="true"] {
+  border-color: rgba(173, 130, 69, 0.7);
+  background: #fffcf7;
+}
+
+.soundtrack-toggle[data-playing="true"] .soundtrack-slash {
+  display: none;
+}
+
+.soundtrack-toggle[data-playing="false"] .soundtrack-waves {
+  display: none;
+}
+
+.soundtrack-toggle[data-playing="false"] {
+  opacity: 0.92;
+  color: #7a505e;
+}
+
+@keyframes soundtrack-wave-pulse {
+  0%, 100% { opacity: 0.55; transform: scale(0.96); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.soundtrack-toggle[data-playing="true"] .soundtrack-waves {
+  transform-origin: 11px 12px;
+  animation: soundtrack-wave-pulse 1.8s ease-in-out infinite;
+}
+
+@media (max-width: 600px) {
+  .soundtrack-widget[data-dock="floating"] {
+    top: max(12px, env(safe-area-inset-top));
+    right: max(12px, env(safe-area-inset-right));
+  }
+  .soundtrack-widget[data-dock="entrance"] {
+    top: 14px;
+    right: 14px;
+  }
+  .soundtrack-widget[data-dock="dialog"] {
+    top: 10px;
+    right: 50px;
+  }
+  #welcome-intro .soundtrack-widget[data-dock="dialog"] {
+    top: 14px;
+    right: 14px;
+  }
+  .soundtrack-toggle {
+    min-height: 36px;
+    padding: 7px 12px;
+    font-size: 11px;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  .soundtrack-toggle {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 50%;
+  }
+  .soundtrack-toggle > span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+}
+
+@media print {
+  .soundtrack-widget {
+    display: none !important;
+  }
+}
+

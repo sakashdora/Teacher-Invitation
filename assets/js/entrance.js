@@ -20,7 +20,7 @@
       <div class="entrance-content">
         <p class="entrance-institution">SRUSTI ACADEMY OF MANAGEMENT &amp; TECHNOLOGY</p>
         <p class="entrance-department">Department of Computer Applications</p>
-        <div class="entrance-title"><p class="entrance-eyebrow">A NEW CHAPTER AWAITS</p><h1>TEJAS <span>’26</span></h1><p class="entrance-script">The Fresh Bloom</p><p class="entrance-dedication">A heartfelt welcome to our esteemed teachers.</p></div>
+        <div class="entrance-title"><p class="entrance-eyebrow">A CELEBRATION OF GUIDANCE &amp; NEW BEGINNINGS</p><h1>TEJAS <span>’26</span></h1><p class="entrance-script">The Fresh Bloom</p><p class="entrance-dedication">A heartfelt welcome to our esteemed teachers.</p></div>
         <div class="entrance-control">
           <div class="entrance-loader" id="entrance-loader"><span class="entrance-loading-mark" aria-hidden="true">T</span><span class="entrance-loading-line" aria-hidden="true"></span></div>
           <button class="entrance-open" id="entrance-open" type="button" hidden><span class="entrance-seal" aria-hidden="true"><span>✦</span><strong>T</strong><small>’26</small><span>❦</span></span><span class="entrance-tap">Tap to open <span aria-hidden="true">↗</span></span></button>

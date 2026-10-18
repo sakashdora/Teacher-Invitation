@@ -261,7 +261,7 @@
       if (destination) destination.scrollIntoView({ behavior: 'instant', block: 'start' });
       else window.scrollTo({ top: 0, behavior: 'instant' });
     }
-    if (!reducedMotion.matches) startAutoplay(selectedTeacher ? 8000 : 4200);
+    if (!reducedMotion.matches && !selectedTeacher) startAutoplay(4200);
     requestAnimationFrame(() => requestAnimationFrame(() => carousel.classList.remove('is-positioning')));
   }
   welcomeForm.addEventListener('submit', formEvent => {

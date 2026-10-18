@@ -8,10 +8,11 @@
   let pending = false;
   let attempt = 0;
   let failed = false;
+
   const audio = document.createElement('audio');
   audio.id = 'page-soundtrack';
-  audio.src = 'assets/audio/tejas-soundtrack.mp3';
-  audio.preload = 'none';
+  audio.src = 'assets/audio/new_song.mp3';
+  audio.preload = 'auto';
   audio.loop = true;
   audio.volume = .35;
   audio.hidden = true;
@@ -26,29 +27,35 @@
   button.type = 'button';
   widget.append(button);
   document.body.append(widget);
-  const speaker = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M11 4 6 8H3v8h3l5 4V4Z"/><path class="soundtrack-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="soundtrack-slash" d="m15 9 6 6m0-6-6 6"/></svg>';
+
+  const speaker = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M11 4 6 8H3v8h3l5 4V4Z"/><path class="soundtrack-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="soundtrack-slash" d="m15 9 6 6m0-6-6 6"/></svg>';
+
   function render() {
     const playing = !audio.paused && !failed;
     const active = playing || pending;
-    button.innerHTML = `${speaker}<span>${failed ? 'Retry music' : pending ? 'Music loading' : playing ? 'Music on' : enabled ? 'Play music' : 'Music off'}</span>`;
+    button.innerHTML = `${speaker}<span>${failed ? 'Retry music' : pending ? 'Music loading…' : playing ? 'Music on' : 'Music off'}</span>`;
     button.dataset.playing = String(active);
     button.setAttribute('aria-pressed', String(active));
     button.setAttribute('aria-label', active ? 'Mute soundtrack' : 'Play soundtrack');
-    button.title = active ? 'Turn background music off' : 'Turn background music on';
+    button.title = active ? 'Turn background music off (Mute)' : 'Turn background music on (Play)';
   }
+
   function save() {
-    try { sessionStorage.setItem(storageKey, JSON.stringify({ enabled, time: audio.currentTime, savedAt: Date.now() })); } catch { /* The control also works without storage. */ }
+    try { sessionStorage.setItem(storageKey, JSON.stringify({ enabled, time: audio.currentTime, savedAt: Date.now() })); } catch { /* Storage is optional. */ }
   }
+
   function pause() {
     attempt += 1;
     enabled = false;
     pending = false;
     audio.pause();
-    save(); render();
+    save();
+    render();
   }
+
   async function start(force = false) {
     if (!force && !enabled) return;
-    if (pending || !audio.paused) return;
+    if (pending || (!audio.paused && !audio.ended)) return;
     enabled = true;
     const thisAttempt = ++attempt;
     pending = true;
@@ -56,11 +63,11 @@
     failed = false;
     render();
     try {
-      // Called directly by the seal or music button, while the user gesture is active.
       await audio.play();
       if (thisAttempt !== attempt) return;
       pending = false;
-      save(); render();
+      save();
+      render();
     } catch (error) {
       if (thisAttempt !== attempt) return;
       pending = false;
@@ -68,20 +75,54 @@
       render();
     }
   }
-  button.addEventListener('click', () => pending || !audio.paused ? pause() : start(true));
+
+  button.addEventListener('click', (event) => {
+    event.stopPropagation();
+    if (pending || !audio.paused) {
+      pause();
+    } else {
+      start(true);
+    }
+  });
+
+  // User gesture unlock for modern browser autoplay policies
+  function onFirstInteraction(event) {
+    if (button.contains(event.target)) return;
+    window.removeEventListener('click', onFirstInteraction, true);
+    window.removeEventListener('touchstart', onFirstInteraction, true);
+    window.removeEventListener('keydown', onFirstInteraction, true);
+    if (enabled && audio.paused && !failed) {
+      start();
+    }
+  }
+  window.addEventListener('click', onFirstInteraction, true);
+  window.addEventListener('touchstart', onFirstInteraction, true);
+  window.addEventListener('keydown', onFirstInteraction, true);
+
   audio.addEventListener('loadedmetadata', () => {
     if (saved && Number.isFinite(saved.time) && Number.isFinite(audio.duration) && audio.duration > 0) {
       audio.currentTime = Math.max(0, saved.time) % audio.duration;
       saved = null;
     }
   });
-  audio.addEventListener('error', () => { failed = true; pending = false; render(); });
+
+  audio.addEventListener('error', () => {
+    if (audio.src && !audio.src.includes('tejas-soundtrack.mp3')) {
+      audio.src = 'assets/audio/tejas-soundtrack.mp3';
+      audio.load();
+      if (enabled) audio.play().catch(() => {});
+      return;
+    }
+    failed = true;
+    pending = false;
+    render();
+  });
+
   audio.addEventListener('playing', () => { pending = false; failed = false; render(); });
   audio.addEventListener('pause', render);
   window.addEventListener('pagehide', () => { save(); audio.pause(); });
   window.addEventListener('pageshow', event => { if (event.persisted && enabled) start(); });
 
-  // A control outside a modal is inert. Move this same control into the active dialog.
   let dialogs = [];
   function dock() {
     dialogs = dialogs.filter(dialog => dialog.open && dialog.isConnected);
@@ -93,12 +134,11 @@
       widget.dataset.dock = 'entrance';
       dialog.append(widget);
     } else {
-      widget.dataset.dock = 'inline';
-      const panel = dialog.querySelector('.intro-panel, .profile-copy');
-      if (panel) panel.append(widget);
-      else dialog.prepend(widget);
+      widget.dataset.dock = 'dialog';
+      dialog.append(widget);
     }
   }
+
   new MutationObserver(records => {
     records.forEach(({ target }) => {
       if (target.tagName !== 'DIALOG') return;
@@ -107,11 +147,14 @@
     });
     dock();
   }).observe(document.body, { subtree: true, attributes: true, attributeFilter: ['open'] });
+
   render();
+
   window.TEJAS_SOUNDTRACK = {
     start,
+    pause,
     resumeFromInvitation() {
-      if (enabled && saved && Date.now() - saved.savedAt < 300000) start();
+      if (enabled) start();
     }
   };
 })();

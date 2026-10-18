@@ -8,7 +8,6 @@
   ];
   const serif = '"Cormorant Garamond", Georgia, serif';
   const sans = '"DM Sans", Arial, sans-serif';
-  const script = '"Alex Brush", "Brush Script MT", cursive';
   const colors = { paper: '#fff9ef', wine: '#64132d', gold: '#ad8245', muted: '#806957' };
   const quoteFor = person => quotes[(person.id - 1) % quotes.length];
   const day = () => new Date(`${window.TEJAS_EVENT.date}T12:00:00+05:30`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata' });
@@ -25,7 +24,7 @@
   async function render(person) {
     const fontLoads = document.fonts ? Promise.allSettled([
       document.fonts.load(`600 58px ${serif}`), document.fonts.load(`italic 34px ${serif}`),
-      document.fonts.load(`500 24px ${sans}`), document.fonts.load(`60px ${script}`)
+      document.fonts.load(`italic 500 48px ${serif}`), document.fonts.load(`500 24px ${sans}`)
     ]) : Promise.resolve();
     const [portrait] = await Promise.all([
       loadPortrait(person.photo),
@@ -85,7 +84,7 @@
     const total = ctx.measureText(first + second).width;
     ctx.textAlign = 'left'; ctx.fillStyle = colors.wine; ctx.fillText(first, (1500 - total) / 2, 345);
     ctx.fillStyle = colors.gold; ctx.fillText(second, (1500 - total) / 2 + ctx.measureText(first).width, 345);
-    text('The Fresh Bloom', 750, 410, `65px ${script}`);
+    text('THE FRESH BLOOM', 750, 408, `italic 500 48px ${serif}`, colors.gold);
     spaced('MCA FRESHERS’ CELEBRATION  ·  BATCH 2026–2028', 456, 16, 2);
     rule(490);
 
@@ -109,21 +108,21 @@
     text('“', 750, 1328, `76px ${serif}`, colors.gold);
     wrap(quoteFor(person), 1358, 1070, `italic 36px ${serif}`, colors.wine, 42);
 
-    ctx.fillStyle = colors.wine; ctx.beginPath(); ctx.roundRect(132, 1470, 1236, 204, 12); ctx.fill();
+    ctx.fillStyle = colors.wine; ctx.beginPath(); ctx.roundRect(132, 1460, 1236, 224, 12); ctx.fill();
     const details = [
-      { x: 441, title: 'THE DAY', value: day(), detail: 'Friday' },
-      { x: 1059, title: 'THE PLACE', value: window.TEJAS_EVENT.venue, detail: 'Srusti Academy' }
+      { x: 441, title: 'DATE & TIME', value: `${day()}`, detail: `${window.TEJAS_EVENT.mainEventTime} · Lunch: ${window.TEJAS_EVENT.lunchTime}` },
+      { x: 1059, title: 'THE VENUE', value: window.TEJAS_EVENT.venue, detail: 'Srusti Academy of Management & Technology' }
     ];
     details.forEach(({x,title,value,detail}) => {
-      text(title, x, 1525, `500 16px ${sans}`, '#e4c38f');
-      text(value, x, 1583, `600 35px ${serif}`, '#fff6e7');
-      text(detail, x, 1627, `20px ${sans}`, '#eedac0');
+      text(title, x, 1515, `600 16px ${sans}`, '#e4c38f');
+      text(value, x, 1573, `600 34px ${serif}`, '#fff6e7');
+      text(detail, x, 1622, `500 21px ${sans}`, '#eedac0');
     });
     ctx.strokeStyle = '#e3bf864a'; ctx.lineWidth = 1;
-    ctx.beginPath(); ctx.moveTo(750,1510); ctx.lineTo(750,1636); ctx.stroke();
-    wrap('Join us for music, performances, games and celebration.', 1746, 1100, `31px ${serif}`, colors.muted, 40);
-    text('With warm regards,', 750, 1838, `47px ${script}`, colors.muted);
-    text('The TEJAS ’26 Organising Team', 750, 1890, `italic 600 36px ${serif}`);
+    ctx.beginPath(); ctx.moveTo(750,1490); ctx.lineTo(750,1650); ctx.stroke();
+    wrap('We warmly seek your gracious presence, blessings and encouragement.', 1746, 1100, `31px ${serif}`, colors.muted, 40);
+    text('With profound respect & warm regards,', 750, 1838, `italic 36px ${serif}`, colors.muted);
+    text('The TEJAS ’26 Organising Team · MCA Batch 2026–2028', 750, 1888, `600 32px ${serif}`);
     rule(1945, 425, 1075);
     text('A new chapter begins with your blessings.', 750, 2006, `italic 27px ${serif}`, colors.muted);
     const blob = await new Promise((resolve, reject) => {

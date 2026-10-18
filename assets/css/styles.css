@@ -11,7 +11,7 @@
   --line: #e8cdb2;
   --serif: 'Cormorant Garamond',Georgia,serif;
   --sans: 'DM Sans',Arial,sans-serif;
-  --script: 'Alex Brush','Brush Script MT',cursive
+  --script: 'Cormorant Garamond',Georgia,serif;
 }
 
 * {
@@ -209,17 +209,21 @@ button {
 }
 
 .header-motto {
-  font: 23px/.92 var(--script);
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.1;
   color: var(--maroon);
   text-align: right;
-  position: relative
+  position: relative;
 }
 
 .header-motto span {
   display: block;
-  font-size: 28px;
-  line-height: .65;
-  margin: 5px 0 -9px
+  font-size: 22px;
+  line-height: 1;
+  margin: 2px 0 0;
 }
 
 /* Welcome hero */
@@ -282,8 +286,13 @@ button {
 }
 
 .hero-subtitle {
-  font: 55px/1.05 var(--script);
-  color: var(--maroon)
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(34px, 4.4vw, 50px);
+  line-height: 1.1;
+  letter-spacing: .02em;
+  color: var(--maroon);
 }
 
 .party-label {
@@ -298,19 +307,150 @@ button {
   letter-spacing: .23em
 }
 
-.hero-details {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  color: #694b42;
-  font-size: 11px;
-  font-weight: 500
+/* Architectural Event Schedule Plaque */
+.schedule-plaque {
+  display: grid;
+  grid-template-columns: 1fr 1px 1.4fr;
+  align-items: stretch;
+  gap: 0;
+  max-width: 840px;
+  margin: 26px auto 18px;
+  background: #ffffff;
+  border: 1px solid rgba(189, 136, 43, 0.32);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(101, 12, 40, 0.07), 0 1px 3px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  text-align: left;
 }
 
-.hero-details span {
+.schedule-col {
+  padding: 20px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.prelude-col {
+  background: rgba(255, 250, 244, 0.65);
+}
+
+.celebration-col {
+  background: #ffffff;
+}
+
+.schedule-divider {
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(189, 136, 43, 0.35) 20%, rgba(189, 136, 43, 0.35) 80%, transparent);
+}
+
+.schedule-col-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--sans);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--maroon);
+  margin: 0 0 6px;
+}
+
+.badge-dot {
+  color: var(--gold);
   font-size: 8px;
-  color: #ab7a29
+}
+
+.schedule-col-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+
+.celebration-col .schedule-col-title {
+  font-size: 22px;
+  color: var(--maroon);
+}
+
+.schedule-col-date {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: #4b363e;
+  margin: 0 0 6px;
+}
+
+.schedule-col-time {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--maroon);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0 0 4px;
+}
+
+.schedule-icon {
+  font-size: 11px;
+  color: var(--gold);
+}
+
+.schedule-col-note {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.schedule-times-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 6px 0 8px;
+}
+
+.event-time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background: rgba(101, 12, 40, 0.06);
+  border: 1px solid rgba(101, 12, 40, 0.15);
+  border-radius: 6px;
+  font-size: 11px;
+  color: var(--maroon);
+}
+
+.lunch-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background: rgba(189, 136, 43, 0.1);
+  border: 1px solid rgba(189, 136, 43, 0.28);
+  border-radius: 6px;
+  font-size: 11px;
+  color: #7d5410;
+}
+
+.lunch-badge strong,
+.event-time-badge strong {
+  font-weight: 700;
+}
+
+.schedule-col-venue {
+  font-family: var(--sans);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
 }
 
 .hero-quote {
@@ -318,13 +458,22 @@ button {
   right: max(5%,calc((100vw - 1260px)/2));
   top: 81px;
   text-align: left;
-  font: 29px/1 var(--script);
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.25;
   color: var(--maroon);
-  transform: rotate(-7deg)
+  transform: rotate(-3deg);
 }
 
 .hero-quote span {
-  padding-left: 10px
+  display: block;
+  font-size: 13px;
+  font-style: normal;
+  color: var(--muted);
+  margin-top: 4px;
+  padding-left: 0;
 }
 
 /* Faculty stage and carousel */
@@ -476,42 +625,43 @@ button {
 .stage-halo {
   position: absolute;
   left: 50%;
-  top: 21px;
-  width: 87%;
-  height: 240px;
+  top: 25px;
+  width: 84%;
+  height: 230px;
   transform: translateX(-50%);
-  border: 2px solid #ffe3aa;
+  border: 1px solid #dfb66744;
   border-radius: 50%;
-  box-shadow: 0 -3px 8px #ffdf9c,0 -2px 25px #ffc16b88,inset 0 2px 10px #ffdf9c;
-  opacity: .7
+  box-shadow: 0 0 30px #dfb66718;
+  opacity: .5;
+  pointer-events: none;
 }
 
 .stage-platform {
   position: absolute;
   left: 50%;
-  bottom: 4px;
-  width: 88%;
-  height: 96px;
+  bottom: 6px;
+  width: 84%;
+  height: 84px;
   border-radius: 50%;
-  border: 2px solid #ffe3a8;
-  box-shadow: 0 0 8px #fff6ce,0 0 20px #ffc382,inset 0 0 22px #eec07844;
+  border: 1px solid #dfb66770;
+  background: radial-gradient(ellipse at 50% 50%, #7d173644 0%, #3d071866 60%, transparent 80%);
+  box-shadow: 0 8px 24px #1d030c66;
   transform: translateX(-50%);
   pointer-events: none;
-  z-index: 0
+  z-index: 0;
 }
 
-.stage-platform:before,.stage-platform:after {
+.stage-platform:before, .stage-platform:after {
   content: '';
   position: absolute;
-  inset: 8px 18px;
-  border: 1px solid #fff2b4;
+  inset: 6px 14px;
+  border: 1px solid #e0be7d40;
   border-radius: 50%;
-  box-shadow: 0 0 10px #ffc569
 }
 
 .stage-platform:after {
-  inset: -9px -30px;
-  opacity: .45
+  inset: -6px -20px;
+  border: 1px dashed #c4964625;
 }
 
 .carousel-toolbar {
@@ -1050,34 +1200,137 @@ button {
 
 .site-footer {
   border-top: 1px solid var(--line);
-  padding-block: 25px 28px;
+  padding-block: 40px 48px;
+  background: var(--paper);
+}
+
+.footer-layout {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 25px
+  gap: 36px;
+  width: 100%;
+}
+
+.footer-primary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  max-width: 440px;
 }
 
 .footer-title {
-  font: 600 27px/1 var(--serif);
+  font: 600 28px/1 var(--serif);
   text-decoration: none;
-  color: var(--maroon)
+  color: var(--maroon);
 }
 
-.footer-title>span {
-  color: #aa7b26
+.footer-title > span {
+  color: #aa7b26;
 }
 
 .footer-title small {
   display: block;
-  font: 20px var(--script);
-  margin-top: 2px
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: .03em;
+  margin-top: 3px;
+  color: var(--maroon);
 }
 
-.site-footer>p {
-  font-size: 10px;
+.footer-dept {
+  font-size: 11px;
   color: var(--muted);
-  line-height: 1.7;
-  text-align: center
+  line-height: 1.55;
+  margin: 0;
+  text-align: left;
+}
+
+.footer-dates-summary {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 10.5px;
+  color: var(--ink);
+  margin-top: 4px;
+}
+
+.footer-dates-summary strong {
+  color: var(--maroon);
+  font-weight: 600;
+}
+
+.footer-sep {
+  color: var(--gold);
+}
+
+.footer-signature-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Atelier Signature Plaque for True Inspire */
+.atelier-plaque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 14px 22px 12px;
+  background: #ffffff;
+  border: 1px solid rgba(189, 136, 43, 0.28);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(101, 12, 40, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.atelier-plaque:hover {
+  transform: translateY(-2px);
+  border-color: rgba(189, 136, 43, 0.55);
+  box-shadow: 0 8px 24px rgba(101, 12, 40, 0.1), 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.plaque-brand-lockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plaque-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  object-fit: contain;
+  display: block;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.plaque-rule {
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.plaque-credit {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.footer-nav-col {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .back-to-top {
@@ -1337,7 +1590,11 @@ dialog::backdrop {
 }
 
 .intro-tagline {
-  font: 38px/1 var(--script);
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.1;
   color: var(--maroon);
 }
 
@@ -1682,6 +1939,19 @@ dialog::backdrop {
   }
   .hero-quote {
     display: none
+  }
+  .schedule-plaque {
+    grid-template-columns: 1fr;
+    border-radius: 12px;
+    margin: 22px 0 16px;
+  }
+  .schedule-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(189, 136, 43, 0.35) 20%, rgba(189, 136, 43, 0.35) 80%, transparent);
+  }
+  .schedule-col {
+    padding: 18px 20px;
   }
   .hero-copy {
     max-width: 520px
@@ -2160,16 +2430,27 @@ dialog::backdrop {
     font-size: 11px
   }
   .site-footer {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-block: 20px;
-    gap: 18px
+    padding-block: 28px 36px;
   }
-  .site-footer>p {
-    order: 3;
-    flex-basis: 100%;
-    text-align: left;
-    font-size: 9px
+  .footer-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+  .footer-primary {
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+  .footer-dept {
+    text-align: center;
+  }
+  .footer-dates-summary {
+    justify-content: center;
+  }
+  .footer-nav-col {
+    justify-content: center;
   }
   .directory-dialog {
     padding: 25px 18px
@@ -2326,6 +2607,33 @@ dialog::backdrop {
   }
   .mobile-carousel-hint {
     font-size: 9px;
+  }
+  .schedule-col {
+    padding: 14px 16px;
+  }
+  .schedule-col-title {
+    font-size: 19px;
+  }
+  .celebration-col .schedule-col-title {
+    font-size: 20px;
+  }
+  .schedule-times-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .event-time-badge, .lunch-badge {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .plaque-logo {
+    width: 52px;
+    height: 52px;
+  }
+  .plaque-credit {
+    font-size: 10px;
+  }
+  .atelier-plaque {
+    padding: 12px 18px 10px;
   }
 }
 

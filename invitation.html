@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/invitation.css">
 
   <link rel="stylesheet" href="assets/css/soundtrack.css">
@@ -34,20 +34,88 @@
       <div class="invitation-loading" id="invitation-loading" role="status"><span aria-hidden="true">T ’26</span><p>Preparing your invitation…</p></div>
       <p class="invitation-error" id="invitation-error" role="alert" hidden></p>
       <button class="secondary-action retry-invitation" id="retry-invitation" type="button" hidden>Try again</button>
-      <figure class="invitation-artwork" id="invitation-artwork" hidden><img id="invitation-preview" width="1500" height="2100" alt=""><figcaption class="sr-only" id="invitation-description"></figcaption></figure>
-      <div class="invitation-actions"><button class="primary-action" id="download-invitation" type="button" disabled>Download invitation <span aria-hidden="true">↓</span></button><button class="secondary-action" id="print-invitation" type="button" disabled>Print / Save PDF <span aria-hidden="true">↗</span></button><a class="secondary-action" href="assets/tejas-2026.ics" download>Save the date</a></div>
-      <p class="download-note">High-resolution PNG · Your name, portrait and event details included</p>
+      <!-- Ceremonial Envelope Delivery Experience -->
+      <div class="envelope-experience" id="envelope-experience" hidden>
+        <div class="envelope-stage" id="envelope-stage">
+          <div class="envelope" id="envelope">
+            <div class="envelope-back" aria-hidden="true"></div>
+            <div class="envelope-liner" aria-hidden="true">
+              <div class="liner-pattern"></div>
+            </div>
+            <div class="card-sleeve" id="card-sleeve">
+              <figure class="invitation-artwork" id="invitation-artwork">
+                <img id="invitation-preview" width="1500" height="2100" alt="">
+                <figcaption class="sr-only" id="invitation-description"></figcaption>
+              </figure>
+            </div>
+            <div class="envelope-pocket" aria-hidden="true">
+              <div class="pocket-crease-left"></div>
+              <div class="pocket-crease-right"></div>
+              <div class="pocket-front">
+                <div class="pocket-crest">
+                  <span class="crest-emblem">S</span>
+                  <div class="crest-text">
+                    <strong>SRUSTI ACADEMY</strong>
+                    <small>OF MANAGEMENT &amp; TECHNOLOGY</small>
+                  </div>
+                </div>
+                <div class="pocket-monogram">TEJAS ’26 <span>·</span> THE FRESH BLOOM</div>
+              </div>
+            </div>
+            <div class="envelope-flap" id="envelope-flap" aria-hidden="true">
+              <div class="flap-triangle"></div>
+            </div>
+            <button class="envelope-seal" id="envelope-seal" type="button" aria-expanded="false" aria-controls="envelope card-sleeve" aria-label="Open personal invitation envelope">
+              <span class="seal-wax" aria-hidden="true">
+                <span class="seal-inner">
+                  <span class="seal-star">✦</span>
+                  <strong class="seal-monogram">T</strong>
+                  <small class="seal-year">’26</small>
+                </span>
+              </span>
+              <span class="seal-label" id="seal-label">✦ Unseal invitation <span aria-hidden="true">↗</span></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="envelope-toolbar">
+          <button class="toggle-envelope-btn" id="toggle-envelope-btn" type="button" aria-expanded="false" hidden>
+            <span class="toggle-icon" aria-hidden="true">↺</span> <span id="toggle-envelope-text">Re-seal envelope</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="invitation-actions">
+        <button class="primary-action" id="download-invitation" type="button" disabled>Download invitation <span aria-hidden="true">↓</span></button>
+        <button class="secondary-action" id="print-invitation" type="button" disabled>Print / Save PDF <span aria-hidden="true">↗</span></button>
+        <a class="secondary-action" href="assets/tejas-2026.ics" download>Save the date</a>
+      </div>
+      <p class="download-note">High-resolution keepsake PNG · Includes your portrait, designation and confirmed event details</p>
     </section>
     <p class="sr-only" id="invitation-status" role="status"></p>
     <noscript><p class="no-script">Please enable JavaScript to prepare your personalised invitation. TEJAS ’26 is on 30 October 2026 at JRD Tata Hall.</p></noscript>
   </main>
-  <footer class="invitation-footer"><span>MADE OF NEW BEGINNINGS</span><span aria-hidden="true">✦</span><span>30 OCTOBER 2026</span></footer>
+  <footer class="invitation-footer">
+    <div class="invitation-footer-inner">
+      <div class="invitation-footer-meta">
+        <p class="invitation-footer-dept">Department of Computer Applications · Srusti Academy of Management &amp; Technology</p>
+        <p class="invitation-footer-dates">Friday, 30 October 2026 · From 12:00 PM Onwards · JRD Tata Hall</p>
+      </div>
+      <div class="atelier-plaque" aria-label="Design and development attribution">
+        <div class="plaque-brand-lockup">
+          <img class="plaque-logo" src="assets/images/true-inspire.jpeg" alt="True Inspire" width="56" height="56" loading="lazy">
+        </div>
+        <div class="plaque-rule" aria-hidden="true"></div>
+        <p class="plaque-credit">Design &amp; Developed by True Inspire</p>
+      </div>
+    </div>
+  </footer>
 
   <dialog class="personalize-dialog" id="personalize-dialog" aria-labelledby="personalize-heading">
     <button class="dialog-close" id="close-personalize" type="button" aria-label="Close personalisation">×</button>
     <p class="eyebrow">A little more personal</p><h2 id="personalize-heading">Whom shall we invite?</h2>
     <p>Find your name to add your original faculty portrait and prepare your invitation.</p>
-    <form id="personalize-form" novalidate><label for="invitation-name">Your name</label><input id="invitation-name" type="text" autocomplete="off" placeholder="e.g. Anuradha Mishra" maxlength="100" aria-describedby="personalize-error"><div id="person-matches" class="person-matches" hidden></div><p id="personalize-error" class="form-error" role="alert" hidden></p><button class="primary-action" type="submit">Prepare my invitation <span aria-hidden="true">↗</span></button></form>
+    <form id="personalize-form" novalidate><label for="invitation-name">Your name</label><input id="invitation-name" type="text" autocomplete="off" placeholder="Enter your name" maxlength="100" aria-describedby="personalize-error"><div id="person-matches" class="person-matches" hidden></div><p id="personalize-error" class="form-error" role="alert" hidden></p><button class="primary-action" type="submit">Prepare my invitation <span aria-hidden="true">↗</span></button></form>
     <a class="reset-name" id="return-home" href="index.html?teacher=guest">Return to home</a>
   </dialog>
 </body>

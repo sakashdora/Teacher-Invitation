@@ -37,7 +37,7 @@ body.entrance-active { overflow: hidden; }
 .entrance-eyebrow { color: #97723c; font-size: 9px; letter-spacing: .26em; }
 .entrance-title h1 { font: 600 clamp(75px, 10vw, 140px)/1.1 'Cormorant Garamond', Georgia, serif; letter-spacing: -.045em; margin-top: 11px; }
 .entrance-title h1 span { color: #b08139; font-weight: 500; }
-.entrance-script { font: 51px/1.1 'Alex Brush', cursive; }
+.entrance-script { font: italic 500 clamp(32px, 5vw, 46px)/1.1 'Cormorant Garamond', Georgia, serif; letter-spacing: 0.04em; color: #b08139; }
 .entrance-dedication { font: italic 21px/1.5 'Cormorant Garamond', Georgia, serif; color: #82644d; margin-top: 21px !important; }
 .entrance-control { margin-top: 30px; min-height: 182px; display: flex; flex-direction: column; align-items: center; }
 .entrance-open { border: 0; padding: 0 16px; background: none; color: #64132d; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 15px; font: inherit; -webkit-tap-highlight-color: transparent; }
@@ -60,8 +60,7 @@ body.entrance-active { overflow: hidden; }
 [data-phase=opening] .entrance-content { opacity: 0; transform: scale(.97); pointer-events: none; }
 [data-phase=opening] .entrance-door-left { transform: translate3d(-103%, 0, 0); }
 [data-phase=opening] .entrance-door-right { transform: translate3d(103%, 0, 0); }
-[data-phase=opening] .entrance-seam::after { animation: entrance-cut .65s ease-in-out both; }
-[data-phase=opening] .entrance-seam { background: none; }
+[data-phase=opening] .entrance-seam { opacity: 0; }
 .entry-form-reveal { animation: entry-form-reveal .5s ease-out both; }
 .welcome-intro.is-handoff #welcome-form, .welcome-intro.is-handoff #continue-guest, .welcome-intro.is-handoff #intro-description { display: none; }
 @keyframes entrance-loading { from { transform: translateX(-110%); } to { transform: translateX(330%); } }
@@ -74,7 +73,7 @@ body.entrance-active { overflow: hidden; }
   .entrance-title { margin-top: 48px; }
   .entrance-title h1 { font-size: clamp(61px, 18vw, 96px); white-space: nowrap; margin-top: 15px; }
   .entrance-eyebrow { font-size: 8px; letter-spacing: .2em; }
-  .entrance-script { font-size: 37px; }
+  .entrance-script { font-size: 28px; }
   .entrance-dedication { font-size: 18px; max-width: 240px; margin: 19px auto 0 !important; }
   .entrance-date { font-size: 7px; letter-spacing: .08em; margin-top: 28px !important; }
   .entrance-date span { margin-inline: 8px; }
@@ -85,7 +84,7 @@ body.entrance-active { overflow: hidden; }
   .entrance-content { padding-block: 22px; }
   .entrance-title { margin-top: 22px; }
   .entrance-title h1 { font-size: clamp(60px, 12vw, 90px); }
-  .entrance-script { font-size: 34px; }
+  .entrance-script { font-size: 26px; }
   .entrance-dedication { margin-top: 12px !important; }
   .entrance-control { margin-top: 18px; min-height: 158px; }
   .entrance-seal { width: 80px; height: 80px; }

@@ -99,11 +99,15 @@ test('Calendar saves only the confirmed date and venue without a timed appointme
   assert.match(calendar, /TRANSP:TRANSPARENT/);
   assert.match(calendar, /LOCATION:JRD Tata Hall/); assert.match(calendar, /BEGIN:VEVENT/); assert.match(calendar, /END:VCALENDAR/);
 });
-test('Live pages and invitation artwork contain no published event times or stale morning instructions', async () => {
+test('Live pages and invitation artwork contain confirmed event schedule without stale morning instructions', async () => {
   for (const path of ['index.html', 'invitation.html', 'data/event.js', 'assets/js/invitation.js', 'assets/js/invitation-renderer.js', 'assets/tejas-2026.ics']) {
     const content = await readFile(new URL(path, root), 'utf8');
-    assert.doesNotMatch(content, /\b\d{1,2}[:.]\d{2}\s*(?:AM|PM)\b|\b(?:morning|be seated by)\b|THE TIME/i, path);
+    assert.doesNotMatch(content, /\b(?:morning|be seated by)\b|THE TIME|\b(?:9|10)[:.]\d{2}\s*(?:AM|PM)\b/i, path);
   }
+  assert.equal(event.mainEventTime, '12:00 PM onwards');
+  assert.equal(event.lunchTime, '12:30 PM');
+  assert.equal(event.posterRevealDate, '2026-10-28');
+  assert.equal(event.posterRevealTime, '4:00 PM');
 });
 test('Page local scripts, stylesheet, favicon and downloads exist', async () => {
   const html = await readFile(new URL('index.html', root), 'utf8');

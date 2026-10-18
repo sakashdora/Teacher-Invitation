@@ -11,9 +11,82 @@
   const preview = byId('invitation-preview');
   const download = byId('download-invitation');
   const printButton = byId('print-invitation');
+  const envelope = byId('envelope');
+  const envelopeSeal = byId('envelope-seal');
+  const envelopeExperience = byId('envelope-experience');
+  const toggleEnvelopeBtn = byId('toggle-envelope-btn');
+  const toggleEnvelopeText = byId('toggle-envelope-text');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let recipient = faculty.find(person => String(person.id) === teacherId) || null;
   let imageURL = null;
   let renderVersion = 0;
+  let isAnimating = false;
+
+  function updateCardDimensions() {
+    if (!envelope) return;
+    const stageWidth = envelope.getBoundingClientRect().width || 640;
+    const isMobile = window.innerWidth <= 560;
+    const padding = isMobile ? 20 : 40;
+    const cardWidth = Math.max(260, stageWidth - padding);
+    const ratio = (preview && preview.naturalHeight && preview.naturalWidth)
+      ? (preview.naturalHeight / preview.naturalWidth)
+      : 1.4;
+    const cardHeight = Math.round(cardWidth * ratio);
+    envelope.style.setProperty('--card-height', `${cardHeight}px`);
+  }
+  window.addEventListener('resize', updateCardDimensions, { passive: true });
+
+  function openEnvelope() {
+    if (!envelope || isAnimating || envelope.classList.contains('is-opened')) return;
+    updateCardDimensions();
+    if (reducedMotion.matches) {
+      envelope.classList.add('is-opened');
+      envelopeSeal.setAttribute('aria-expanded', 'true');
+      toggleEnvelopeBtn.hidden = false;
+      toggleEnvelopeBtn.setAttribute('aria-expanded', 'true');
+      toggleEnvelopeText.textContent = 'Re-seal envelope';
+      download.disabled = false;
+      printButton.disabled = false;
+      byId('invitation-status').textContent = recipient ? `Invitation for ${recipient.name} is open.` : 'Invitation is open.';
+      return;
+    }
+    isAnimating = true;
+    envelope.classList.add('is-unsealing');
+    envelopeSeal.setAttribute('aria-expanded', 'true');
+    setTimeout(() => {
+      envelope.classList.remove('is-unsealing');
+      envelope.classList.add('is-opened');
+      toggleEnvelopeBtn.hidden = false;
+      toggleEnvelopeBtn.setAttribute('aria-expanded', 'true');
+      toggleEnvelopeText.textContent = 'Re-seal envelope';
+      download.disabled = false;
+      printButton.disabled = false;
+      byId('invitation-status').textContent = recipient ? `Invitation for ${recipient.name} is open.` : 'Invitation is open.';
+      setTimeout(() => { isAnimating = false; }, 1300);
+    }, 120);
+  }
+
+  function closeEnvelope() {
+    if (!envelope || isAnimating || !envelope.classList.contains('is-opened')) return;
+    if (reducedMotion.matches) {
+      envelope.classList.remove('is-opened');
+      envelopeSeal.setAttribute('aria-expanded', 'false');
+      toggleEnvelopeBtn.setAttribute('aria-expanded', 'false');
+      toggleEnvelopeText.textContent = 'Open invitation';
+      byId('invitation-status').textContent = 'Invitation envelope is sealed.';
+      return;
+    }
+    isAnimating = true;
+    envelope.classList.remove('is-opened');
+    envelopeSeal.setAttribute('aria-expanded', 'false');
+    toggleEnvelopeBtn.setAttribute('aria-expanded', 'false');
+    toggleEnvelopeText.textContent = 'Open invitation';
+    byId('invitation-status').textContent = 'Invitation envelope is sealed.';
+    setTimeout(() => {
+      toggleEnvelopeBtn.hidden = true;
+      isAnimating = false;
+    }, 1100);
+  }
 
   function homeLink(person) { return `index.html?teacher=${person ? person.id : 'guest'}`; }
   function updateLinks() {
@@ -30,7 +103,7 @@
     const version = ++renderVersion;
     recipient = person; updateLinks();
     byId('recipient-caption').textContent = `Prepared especially for ${person.name}`;
-    byId('invitation-artwork').hidden = true;
+    envelopeExperience.hidden = true;
     byId('invitation-loading').hidden = false;
     byId('invitation-error').hidden = true;
     byId('retry-invitation').hidden = true;
@@ -49,9 +122,11 @@
       await preview.decode();
       if (version !== renderVersion) return;
       byId('invitation-loading').hidden = true;
-      byId('invitation-artwork').hidden = false;
-      download.disabled = false; printButton.disabled = false;
-      byId('invitation-status').textContent = `Your invitation with ${person.name}'s portrait is ready.`;
+      envelopeExperience.hidden = false;
+      updateCardDimensions();
+      closeEnvelope();
+      if (reducedMotion.matches) openEnvelope();
+      byId('invitation-status').textContent = `Your personal invitation for ${person.name} is ready. Click or tap the wax seal to open.`;
     } catch (error) {
       if (version !== renderVersion) return;
       byId('invitation-loading').hidden = true;
@@ -92,6 +167,11 @@
     choose(matches[0]);
   });
   byId('retry-invitation').addEventListener('click', () => { if (recipient) prepareInvitation(recipient); });
+  envelopeSeal.addEventListener('click', openEnvelope);
+  toggleEnvelopeBtn.addEventListener('click', () => {
+    if (envelope.classList.contains('is-opened')) closeEnvelope();
+    else openEnvelope();
+  });
   download.addEventListener('click', () => {
     if (!imageURL || !recipient || download.disabled) return;
     const link = document.createElement('a');

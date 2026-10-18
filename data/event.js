@@ -1,6 +1,12 @@
-/* Agenda supplied by the project owner. Activities are ordered, without published times. */
+/* Confirmed event schedule supplied by the project owner. */
 window.TEJAS_EVENT = {
-  date: '2026-10-30', venue: 'JRD Tata Hall', timezone: 'Asia/Kolkata',
+  date: '2026-10-30',
+  venue: 'JRD Tata Hall',
+  timezone: 'Asia/Kolkata',
+  mainEventTime: '12:00 PM onwards',
+  lunchTime: '12:30 PM',
+  posterRevealDate: '2026-10-28',
+  posterRevealTime: '4:00 PM',
   programme: [
     {
       id: 'freshers', category: 'Welcome', title: 'Introduction of Freshers & Song',
