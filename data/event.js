@@ -1,4 +1,4 @@
-/* Confirmed event schedule supplied by the project owner. */
+/* Confirmed event programme without published times or durations. */
 window.TEJAS_EVENT = {
   date: '2026-10-30',
   venue: 'JRD Tata Hall',
@@ -9,54 +9,92 @@ window.TEJAS_EVENT = {
   posterRevealTime: '4:00 PM',
   programme: [
     {
-      id: 'freshers', category: 'Welcome', title: 'Introduction of Freshers & Song',
-      description: 'Meet our incoming freshers and begin the celebration with a song.',
-      highlights: [], image: 'assets/images/freshers.webp'
+      id: 'welcome',
+      number: '01',
+      category: 'Welcome',
+      title: 'Welcome',
+      subtitle: 'Introduction of Freshers & Song',
+      description: 'Heartfelt welcoming melodies marking a new academic journey.'
     },
     {
-      id: 'fun-games', category: 'Fun & games', title: 'Fun Games',
-      description: 'Join in, think fast and share a laugh.',
-      highlights: ['Guess the Song or Shot', 'Say It First', 'Funny Face']
+      id: 'fun-games',
+      number: '02',
+      category: 'Fun & Games',
+      title: 'Fun Games',
+      subtitle: '',
+      description: 'Light-hearted games to break the ice.'
     },
     {
-      id: 'solo-performance', category: 'On stage', title: 'Solo Performance',
-      description: 'An individual talent takes the spotlight.', highlights: []
+      id: 'solo-performance-1',
+      number: '03',
+      category: 'On Stage',
+      title: 'Solo Performance',
+      subtitle: '',
+      description: 'An individual talent takes the spotlight.'
     },
     {
-      id: 'group-duo-dance', category: 'Dance', title: 'Group / Duo Performances', subtitle: 'Dance',
-      description: 'Group and duo dance performances bring energy to the stage.',
-      highlights: [], image: 'assets/images/celebration.webp'
+      id: 'group-duo-performance',
+      number: '04',
+      category: 'Dance',
+      title: 'Group / Duo Performance',
+      subtitle: '',
+      description: 'Energetic group and duo dance performances bring energy to the stage.'
     },
     {
-      id: 'dialogue-dance-games', category: 'Fun & games', title: 'Games',
-      description: 'From familiar dialogues to favourite dance steps and songs.',
-      highlights: ['Dialogue Decoder', 'Hook Step Dance-Off', 'Song']
+      id: 'games-1',
+      number: '05',
+      category: 'Fun & Games',
+      title: 'Games',
+      subtitle: '',
+      description: 'More interactive challenges to keep the excitement going.'
     },
     {
-      id: 'solo-performances', category: 'On stage', title: 'Solo Performances',
-      description: 'More individual performances from our talented participants.', highlights: []
+      id: 'solo-performance-2',
+      number: '06',
+      category: 'On Stage',
+      title: 'Solo Performance',
+      subtitle: '',
+      description: 'More individual performances from our talented participants.'
     },
     {
-      id: 'song-reaction-games', category: 'Fun & games', title: 'Games',
-      description: 'A playful mix of music, unexpected answers and quick reactions.',
-      highlights: ['One Word, One Song', 'Wrong Answers Only', 'Fastest Reaction']
+      id: 'games-2',
+      number: '07',
+      category: 'Fun & Games',
+      title: 'Games',
+      subtitle: '',
+      description: 'Engaging and refreshing games with surprise rounds.'
     },
     {
-      id: 'mimicry', category: 'Entertainment', title: 'Mimicry',
-      description: 'A performance filled with impressions and laughter.', highlights: []
+      id: 'mimicry',
+      number: '08',
+      category: 'Entertainment',
+      title: 'Mimicry',
+      subtitle: '',
+      description: 'A performance filled with impressions and laughter.'
     },
     {
-      id: 'freshers-titles', category: 'Recognition', title: 'Freshers’ Title Announcement',
-      description: 'Celebrating our freshers with the announcement of their titles.', highlights: []
+      id: 'freshers-titles',
+      number: '09',
+      category: 'Recognition',
+      title: 'Freshers’ Title Announcement',
+      subtitle: '',
+      description: 'Celebrating and honouring the stars of the day.'
     },
     {
-      id: 'vote-of-thanks', category: 'Gratitude', title: 'Vote of Thanks',
-      description: 'A heartfelt thank-you to everyone who made the celebration possible.', highlights: []
+      id: 'vote-of-thanks',
+      number: '10',
+      category: 'Gratitude',
+      title: 'Vote of Thanks',
+      subtitle: '',
+      description: 'A heartfelt thank you to everyone who made this celebration possible.'
     },
     {
-      id: 'celebrations', category: 'The finale', title: 'DJ',
-      description: 'Music, dancing and shared memories to close the celebration.',
-      highlights: [], image: 'assets/images/celebration.webp'
+      id: 'dj',
+      number: '11',
+      category: 'The Finale',
+      title: 'DJ',
+      subtitle: '',
+      description: 'Music, meeting and memorable moments to close the celebration.'
     }
   ]
 };

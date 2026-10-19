@@ -281,10 +281,13 @@
   });
 
   event.programme.forEach((entry, index) => {
+    const isRight = index % 2 === 1;
     const row = document.createElement('li');
-    row.className = 'timeline-row'; row.id = entry.id;
+    row.className = `programme-timeline-item ${isRight ? 'programme-item--right' : 'programme-item--left'}`;
+    row.id = entry.id;
     row.setAttribute('aria-labelledby', `${entry.id}-title`);
-    row.innerHTML = `<div class="sequence-card"><span class="sequence-number" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span><p class="sequence-category">${escapeHTML(entry.category)}</p></div><div class="event-card${entry.image ? '' : ' no-image'}">${entry.image ? `<img class="event-image" src="${escapeHTML(entry.image)}" alt="" loading="lazy" width="600" height="350">` : ''}<div class="event-copy"><h3 id="${entry.id}-title">${escapeHTML(entry.title)}</h3>${entry.subtitle ? `<p class="event-subtitle">${escapeHTML(entry.subtitle)}</p>` : ''}<p class="event-description">${escapeHTML(entry.description)}</p>${entry.highlights.length ? `<ul class="event-highlights">${entry.highlights.map(item => `<li>${escapeHTML(item)}</li>`).join('')}</ul>` : ''}</div></div>`;
+    const num = entry.number || String(index + 1).padStart(2, '0');
+    row.innerHTML = `${isRight ? '<span class="connector-line" aria-hidden="true"><span class="connector-dot"></span></span>' : ''}<div class="programme-card"><div class="card-num-box"><span class="card-num">${escapeHTML(num)}</span></div><div class="card-divider" aria-hidden="true"></div><div class="card-content-box"><h3 class="card-title" id="${entry.id}-title">${escapeHTML(entry.title)}</h3>${entry.subtitle ? `<p class="card-subtitle">${escapeHTML(entry.subtitle)}</p>` : ''}<p class="card-desc">${escapeHTML(entry.description)}</p></div>${entry.category ? `<div class="card-category-badge"><span>${escapeHTML(entry.category)}</span></div>` : ''}</div>`;
     byId('programme-timeline').append(row);
   });
   const navLinks = [...document.querySelectorAll('.main-nav a')];

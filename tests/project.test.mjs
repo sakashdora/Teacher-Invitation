@@ -76,20 +76,18 @@ test('Soumya Ranjan Swain resolves to the supplied Assistant Professor profile',
   }
   assert.equal(window.TEJAS_NAMES.findMatches('Swain', faculty).length, 2);
 });
-test('The eleven agenda items follow the supplied order without times or durations', async () => {
+test('The eleven agenda items follow the confirmed celebration programme design without times or durations', async () => {
   assert.deepEqual(Array.from(event.programme, entry => entry.title), [
-    'Introduction of Freshers & Song', 'Fun Games', 'Solo Performance', 'Group / Duo Performances',
-    'Games', 'Solo Performances', 'Games', 'Mimicry', 'Freshers’ Title Announcement', 'Vote of Thanks', 'DJ'
+    'Welcome', 'Fun Games', 'Solo Performance', 'Group / Duo Performance',
+    'Games', 'Solo Performance', 'Games', 'Mimicry', 'Freshers’ Title Announcement', 'Vote of Thanks', 'DJ'
   ]);
   assert.equal(new Set(event.programme.map(entry => entry.id)).size, 11);
   assert.equal(event.date, '2026-10-30'); assert.equal(event.timezone, 'Asia/Kolkata');
-  assert.equal(event.programme[3].subtitle, 'Dance');
-  assert.deepEqual(Array.from(event.programme[1].highlights), ['Guess the Song or Shot', 'Say It First', 'Funny Face']);
-  assert.deepEqual(Array.from(event.programme[4].highlights), ['Dialogue Decoder', 'Hook Step Dance-Off', 'Song']);
-  assert.deepEqual(Array.from(event.programme[6].highlights), ['One Word, One Song', 'Wrong Answers Only', 'Fastest Reaction']);
+  assert.equal(event.programme[0].subtitle, 'Introduction of Freshers & Song');
   for (const entry of event.programme) {
-    for (const field of ['start', 'end', 'duration']) assert.equal(Object.hasOwn(entry, field), false);
-    if (entry.image) await access(new URL(entry.image, root));
+    for (const field of ['time', 'timeStart', 'timeEnd', 'start', 'end', 'duration']) {
+      assert.equal(Object.hasOwn(entry, field), false);
+    }
   }
 });
 test('Calendar saves only the confirmed date and venue without a timed appointment', async () => {
