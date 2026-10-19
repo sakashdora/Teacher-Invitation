@@ -512,7 +512,7 @@ button {
 
 .stage-eyebrow {
   text-align: center;
-  font-size: 9px;
+  font-size: 10.5px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: .25em;
@@ -604,7 +604,7 @@ button {
 
 .faculty-card-copy small {
   display: block;
-  font-size: 9px;
+  font-size: 11px;
   line-height: 1.35;
   color: #ffecdb
 }
@@ -613,7 +613,7 @@ button {
   display: block;
   text-transform: uppercase;
   letter-spacing: .12em;
-  font-size: 8px;
+  font-size: 11px;
   color: #ffe0a0;
   margin-top: 8px
 }
@@ -1187,13 +1187,13 @@ button {
 
 @media (max-width: 880px) {
   .schedule {
-    padding: 32px 0 44px;
+    padding: 36px 0 48px;
   }
   .timeline-container {
-    padding: 16px 16px 36px;
+    padding: 20px 16px 40px;
   }
   .timeline-spine-track {
-    left: 22px;
+    left: 20px;
     transform: none;
   }
   .programme-timeline-grid {
@@ -1212,24 +1212,24 @@ button {
   .programme-item--left::after,
   .programme-item--right::after {
     display: block !important;
-    left: -28px;
+    left: -27px;
     right: auto;
     top: 50%;
     transform: translateY(-50%);
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
   }
   .connector-line {
     display: none;
   }
   .programme-eyebrow {
-    font-size: 11px;
+    font-size: 11.5px;
     letter-spacing: 0.14em;
     white-space: normal;
     text-align: center;
   }
   .programme-tagline {
-    font-size: 11.5px;
+    font-size: 12px;
     letter-spacing: 0.14em;
     flex-wrap: wrap;
   }
@@ -1239,20 +1239,30 @@ button {
 }
 
 @media (max-width: 640px) {
+  .programme-eyebrow-rule {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 12px;
+  }
+  .programme-eyebrow-rule .eyebrow-line {
+    width: 64px;
+    height: 1px;
+    flex: none;
+  }
   .timeline-spine-track {
-    left: 16px;
+    left: 20px;
   }
   .programme-timeline-grid {
-    padding-left: 36px;
+    padding-left: 42px;
     gap: 14px;
   }
   .programme-item--left::after,
   .programme-item--right::after {
-    left: -26px;
-    top: 26px;
+    left: -27px;
+    top: 29px;
     transform: none;
-    width: 11px;
-    height: 11px;
+    width: 12px;
+    height: 12px;
   }
   .programme-card {
     padding: 14px 16px;
@@ -1262,8 +1272,8 @@ button {
     align-items: center;
   }
   .card-num-box {
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
   }
   .card-num {
     font-size: 22px;
@@ -1276,7 +1286,7 @@ button {
     padding: 4px 12px;
   }
   .card-category-badge span {
-    font-size: 10px;
+    font-size: 10.5px;
   }
   .card-content-box {
     flex-basis: 100%;
@@ -1284,31 +1294,34 @@ button {
     padding: 0;
   }
   .card-title {
-    font-size: 18px;
+    font-size: 19px;
     margin-bottom: 2px;
   }
   .card-subtitle {
-    font-size: 12px;
+    font-size: 12.5px;
     margin-bottom: 2px;
   }
   .card-desc {
-    font-size: 11.5px;
-    line-height: 1.4;
+    font-size: 12px;
+    line-height: 1.45;
   }
 }
 
 @media (max-width: 380px) {
+  .timeline-container {
+    padding: 16px 10px 36px;
+  }
   .timeline-spine-track {
-    left: 12px;
+    left: 16px;
   }
   .programme-timeline-grid {
-    padding-left: 28px;
+    padding-left: 36px;
     gap: 12px;
   }
   .programme-item--left::after,
   .programme-item--right::after {
-    left: -22px;
-    top: 24px;
+    left: -25px;
+    top: 27px;
     width: 10px;
     height: 10px;
   }
@@ -1317,14 +1330,14 @@ button {
     column-gap: 8px;
   }
   .card-num-box {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
   }
   .card-num {
-    font-size: 18px;
+    font-size: 19px;
   }
   .card-title {
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 
@@ -1568,35 +1581,46 @@ dialog {
   box-shadow: 0 25px 90px #21000e55;
   padding: 0;
   max-height: 90dvh;
-  max-width: calc(100% - 32px)
+  max-width: calc(100% - 32px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 dialog::backdrop {
   background: #230714b3;
-  backdrop-filter: blur(5px)
+  backdrop-filter: blur(5px);
 }
 
 .dialog-close {
   position: absolute;
-  right: 12px;
-  top: 12px;
-  z-index: 2;
-  width: 36px;
-  height: 36px;
+  right: max(12px, env(safe-area-inset-right));
+  top: max(12px, env(safe-area-inset-top));
+  z-index: 20;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
   background: #fffaf2e8;
   border: 1px solid var(--line);
-  font: 28px/1 var(--sans);
-  color: var(--maroon)
+  font: 26px/1 var(--sans);
+  color: var(--maroon);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .profile-dialog {
-  width: 760px
+  width: 760px;
+  max-height: 90dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .profile-layout {
   display: grid;
-  grid-template-columns: 44% 56%
+  grid-template-columns: 44% 56%;
 }
 
 .profile-layout>img {
@@ -1746,21 +1770,28 @@ dialog::backdrop {
 
 .welcome-intro {
   width: 100%;
-  height: 100dvh;
+  height: 100%;
+  min-height: 100dvh;
   max-width: none;
   max-height: none;
   margin: 0;
+  padding: 0;
   border: 0;
   border-radius: 0;
   background: var(--cream) url('../images/hero-engraving.webp') center / cover no-repeat;
   box-shadow: none;
+  overflow-y: auto;
   overscroll-behavior: contain;
 }
 
 .welcome-intro[open] {
-  display: grid;
-  place-items: center;
-  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  padding: max(24px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
 }
 
 .welcome-intro::backdrop {
@@ -1769,7 +1800,8 @@ dialog::backdrop {
 
 .intro-panel {
   width: min(100%, 540px);
-  padding: 32px 50px 27px;
+  margin: auto;
+  padding: 32px 42px 26px;
   text-align: center;
   background: #fffaf5f5;
   border: 1px solid #cba25875;
@@ -1778,8 +1810,10 @@ dialog::backdrop {
 }
 
 .intro-panel > .eyebrow {
-  font-size: 8px;
-  letter-spacing: .12em;
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .intro-ornament {
@@ -1882,7 +1916,7 @@ dialog::backdrop {
 
 .name-suggestions > p {
   margin: 10px 12px 3px;
-  font-size: 9px;
+  font-size: 11px;
   color: var(--muted);
 }
 
@@ -1921,7 +1955,7 @@ dialog::backdrop {
 }
 
 .name-choice small {
-  font-size: 9px;
+  font-size: 11px;
   color: var(--muted);
   line-height: 1.4;
   margin-top: 2px;
@@ -2038,117 +2072,108 @@ dialog::backdrop {
 
 @media(max-width:1100px) {
   .header-inner {
-    padding-inline: 25px
+    padding-inline: 25px;
   }
   .main-nav {
-    gap: 25px
+    gap: 25px;
   }
   .header-motto {
-    font-size: 21px
+    font-size: 21px;
   }
   .hero-quote {
     right: 3%;
-    font-size: 25px;
-    top: 104px
+    font-size: 22px;
+    top: 96px;
   }
   .hero {
-    min-height: 305px
+    min-height: 305px;
   }
   .hero h1 {
-    font-size: 115px
+    font-size: 115px;
   }
   .hero-subtitle {
-    font-size: 48px
+    font-size: 48px;
   }
   .hero>.eyebrow {
-    font-size: 8px
+    font-size: 11px;
   }
   .section-container {
-    width: calc(100% - 56px)
-  }
-  .timeline-row {
-    grid-template-columns: 205px minmax(0,1fr);
-    gap: 45px
-  }
-  .timeline:before {
-    left: 227px
-  }
-  .timeline-row:before {
-    left: 221px
-  }
-  .time-range {
-    font-size: 17px;
-    gap: 6px
-  }
-  .sequence-category {
-    font-size: 14px
-  }
-  .event-copy {
-    padding-left: 21px
-  }
-  .event-copy h3 {
-    font-size: 24px
-  }
-  .event-card {
-    grid-template-columns: minmax(0,1fr) 25%
-  }
-  .event-description {
-    font-size: 11px
-  }
-  .event-card:after {
-    background: linear-gradient(90deg,#fffaf4 0%,#fffaf4 48%,#fffaf4ef 65%,#fffaf430 87%,transparent)
-  }
-.compact .event-copy {
-    gap: 12px
-  }
-  .compact h3 {
-    font-size: 22px
+    width: calc(100% - 56px);
   }
 }
 
 @media(max-width:800px) {
   .header-inner {
-    min-height: 85px;
+    min-height: 80px;
     gap: 12px 16px;
     flex-wrap: wrap;
-    justify-content: center
+    justify-content: center;
+    padding-right: calc(max(16px, env(safe-area-inset-right)) + 120px);
   }
   .header-motto {
-    display: none
+    display: none;
   }
   .main-nav {
     max-width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
-    padding-bottom: 13px
+    gap: 20px;
+    padding-bottom: 10px;
   }
   .main-nav a {
-    font-size: 11px
+    font-size: 12px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
   }
   .main-nav a:after {
-    bottom: -14px
+    bottom: -8px;
   }
   .hero {
     padding-top: 14px;
     min-height: 315px;
     background-size: auto 100%;
-    background-position: center
+    background-position: center;
   }
   .hero>.eyebrow {
-    max-width: 480px;
+    font-size: 11px;
+    max-width: 500px;
     margin: auto;
-    line-height: 1.7
+    line-height: 1.6;
   }
   .hero h1 {
-    font-size: 102px;
-    margin-top: 10px
+    font-size: clamp(76px, 15vw, 102px);
+    margin-top: 10px;
   }
   .hero-subtitle {
-    font-size: 46px
+    font-size: clamp(34px, 7vw, 46px);
+  }
+  .party-label {
+    font-size: 12.5px;
+    letter-spacing: .2em;
+    padding: 4px 18px;
+    margin: 10px auto 14px;
   }
   .hero-quote {
-    display: none
+    position: static;
+    display: block;
+    margin: 18px auto 0;
+    max-width: 480px;
+    text-align: center;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.35;
+    color: var(--maroon);
+    transform: none;
+    padding: 0 16px;
+  }
+  .hero-quote span {
+    display: block;
+    font-size: 12.5px;
+    font-style: normal;
+    color: var(--muted);
+    margin-top: 6px;
   }
   .schedule-plaque {
     grid-template-columns: 1fr;
@@ -2164,553 +2189,14 @@ dialog::backdrop {
     padding: 18px 20px;
   }
   .hero-copy {
-    max-width: 520px
+    max-width: 520px;
   }
   .hero:before {
-    background: linear-gradient(90deg,#fff7ed10,#fff7edaa 30%,#fff7ed8c 70%,#fff7ed10)
+    background: linear-gradient(90deg,#fff7ed10,#fff7edaa 30%,#fff7ed8c 70%,#fff7ed10);
   }
   .hero-details {
-    font-size: 10px
-  }
-  .carousel {
-    height: 306px
-  }
-  .faculty-card {
-    width: 180px;
-    height: 246px
-  }
-.stage-platform {
-    width: 90%;
-    height: 80px
-  }
-  .faculty-badge {
-    padding-inline: 25px
-  }
-  .faculty-badge h2 {
-    font-size: 21px
-  }
-.section-container {
-    width: calc(100% - 40px)
-  }
-  .timeline-row {
-    grid-template-columns: 155px minmax(0,1fr);
-    gap: 36px
-  }
-  .timeline:before {
-    left: 173px
-  }
-  .timeline-row:before {
-    left: 167px;
-    top: 28px
-  }
-  .sequence-card {
-    padding: 16px 8px;
-    border-radius: 13px
-  }
-  .time-range {
-    font-size: 16px;
-    flex-wrap: wrap;
-    gap: 4px;
-    white-space: normal
-  }
-  .time-range svg {
-    width: 17px;
-    height: 18px
-  }
-  .time-range .time-text {
-    display: block;
-    width: 100%
-  }
-  .sequence-category {
-    font-size: 13px
-  }
-  .event-copy {
-    padding-left: 16px;
-    grid-column: 1/-1;
-    padding-right: 18%
-  }
-  .event-image {
-    width: 46%;
-    opacity: .65
-  }
-  .event-card:after {
-    background: linear-gradient(90deg,#fffaf4 30%,#fffaf4eb 68%,#fffaf475 100%)
-  }
-  .event-copy h3 {
-    font-size: 23px
-  }
-  .event-card {
-    border-radius: 14px
-  }
-  .event-subtitle {
-    font-size: 13px
-  }
-  .event-description {
-    font-size: 11px
-  }
-  .event-highlights {
-    display: block
-  }
-  .event-highlights li+li {
-    margin-top: 3px
-  }
-  .compact .event-copy {
-    padding-right: 12%
-  }
-  .event-icon {
-    width: 30px;
-    flex-basis: 30px;
-    font-size: 34px
-  }
-  .event-icon svg {
-    width: 30px
-  }
-  .compact h3 {
-    font-size: 22px
-  }
-  .compact .event-description {
-    font-size: 16px
-  }
-  .section-heading h2 {
-    font-size: 38px
-  }
-  .section-heading>p {
-    font-size: 23px
-  }
-  .directory-grid {
-    grid-template-columns: repeat(3,minmax(0,1fr))
-  }
-}
-
-@media(max-width:560px) {
-  .faculty-memory {
-    margin-block: 34px 38px
-  }
-  .faculty-memory-header {
-    margin-bottom: 18px
-  }
-  .faculty-memory-header > p:last-child {
-    font-size: 11px
-  }
-  .faculty-memory-frame {
-    padding: 6px 6px 0;
-    border-radius: 12px
-  }
-  .faculty-memory-frame figcaption {
-    flex-direction: column;
-    padding: 12px 4px 0;
-    text-align: center;
-    font-size: 9px
-  }
-  html {
-    scroll-padding-top: 20px
-  }
-  .header-inner {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 12px 16px 0;
-    gap: 5px
-  }
-  .brand {
-    gap: 7px
-  }
-  .brand-mark {
-    width: 34px;
-    height: 39px;
-    font-size: 33px;
-    border-bottom-width: 3px
-  }
-  .brand-mark span {
-    font-size: 10px;
-    right: 1px;
-    top: 3px
-  }
-  .brand-name strong {
-    font-size: 13px
-  }
-  .brand-name>span {
-    font-size: 8px;
-    line-height: 1.08
-  }
-  .brand-name br {
-    display: none
-  }
-  .brand-name>span {
-    max-width: 171px
-  }
-  .main-nav {
-    width: 100%;
-    justify-content: center;
-    gap: 0 12px;
-    padding: 3px 2px 5px
-  }
-  .main-nav a {
-    display: inline-flex;
-    align-items: center;
-    min-height: 36px;
-    font-size: 10px
-  }
-  .main-nav a:after {
-    bottom: 0
-  }
-  .hero {
-    min-height: 287px;
-    padding: 17px 12px 49px;
-    background-size: auto 245px
-  }
-  .hero>.eyebrow {
-    font-size: 7px;
-    letter-spacing: .12em;
-    max-width: 335px;
-    line-height: 1.8
-  }
-  .hero>.eyebrow span {
-    display: none
-  }
-  .hero-copy {
-    padding-top: 8px
-  }
-  .hero h1 {
-    font-size: clamp(73px,19.5vw,105px);
-    letter-spacing: -.045em;
-    margin-top: 4px;
-    margin-bottom: 0
-  }
-  .hero-subtitle {
-    font-size: 38px;
-    line-height: 1
-  }
-  .party-label {
-    font-size: 12px;
-    letter-spacing: .21em;
-    padding: 3px 18px;
-    margin: 10px auto 12px
-  }
-  .hero-details {
-    gap: 7px;
-    font-size: 8px;
-    font-weight: 600
-  }
-  .hero-details span {
-    font-size: 6px
-  }
-  .hero:before {
-    background: linear-gradient(90deg,#fff7ed30,#fff7edba 25%,#fff7edaa 75%,#fff7ed30)
-  }
-  .stage-wave {
-    top: -37px;
-    height: 49px
-  }
-  .stage-inner {
-    padding-top: 8px
-  }
-  .stage-eyebrow {
-    font-size: 7px;
-    letter-spacing: .18em;
-    margin-bottom: 4px
-  }
-  .carousel {
-    height: 284px
-  }
-  .faculty-card {
-    width: 164px;
-    height: 232px;
-    top: 17px
-  }
-  .faculty-card-copy strong {
-    font-size: 17px
-  }
-  .faculty-card-copy small {
-    font-size: 8px
-  }
-  .faculty-card-copy {
-    padding-inline: 9px;
-    padding-bottom: 12px
-  }
-  .stage-halo {
-    width: 114%;
-    height: 180px;
-    top: 35px;
-    opacity: .5
-  }
-  .stage-platform {
-    height: 62px;
-    bottom: 9px;
-    width: 92%
-  }
-.carousel-toolbar {
-    gap: 18px;
-    font-size: 9px;
-    margin-top: -1px;
-    margin-bottom: 5px
-  }
-  .carousel-hint {
-    display: none
-  }
-  .text-button {
-    font-size: 9px
-  }
-  .faculty-section {
-    padding-bottom: 27px
-  }
-  .faculty-badge {
-    gap: 13px;
-    padding: 8px 19px;
-    bottom: -27px;
-    width: max-content;
-    max-width: calc(100% - 32px)
-  }
-.faculty-badge h2 {
-    font-size: 20px
-  }
-  .faculty-badge p {
-    font-size: 12px
-  }
-  .faculty-browse {
-    padding-top: 39px
-  }
-  .link-button {
-    font-size: 9px
-  }
-  .section-container {
-    width: calc(100% - 32px)
-  }
-  .schedule {
-    padding-top: 7px
-  }
-  .ornamental-rule {
-    gap: 10px
-  }
-  .ornamental-rule span {
-    font-size: 26px
-  }
-  .section-heading {
-    margin-bottom: 21px
-  }
-  .section-heading h2 {
-    font-size: 34px
-  }
-  .section-heading>p {
-    font-size: 19px
-  }
-  .schedule-meta {
-    flex-wrap: wrap;
-    gap: 4px 8px;
-    font-size: 9px;
-    margin-top: 12px
-  }
-  .schedule-meta a {
-    flex-basis: 100%;
-    margin: 4px 0 0
-  }
-  .timeline {
-    gap: 22px;
-    padding-left: 21px
-  }
-  .timeline:before {
-    left: 5px;
-    top: 25px;
-    bottom: 20px
-  }
-  .timeline-row {
-    display: block
-  }
-  .timeline-row:before {
-    left: -21px;
-    top: 24px;
-    width: 11px;
-    height: 11px
-  }
-  .sequence-card {
-    display: grid;
-    grid-template-columns: auto minmax(0,1fr);
-    gap: 12px;
-    text-align: left;
-    align-items: center;
-    min-height: 0;
-    padding: 10px 12px;
-    border-radius: 12px 12px 0 0;
-    border-bottom: none;
-    background: linear-gradient(110deg,#f4e1cb,#f9ebdd)
-  }
-  .sequence-number {
-    font-size: 32px;
-    margin: 0
-  }
-  .time-range {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    gap: 6px;
-    font-size: 17px
-  }
-  .time-range .time-text {
-    width: auto;
-    white-space: nowrap
-  }
-  .time-range svg {
-    width: 16px;
-    height: 16px
-  }
-  .duration {
-    grid-column: 2;
-    grid-row: 1/3;
-    font-size: 8px;
-    margin: 0;
-    padding: 4px 7px
-  }
-  .sequence-category {
-    grid-column: 2;
-    font-family: var(--sans);
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: .03em;
-    max-width: none;
-    padding-left: 0
-  }
-  .event-card {
-    border-radius: 0 0 12px 12px;
-    min-height: 170px
-  }
-  .event-copy {
-    padding: 16px 13px 17px;
-    padding-right: 14%;
-  }
-  .event-copy h3 {
-    font-size: 26px;
-    line-height: 1.05;
-    max-width: 290px
-  }
-  .event-subtitle {
-    font-size: 13px;
-    line-height: 1.25
-  }
-  .event-description {
     font-size: 11px;
-    line-height: 1.65;
-    margin-top: 5px
   }
-  .event-highlights li {
-    font-size: 10px;
-    line-height: 1.6
-  }
-  .event-image {
-    width: 60%;
-    opacity: .58
-  }
-  .event-card:after {
-    background: linear-gradient(90deg,#fffaf4 15%,#fffaf4f5 48%,#fffaf4ba 80%,#fffaf470)
-  }
-  .event-notes {
-    margin-top: 10px
-  }
-  .event-notes summary {
-    padding: 7px 10px;
-    min-height: 34px
-  }
-  .timeline-row:has(.compact) .sequence-card {
-    min-height: 0;
-    padding: 10px 12px
-  }
-  .compact .event-copy {
-    padding: 23px 14px;
-    gap: 13px
-  }
-  .compact h3 {
-    font-size: 24px
-  }
-  .compact .event-description {
-    font-size: 16px
-  }
-  .programme-footnote {
-    font-size: 9px;
-    line-height: 1.7;
-    padding-left: 21px;
-    text-align: left
-  }
-  .welcome-note {
-    padding: 25px 8px 30px
-  }
-  .welcome-note h2 {
-    font-size: 32px
-  }
-  .welcome-note>.eyebrow {
-    font-size: 8px
-  }
-  .welcome-note>p:not(.eyebrow) {
-    font-size: 11px
-  }
-  .site-footer {
-    padding-block: 28px 36px;
-  }
-  .footer-layout {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 24px;
-  }
-  .footer-primary {
-    align-items: center;
-    text-align: center;
-    max-width: 100%;
-  }
-  .footer-dept {
-    text-align: center;
-  }
-  .footer-dates-summary {
-    justify-content: center;
-  }
-  .footer-nav-col {
-    justify-content: center;
-  }
-  .directory-dialog {
-    padding: 25px 18px
-  }
-  .directory-dialog>.eyebrow {
-    font-size: 8px;
-    margin-right: 25px
-  }
-  .directory-dialog h2 {
-    font-size: 32px
-  }
-  .directory-grid {
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    gap: 10px
-  }
-  .directory-card img {
-    height: 145px
-  }
-  .directory-card strong {
-    font-size: 17px;
-    padding-inline: 10px
-  }
-  .directory-card small {
-    font-size: 9px;
-    padding-inline: 10px
-  }
-  .profile-layout {
-    display: block
-  }
-  .profile-layout>img {
-    height: 270px;
-    min-height: 0;
-    object-position: center 18%
-  }
-  .profile-copy {
-    padding: 23px
-  }
-  .profile-copy h2 {
-    font-size: 32px
-  }
-  .profile-copy .eyebrow {
-    font-size: 9px
-  }
-  .profile-event {
-    margin-top: 20px
-  }
-}
-
-/* Small screens use a flat, swipeable portrait slider instead of the desktop arc. */
-@media(max-width:800px) {
   .carousel {
     height: 378px;
   }
@@ -2719,7 +2205,7 @@ dialog::backdrop {
     transform-style: flat;
   }
   .faculty-card {
-    width: min(270px, calc(100% - 76px));
+    width: min(270px, calc(100% - 64px));
     height: 352px;
     top: 12px;
     border-radius: 12px;
@@ -2744,7 +2230,7 @@ dialog::backdrop {
     line-height: 1.05;
   }
   .faculty-card-copy small {
-    font-size: 10px;
+    font-size: 11px;
   }
   .faculty-card-copy .profile-link {
     margin-top: 6px;
@@ -2760,63 +2246,139 @@ dialog::backdrop {
   }
   .mobile-carousel-hint {
     display: inline;
-    font-size: 10px;
+    font-size: 11px;
   }
   #carousel-play {
     display: inline-flex;
     justify-content: center;
-    padding: 9px 12px;
+    align-items: center;
+    padding: 9px 14px;
     min-height: 44px;
     min-width: 122px;
     border: 1px solid #c89a60;
     border-radius: 24px;
-    font-size: 10px;
+    font-size: 11px;
   }
   .faculty-badge {
     padding: 10px 25px;
+  }
+  .faculty-badge h2 {
+    font-size: 21px;
   }
   .personal-welcome {
     font-size: 23px;
     padding-top: 5px;
   }
+  .section-container {
+    width: calc(100% - 40px);
+  }
+  .section-heading h2 {
+    font-size: 38px;
+  }
+  .section-heading>p {
+    font-size: 23px;
+  }
+  .directory-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media(max-width:560px) {
-  .welcome-intro[open] {
-    padding: 18px 14px;
-    background-size: auto 100%;
+  html {
+    scroll-padding-top: 20px;
   }
-  .intro-panel {
-    padding: 24px 23px 20px;
-    border-radius: 13px;
+  .section-container {
+    width: calc(100% - 32px);
   }
-  .intro-panel > .eyebrow {
-    font-size: 7px;
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: max(12px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) 6px max(14px, env(safe-area-inset-left));
+    padding-right: calc(max(14px, env(safe-area-inset-right)) + 64px);
+    gap: 8px;
   }
-  .intro-ornament {
-    margin-top: 16px;
+  .brand {
+    gap: 8px;
   }
-  .intro-wordmark {
-    font-size: clamp(55px, 17vw, 75px);
+  .brand-mark {
+    width: 36px;
+    height: 40px;
+    font-size: 32px;
+    border-bottom-width: 3px;
   }
-  .intro-tagline {
-    font-size: 33px;
+  .brand-mark span {
+    font-size: 10px;
+    right: 1px;
+    top: 3px;
   }
-  .intro-panel h2 {
-    font-size: 30px;
+  .brand-name strong {
+    font-size: 13px;
   }
-  #intro-description {
+  .brand-name > span {
+    font-size: 10px;
+    line-height: 1.15;
+    max-width: 180px;
+  }
+  .brand-name br {
+    display: none;
+  }
+  .main-nav {
+    width: 100%;
+    justify-content: center;
+    gap: 4px 12px;
+    padding: 2px 0 4px;
+  }
+  .main-nav a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
     font-size: 11px;
+    padding: 6px 4px;
   }
-  .intro-rule {
-    margin-block: 17px;
+  .main-nav a:after {
+    bottom: 0;
   }
-  .intro-date {
-    font-size: 8px;
-    margin-top: 10px;
+  .hero {
+    min-height: 280px;
+    padding: 16px 12px 38px;
+    background-size: auto 240px;
   }
-  .mobile-carousel-hint {
-    font-size: 9px;
+  .hero > .eyebrow {
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    max-width: 330px;
+    line-height: 1.6;
+  }
+  .hero > .eyebrow span {
+    display: none;
+  }
+  .hero-copy {
+    padding-top: 6px;
+  }
+  .hero h1 {
+    font-size: clamp(66px, 18vw, 92px);
+    letter-spacing: -.045em;
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+  .hero-subtitle {
+    font-size: clamp(30px, 8vw, 36px);
+    line-height: 1.05;
+  }
+  .party-label {
+    font-size: 11.5px;
+    letter-spacing: .16em;
+    padding: 4px 14px;
+    margin: 8px auto 12px;
+    white-space: normal;
+    text-align: center;
+  }
+  .hero-quote {
+    font-size: 15px;
+    padding: 0 8px;
+  }
+  .hero-quote span {
+    font-size: 11.5px;
   }
   .schedule-col {
     padding: 14px 16px;
@@ -2835,74 +2397,294 @@ dialog::backdrop {
     width: 100%;
     justify-content: flex-start;
   }
+  .stage-wave {
+    top: -37px;
+    height: 49px;
+  }
+  .stage-inner {
+    padding-top: 8px;
+  }
+  .stage-eyebrow {
+    font-size: 10.5px;
+    letter-spacing: .18em;
+    margin-bottom: 4px;
+  }
+  .carousel {
+    height: 340px;
+  }
+  .faculty-card {
+    width: min(250px, calc(100% - 48px));
+    height: 316px;
+    top: 8px;
+  }
+  .faculty-card img {
+    height: 220px;
+  }
+  .faculty-card-copy {
+    padding: 10px 8px 8px;
+    min-height: 96px;
+  }
+  .faculty-card-copy strong {
+    font-size: 18px;
+  }
+  .faculty-card-copy small {
+    font-size: 10.5px;
+  }
+  .mobile-carousel-hint {
+    font-size: 10.5px;
+  }
+  .faculty-badge {
+    gap: 10px;
+    padding: 8px 18px;
+    bottom: -25px;
+    width: max-content;
+    max-width: calc(100% - 32px);
+  }
+  .faculty-badge h2 {
+    font-size: 19px;
+  }
+  .faculty-badge p {
+    font-size: 12px;
+  }
+  .faculty-browse {
+    padding-top: 36px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .faculty-browse .button {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    min-height: 48px;
+  }
+  .link-button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+  }
+  .faculty-memory {
+    margin-block: 32px 36px;
+  }
+  .faculty-memory-header {
+    margin-bottom: 16px;
+  }
+  .faculty-memory-header h2 {
+    font-size: 30px;
+  }
+  .faculty-memory-header > p:last-child {
+    font-size: 12px;
+  }
+  .faculty-memory-frame {
+    padding: 6px 6px 0;
+    border-radius: 12px;
+  }
+  .faculty-memory-frame figcaption {
+    flex-direction: column;
+    padding: 12px 6px 6px;
+    text-align: center;
+    font-size: 11px;
+    gap: 6px;
+  }
+  .welcome-note {
+    padding: 28px 12px 32px;
+  }
+  .welcome-note h2 {
+    font-size: clamp(28px, 7vw, 34px);
+  }
+  .welcome-note > .eyebrow {
+    font-size: 10.5px;
+  }
+  .welcome-note > p:not(.eyebrow) {
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .welcome-note .button {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+    min-height: 48px;
+  }
+  .site-footer {
+    padding-block: 28px max(36px, env(safe-area-inset-bottom));
+  }
+  .footer-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .footer-primary {
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+  .footer-dept {
+    text-align: center;
+  }
+  .footer-dates-summary {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 11.5px;
+  }
+  .footer-dates-summary .footer-sep {
+    display: none;
+  }
+  .footer-nav-col {
+    justify-content: center;
+  }
+  .back-to-top {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .atelier-plaque {
+    padding: 12px 20px 10px;
+  }
   .plaque-logo {
     width: 52px;
     height: 52px;
   }
   .plaque-credit {
+    font-size: 11px;
+  }
+  .directory-dialog {
+    padding: 22px 14px;
+    max-width: calc(100% - 20px);
+    max-height: 92dvh;
+  }
+  .directory-dialog > .eyebrow {
+    font-size: 10px;
+    margin-right: 25px;
+  }
+  .directory-dialog h2 {
+    font-size: 28px;
+  }
+  .directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .directory-card img {
+    height: 140px;
+  }
+  .directory-card strong {
+    font-size: 13px;
+    padding-inline: 6px;
+  }
+  .directory-card small {
+    font-size: 10.5px;
+    padding-inline: 6px;
+  }
+  .profile-dialog {
+    max-width: calc(100% - 20px);
+    max-height: 92dvh;
+  }
+  .profile-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-layout > img {
+    width: 100%;
+    height: 250px;
+    min-height: 220px;
+    object-position: center 20%;
+    flex-shrink: 0;
+  }
+  .profile-copy {
+    padding: 20px 18px 24px;
+  }
+  .profile-copy h2 {
+    font-size: 28px;
+  }
+  .profile-copy .eyebrow {
     font-size: 10px;
   }
-  .atelier-plaque {
-    padding: 12px 18px 10px;
+  .profile-event {
+    margin-top: 16px;
+  }
+  .welcome-intro[open] {
+    padding: 18px 14px;
+    background-size: auto 100%;
+  }
+  .intro-panel {
+    padding: 24px 20px 20px;
+    border-radius: 14px;
+  }
+  .intro-panel > .eyebrow {
+    font-size: 10px;
+  }
+  .intro-ornament {
+    margin-top: 14px;
+  }
+  .intro-wordmark {
+    font-size: clamp(52px, 16vw, 72px);
+  }
+  .intro-tagline {
+    font-size: 30px;
+  }
+  .intro-panel h2 {
+    font-size: clamp(24px, 6vw, 28px);
+  }
+  #intro-description {
+    font-size: 12px;
+  }
+  .intro-rule {
+    margin-block: 15px;
+  }
+  .intro-date {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+}
+
+@media(max-width:360px) {
+  .directory-grid {
+    grid-template-columns: 1fr;
+  }
+  .faculty-card {
+    width: calc(100% - 32px);
   }
 }
 
 @media(prefers-reduced-motion:reduce) {
   html {
-    scroll-behavior: auto
+    scroll-behavior: auto;
   }
   *,*:before,*:after {
     transition: none!important;
-    animation: none!important
+    animation: none!important;
   }
 }
 
 @media print {
-  .site-header,.hero,.faculty-section,.faculty-browse,.faculty-memory,.welcome-note,.site-footer,.event-notes,.schedule-meta a {
-    display: none
+  .site-header, .hero, .faculty-section, .faculty-browse, .faculty-memory, .welcome-note, .site-footer, .schedule-meta a, .soundtrack-widget, dialog, .timeline-spine-track, .schedule-bg-decor {
+    display: none !important;
   }
   .section-container {
-    width: 100%
+    width: 100%;
   }
   .schedule {
-    padding: 0
+    padding: 0;
+    background: none;
+    border: 0;
   }
-  .event-card,.sequence-card {
-    break-inside: avoid
+  .programme-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
   }
-  .timeline-row {
-    break-inside: avoid
+  .programme-timeline-grid {
+    display: block;
+    padding: 0;
   }
-  .event-card:after {
-    background: #fff!important
-  }
-  .event-image {
-    display: none
-  }
-  .event-copy {
-    grid-column: 1/-1;
-    padding: 12px
-  }
-  .timeline-row {
-    grid-template-columns: 180px minmax(0,1fr);
-    gap: 30px
-  }
-  .timeline:before {
-    left: 195px
-  }
-  .timeline-row:before {
-    left: 189px
-  }
-  .sequence-card {
-    min-height: 0
-  }
-  .timeline {
-    gap: 10px
-  }
-  .section-heading {
-    margin-bottom: 18px
+  .programme-timeline-item {
+    margin-bottom: 12px;
   }
   body {
-    background: white
+    background: white;
   }
 }

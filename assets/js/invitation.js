@@ -12,6 +12,7 @@
   const download = byId('download-invitation');
   const printButton = byId('print-invitation');
   const envelope = byId('envelope');
+  const envelopeStage = byId('envelope-stage');
   const envelopeSeal = byId('envelope-seal');
   const envelopeExperience = byId('envelope-experience');
   const toggleEnvelopeBtn = byId('toggle-envelope-btn');
@@ -41,6 +42,7 @@
     updateCardDimensions();
     if (reducedMotion.matches) {
       envelope.classList.add('is-opened');
+      envelopeStage?.classList.add('is-opened');
       envelopeSeal.setAttribute('aria-expanded', 'true');
       toggleEnvelopeBtn.hidden = false;
       toggleEnvelopeBtn.setAttribute('aria-expanded', 'true');
@@ -56,6 +58,7 @@
     setTimeout(() => {
       envelope.classList.remove('is-unsealing');
       envelope.classList.add('is-opened');
+      envelopeStage?.classList.add('is-opened');
       toggleEnvelopeBtn.hidden = false;
       toggleEnvelopeBtn.setAttribute('aria-expanded', 'true');
       toggleEnvelopeText.textContent = 'Re-seal envelope';
@@ -70,6 +73,7 @@
     if (!envelope || isAnimating || !envelope.classList.contains('is-opened')) return;
     if (reducedMotion.matches) {
       envelope.classList.remove('is-opened');
+      envelopeStage?.classList.remove('is-opened');
       envelopeSeal.setAttribute('aria-expanded', 'false');
       toggleEnvelopeBtn.setAttribute('aria-expanded', 'false');
       toggleEnvelopeText.textContent = 'Open invitation';
@@ -78,6 +82,7 @@
     }
     isAnimating = true;
     envelope.classList.remove('is-opened');
+    envelopeStage?.classList.remove('is-opened');
     envelopeSeal.setAttribute('aria-expanded', 'false');
     toggleEnvelopeBtn.setAttribute('aria-expanded', 'false');
     toggleEnvelopeText.textContent = 'Open invitation';
