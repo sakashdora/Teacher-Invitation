@@ -259,16 +259,21 @@ button:focus-visible,a:focus-visible,input:focus-visible { outline:2px solid var
   display:inline-flex; flex-direction:column; align-items:center; text-align:center; gap:8px;
   padding:14px 24px 12px; background:#ffffff; border:1px solid rgba(189,136,43,0.28);
   border-radius:12px; box-shadow:0 4px 16px rgba(101,12,40,0.06),0 1px 3px rgba(0,0,0,0.04);
+  text-decoration:none; color:inherit; cursor:pointer;
   transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s ease,border-color .25s ease;
 }
 .atelier-plaque:hover {
   transform:translateY(-2px); border-color:rgba(189,136,43,0.55);
   box-shadow:0 8px 24px rgba(101,12,40,0.1),0 2px 6px rgba(0,0,0,0.06);
 }
+.atelier-plaque:focus-visible {
+  outline:2px solid var(--gold); outline-offset:3px;
+}
 .plaque-brand-lockup { display:flex; align-items:center; justify-content:center; }
 .plaque-logo { width:56px; height:56px; border-radius:8px; object-fit:contain; display:block; background:#ffffff; box-shadow:0 1px 3px rgba(0,0,0,0.08); }
 .plaque-rule { width:48px; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); }
-.plaque-credit { font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.04em; color:var(--wine); margin:0; white-space:nowrap; }
+.plaque-credit { font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.04em; color:var(--wine); margin:0; white-space:nowrap; transition:color .2s ease; }
+.atelier-plaque:hover .plaque-credit { color:var(--maroon); }
 .personalize-dialog { width:min(460px,calc(100% - 32px)); max-height:calc(100dvh - 32px); border:1px solid #c9a575; border-radius:10px; padding:35px; color:var(--wine); background:var(--paper); box-shadow:0 20px 70px #3d172c2b; }
 .personalize-dialog::backdrop { background:#351a2855; backdrop-filter:blur(6px); }
 .dialog-close { position:absolute; top:8px; right:8px; width:44px; height:44px; min-width:44px; min-height:44px; border:0; background:none; font-size:26px; display:grid; place-items:center; cursor:pointer; }

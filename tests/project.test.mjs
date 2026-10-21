@@ -113,3 +113,11 @@ test('Page local scripts, stylesheet, favicon and downloads exist', async () => 
   for (const url of urls) await access(new URL(url, root));
   assert.doesNotMatch(html, /onclick=|<style>/);
 });
+
+test('True Inspire atelier plaque links to official portfolio URL', async () => {
+  for (const path of ['index.html', 'invitation.html']) {
+    const html = await readFile(new URL(path, root), 'utf8');
+    assert.match(html, /<a\s+class="atelier-plaque"[^>]*href="https:\/\/true-inspires\.vercel\.app\/"/);
+    assert.match(html, /Design &amp; Developed by True Inspire/);
+  }
+});
