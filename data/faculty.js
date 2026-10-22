@@ -167,5 +167,33 @@ window.TEJAS_FACULTY = [
     "role": "Assistant Professor",
     "email": "",
     "photo": "Faculty_Members/Photos_Original/25_Soumya_Ranjan_Swain.png"
+  },
+  {
+    "id": 26,
+    "name": "Dr. Monalisa Chakrabarty",
+    "role": "Assistant Professor – Placement",
+    "email": "",
+    "photo": "Faculty_Members/Photos_Original/26_Dr_Monalisa_Chakrabarty.png"
+  },
+  {
+    "id": 27,
+    "name": "Mr. Sashikanta Sethi",
+    "role": "Assistant Professor",
+    "email": "",
+    "photo": "Faculty_Members/Photos_Original/27_Mr_Sashikanta_Sethi.png"
+  },
+  {
+    "id": 28,
+    "name": "Saurav Sir",
+    "role": "Assistant Professor",
+    "email": "",
+    "photo": "Faculty_Members/Photos_Original/28_Saurav_Sir.png"
+  },
+  {
+    "id": 29,
+    "name": "Mrs. Susmita Barala",
+    "role": "Assistant Professor",
+    "email": "",
+    "photo": "Faculty_Members/Photos_Original/29_Mrs_Susmita_Barala.png"
   }
 ];

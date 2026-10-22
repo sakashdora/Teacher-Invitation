@@ -338,7 +338,7 @@
   {
     "id": 23,
     "name": "Namrata Sahoo",
-    "designation": "Deputy Director – Strategy",
+    "designation": "Deputy Director \u2013 Strategy",
     "email": "",
     "institution": "Srusti Academy of Management & Technology",
     "safe_name": "Namrata_Sahoo",
@@ -385,5 +385,73 @@
       "teacher_folder": "By_Teacher/25_Soumya_Ranjan_Swain"
     },
     "source": "Name, title and original photograph supplied by the project owner on 16 October 2026."
+  },
+  {
+    "id": 26,
+    "name": "Dr. Monalisa Chakrabarty",
+    "designation": "Assistant Professor \u2013 Placement",
+    "email": "",
+    "institution": "Srusti Academy of Management & Technology",
+    "safe_name": "Dr_Monalisa_Chakrabarty",
+    "folder_name": "26_Dr_Monalisa_Chakrabarty",
+    "original_photo_filename": "26_Dr_Monalisa_Chakrabarty.png",
+    "labeled_photo_filename": "26_Dr_Monalisa_Chakrabarty.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/26_Dr_Monalisa_Chakrabarty.png",
+      "labeled_photo": "Photos_With_Name_Overlay/26_Dr_Monalisa_Chakrabarty.png",
+      "teacher_folder": "By_Teacher/26_Dr_Monalisa_Chakrabarty"
+    },
+    "source": "Name and designation supplied by the project owner on 21 October 2026."
+  },
+  {
+    "id": 27,
+    "name": "Mr. Sashikanta Sethi",
+    "designation": "Assistant Professor",
+    "email": "",
+    "institution": "Srusti Academy of Management & Technology",
+    "safe_name": "Mr_Sashikanta_Sethi",
+    "folder_name": "27_Mr_Sashikanta_Sethi",
+    "original_photo_filename": "27_Mr_Sashikanta_Sethi.png",
+    "labeled_photo_filename": "27_Mr_Sashikanta_Sethi.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/27_Mr_Sashikanta_Sethi.png",
+      "labeled_photo": "Photos_With_Name_Overlay/27_Mr_Sashikanta_Sethi.png",
+      "teacher_folder": "By_Teacher/27_Mr_Sashikanta_Sethi"
+    },
+    "source": "Name and designation supplied by the project owner on 21 October 2026."
+  },
+  {
+    "id": 28,
+    "name": "Saurav Sir",
+    "designation": "Assistant Professor",
+    "email": "",
+    "institution": "Srusti Academy of Management & Technology",
+    "safe_name": "Saurav_Sir",
+    "folder_name": "28_Saurav_Sir",
+    "original_photo_filename": "28_Saurav_Sir.png",
+    "labeled_photo_filename": "28_Saurav_Sir.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/28_Saurav_Sir.png",
+      "labeled_photo": "Photos_With_Name_Overlay/28_Saurav_Sir.png",
+      "teacher_folder": "By_Teacher/28_Saurav_Sir"
+    },
+    "source": "Name and designation supplied by the project owner on 21 October 2026."
+  },
+  {
+    "id": 29,
+    "name": "Mrs. Susmita Barala",
+    "designation": "Assistant Professor",
+    "email": "",
+    "institution": "Srusti Academy of Management & Technology",
+    "safe_name": "Mrs_Susmita_Barala",
+    "folder_name": "29_Mrs_Susmita_Barala",
+    "original_photo_filename": "29_Mrs_Susmita_Barala.png",
+    "labeled_photo_filename": "29_Mrs_Susmita_Barala.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/29_Mrs_Susmita_Barala.png",
+      "labeled_photo": "Photos_With_Name_Overlay/29_Mrs_Susmita_Barala.png",
+      "teacher_folder": "By_Teacher/29_Mrs_Susmita_Barala"
+    },
+    "source": "Name and designation supplied by the project owner on 21 October 2026."
   }
 ]

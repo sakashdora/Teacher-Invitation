@@ -1,0 +1,17 @@
+{
+  "id": 29,
+  "name": "Mrs. Susmita Barala",
+  "designation": "Assistant Professor",
+  "email": "",
+  "institution": "Srusti Academy of Management & Technology",
+  "safe_name": "Mrs_Susmita_Barala",
+  "folder_name": "29_Mrs_Susmita_Barala",
+  "original_photo_filename": "29_Mrs_Susmita_Barala.png",
+  "labeled_photo_filename": "29_Mrs_Susmita_Barala.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/29_Mrs_Susmita_Barala.png",
+    "labeled_photo": "Photos_With_Name_Overlay/29_Mrs_Susmita_Barala.png",
+    "teacher_folder": "By_Teacher/29_Mrs_Susmita_Barala"
+  },
+  "source": "Name and designation supplied by the project owner on 21 October 2026."
+}
