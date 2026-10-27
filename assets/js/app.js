@@ -193,9 +193,11 @@
     selectedTeacher = null;
     errorMessage.hidden = true;
     nameInput.removeAttribute('aria-invalid');
-    const matches = window.TEJAS_NAMES.findMatches(nameInput.value, faculty);
+    const query = nameInput.value;
+    const matches = window.TEJAS_NAMES.findMatches(query, faculty);
     suggestions.replaceChildren();
     suggestions.hidden = !matches.length;
+    intro.querySelector('.intro-panel')?.classList.toggle('has-suggestions', matches.length > 0);
     if (!matches.length) return;
     const hint = document.createElement('p');
     hint.textContent = matches.length === 1 ? 'Your faculty profile' : 'Choose your name';
@@ -203,14 +205,27 @@
     matches.forEach(person => {
       const choice = document.createElement('button');
       choice.type = 'button'; choice.className = 'name-choice';
-      choice.innerHTML = `<img src="${escapeHTML(person.photo)}" alt="" width="40" height="44"><span><strong>${escapeHTML(person.name)}</strong><small>${escapeHTML(person.role)}</small></span><span class="choice-tick" aria-hidden="true">↗</span>`;
+      choice.setAttribute('aria-label', `Select ${person.name}, ${person.role}`);
+      choice.innerHTML = `<img src="${escapeHTML(person.photo)}" alt="" width="40" height="44" loading="lazy"><span><strong>${escapeHTML(person.name)}</strong><small>${escapeHTML(person.role)}</small></span><span class="choice-tick" aria-hidden="true">↗</span>`;
+      // On mobile / Android touch screens, prevent input blur before selection
+      choice.addEventListener('pointerdown', event => {
+        event.preventDefault();
+      });
       choice.addEventListener('click', () => {
         nameInput.value = person.name;
-        renderSuggestions();
         selectedTeacher = person;
+        suggestions.replaceChildren();
+        suggestions.hidden = true;
+        intro.querySelector('.intro-panel')?.classList.remove('has-suggestions');
         byId('enter-celebration').focus();
       });
       suggestions.append(choice);
+    });
+
+    requestAnimationFrame(() => {
+      if (!suggestions.hidden) {
+        suggestions.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
     });
   }
 
@@ -267,6 +282,9 @@
   welcomeForm.addEventListener('submit', formEvent => {
     formEvent.preventDefault();
     if (entering) return;
+    if (selectedTeacher && nameInput.value.trim().toLowerCase() === selectedTeacher.name.trim().toLowerCase()) {
+      return enterCelebration(selectedTeacher);
+    }
     const matches = window.TEJAS_NAMES.findMatches(nameInput.value, faculty);
     if (!nameInput.value.trim()) return showNameError('Please enter your name, or continue as a guest.');
     if (!matches.length) return showNameError('We couldn’t find that name. Try your first or last name, or continue as a guest.');
@@ -274,6 +292,12 @@
     enterCelebration(matches[0]);
   });
   nameInput.addEventListener('input', renderSuggestions);
+  nameInput.addEventListener('keyup', renderSuggestions);
+  nameInput.addEventListener('change', renderSuggestions);
+  nameInput.addEventListener('compositionend', renderSuggestions);
+  nameInput.addEventListener('focus', () => {
+    if (nameInput.value.trim().length >= 2) renderSuggestions();
+  });
   byId('continue-guest').addEventListener('click', () => enterCelebration(null));
   intro.addEventListener('cancel', cancelEvent => {
     cancelEvent.preventDefault();

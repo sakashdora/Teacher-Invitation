@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
   <meta name="theme-color" content="#650c28">
   <meta name="description" content="TEJAS ’26 — The Fresh Bloom. Join the MCA freshers’ celebration on 30 October 2026 at JRD Tata Hall, Srusti Academy of Management & Technology. Meet our esteemed teachers and explore the programme.">
   <title>TEJAS ’26 — The Fresh Bloom | Srusti Academy</title>
@@ -34,7 +34,7 @@
       <p id="intro-description">Please share your name so we may present your personalized welcome and celebration invitation.</p>
       <form id="welcome-form" novalidate>
         <label for="teacher-name">Your name</label>
-        <input id="teacher-name" name="teacher-name" type="text" placeholder="Enter your name" autocomplete="off" maxlength="100" aria-describedby="name-help intro-error" aria-controls="name-suggestions">
+        <input id="teacher-name" name="teacher-name" type="text" placeholder="Enter your name" autocomplete="off" autocapitalize="words" autocorrect="off" spellcheck="false" maxlength="100" aria-describedby="name-help intro-error" aria-controls="name-suggestions">
         <p class="name-help" id="name-help">Your first name or full name is enough.</p>
         <div class="name-suggestions" id="name-suggestions" aria-label="Matching teachers" hidden></div>
         <p class="intro-error" id="intro-error" role="alert" hidden></p>
