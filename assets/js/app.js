@@ -231,6 +231,7 @@
 
   async function enterCelebration(person) {
     if (entering || entered) return;
+    window.TEJAS_SOUNDTRACK.start(true);
     entering = true; selectedTeacher = person;
     const teacherId = person ? String(person.id) : 'guest';
     document.querySelectorAll('[data-invitation-link]').forEach(link => { link.href = `invitation.html?teacher=${teacherId}`; });
@@ -324,6 +325,9 @@
   };
   window.addEventListener('hashchange', updateNavigation);
   renderCarousel(); updateNavigation();
+  document.querySelectorAll('[data-invitation-link]').forEach(link => {
+    link.addEventListener('click', () => { window.TEJAS_SOUNDTRACK.start(true); });
+  });
   const welcomeParam = new URLSearchParams(location.search).get('teacher');
   const invitedTeacher = faculty.find(person => String(person.id) === welcomeParam);
   if (invitedTeacher || welcomeParam === 'guest') {

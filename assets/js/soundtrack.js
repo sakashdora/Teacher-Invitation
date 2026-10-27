@@ -16,6 +16,8 @@
   audio.loop = true;
   audio.volume = .35;
   audio.hidden = true;
+  audio.setAttribute('playsinline', 'true');
+  audio.setAttribute('webkit-playsinline', 'true');
   document.body.append(audio);
 
   const widget = document.createElement('div');
@@ -55,15 +57,32 @@
 
   async function start(force = false) {
     if (!force && !enabled) return;
-    if (pending || (!audio.paused && !audio.ended)) return;
+    if (!audio.paused && !audio.ended) return;
+    if (pending && !force) return;
     enabled = true;
+    audio.muted = false;
     const thisAttempt = ++attempt;
     pending = true;
-    if (audio.error) audio.load();
+    if (audio.error || audio.readyState === 0) {
+      audio.load();
+    }
     failed = false;
     render();
+
+    // Mobile AudioContext unlock for iOS Safari and Chromium
     try {
-      await audio.play();
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (AudioCtx) {
+        if (!window.__tejasAudioCtx) window.__tejasAudioCtx = new AudioCtx();
+        if (window.__tejasAudioCtx.state === 'suspended') window.__tejasAudioCtx.resume();
+      }
+    } catch { /* AudioContext optional enhancement */ }
+
+    try {
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        await playPromise;
+      }
       if (thisAttempt !== attempt) return;
       pending = false;
       save();
@@ -85,19 +104,18 @@
     }
   });
 
-  // User gesture unlock for modern browser autoplay policies
-  function onFirstInteraction(event) {
+  // User gesture unlock for modern mobile browser autoplay policies
+  function unlockOnUserGesture(event) {
     if (button.contains(event.target)) return;
-    window.removeEventListener('click', onFirstInteraction, true);
-    window.removeEventListener('touchstart', onFirstInteraction, true);
-    window.removeEventListener('keydown', onFirstInteraction, true);
-    if (enabled && audio.paused && !failed) {
-      start();
+    if (enabled && audio.paused) {
+      start(true);
     }
   }
-  window.addEventListener('click', onFirstInteraction, true);
-  window.addEventListener('touchstart', onFirstInteraction, true);
-  window.addEventListener('keydown', onFirstInteraction, true);
+
+  const unlockEvents = ['pointerup', 'touchend', 'click', 'keydown'];
+  unlockEvents.forEach(evt => {
+    window.addEventListener(evt, unlockOnUserGesture, { capture: true, passive: true });
+  });
 
   audio.addEventListener('loadedmetadata', () => {
     if (saved && Number.isFinite(saved.time) && Number.isFinite(audio.duration) && audio.duration > 0) {
@@ -118,7 +136,14 @@
     render();
   });
 
-  audio.addEventListener('playing', () => { pending = false; failed = false; render(); });
+  audio.addEventListener('playing', () => {
+    pending = false;
+    failed = false;
+    unlockEvents.forEach(evt => {
+      window.removeEventListener(evt, unlockOnUserGesture, { capture: true, passive: true });
+    });
+    render();
+  });
   audio.addEventListener('pause', render);
   window.addEventListener('pagehide', () => { save(); audio.pause(); });
   window.addEventListener('pageshow', event => { if (event.persisted && enabled) start(); });

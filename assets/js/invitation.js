@@ -39,6 +39,7 @@
 
   function openEnvelope() {
     if (!envelope || isAnimating || envelope.classList.contains('is-opened')) return;
+    window.TEJAS_SOUNDTRACK.start(true);
     updateCardDimensions();
     if (reducedMotion.matches) {
       envelope.classList.add('is-opened');
@@ -172,11 +173,20 @@
     choose(matches[0]);
   });
   byId('retry-invitation').addEventListener('click', () => { if (recipient) prepareInvitation(recipient); });
+  envelopeSeal.addEventListener('pointerup', () => { window.TEJAS_SOUNDTRACK.start(true); }, { passive: true });
+  envelopeSeal.addEventListener('touchend', () => { window.TEJAS_SOUNDTRACK.start(true); }, { passive: true });
   envelopeSeal.addEventListener('click', openEnvelope);
   toggleEnvelopeBtn.addEventListener('click', () => {
     if (envelope.classList.contains('is-opened')) closeEnvelope();
     else openEnvelope();
   });
+  if (envelope) {
+    envelope.addEventListener('click', (event) => {
+      if (!envelope.classList.contains('is-opened') && !event.target.closest('#envelope-seal')) {
+        openEnvelope();
+      }
+    });
+  }
   download.addEventListener('click', () => {
     if (!imageURL || !recipient || download.disabled) return;
     const link = document.createElement('a');

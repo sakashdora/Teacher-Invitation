@@ -51,7 +51,7 @@
     function onMotionChange() { if (motion.matches) finish(); }
     function openDoors() {
       if (screen.dataset.phase !== 'ready') return;
-      window.TEJAS_SOUNDTRACK.start();
+      window.TEJAS_SOUNDTRACK.start(true);
       screen.dataset.phase = 'opening';
       button.disabled = true;
       status.textContent = 'Opening the doors…';
@@ -62,6 +62,8 @@
     screen.querySelector('.entrance-door-right').addEventListener('transitionend', event => {
       if (event.propertyName === 'transform' && event.target.classList.contains('entrance-door-right')) finish();
     });
+    button.addEventListener('pointerup', () => { window.TEJAS_SOUNDTRACK.start(true); }, { passive: true });
+    button.addEventListener('touchend', () => { window.TEJAS_SOUNDTRACK.start(true); }, { passive: true });
     button.addEventListener('click', openDoors);
     screen.addEventListener('cancel', event => { event.preventDefault(); openDoors(); });
     motion.addEventListener('change', onMotionChange);
