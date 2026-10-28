@@ -10,6 +10,7 @@
     .replace(/^(?:(?:dr|doctor|prof|professor|mr|mrs|ms|er)\s+)+/, '')
     .replace(/(?:\s+(?:sir|madam|ma\s*am|mam))+$/, '')
     .replace(/\bsatpathy\b/g, 'satpaty')
+    .replace(/\bpatnaik\b|\bpattnaik\b/g, 'pattanaik')
     .replace(/\s+/g, ' ');
 
   function findMatches(query, records) {

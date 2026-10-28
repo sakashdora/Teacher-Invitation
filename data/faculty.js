@@ -209,5 +209,12 @@ window.TEJAS_FACULTY = [
     "role": "Assistant Professor",
     "email": "",
     "photo": "Faculty_Members/Photos_Original/31_Sahil_Satpaty.png"
+  },
+  {
+    "id": 32,
+    "name": "Hemant Pattanaik",
+    "role": "Assistant Professor",
+    "email": "",
+    "photo": "Faculty_Members/Photos_Original/32_Hemant_Pattanaik.png"
   }
 ];

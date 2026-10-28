@@ -487,5 +487,22 @@
       "teacher_folder": "By_Teacher/31_Sahil_Satpaty"
     },
     "source": "Name and photograph supplied by the project owner on 28 October 2026."
+  },
+  {
+    "id": 32,
+    "name": "Hemant Pattanaik",
+    "designation": "Assistant Professor",
+    "email": "",
+    "institution": "Srusti Academy of Management & Technology",
+    "safe_name": "Hemant_Pattanaik",
+    "folder_name": "32_Hemant_Pattanaik",
+    "original_photo_filename": "32_Hemant_Pattanaik.png",
+    "labeled_photo_filename": "32_Hemant_Pattanaik.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/32_Hemant_Pattanaik.png",
+      "labeled_photo": "Photos_With_Name_Overlay/32_Hemant_Pattanaik.png",
+      "teacher_folder": "By_Teacher/32_Hemant_Pattanaik"
+    },
+    "source": "Name and photograph supplied by the project owner on 28 October 2026."
   }
 ]

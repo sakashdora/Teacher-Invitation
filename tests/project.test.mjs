@@ -48,7 +48,7 @@ test('Removed teacher cannot be found or selected by the former profile ID', asy
   const csv = await readFile(new URL('Faculty_Members/faculty_list.csv', root), 'utf8');
   assert.doesNotMatch(csv, /Parija|drsusmita|^6,/im);
 });
-test('Newly added and updated teachers (Monalisa Chakrabarty, Sashikanta Sethi, Saurav Kumar Pati, Susmita Barala, Madhusmita Nayak, Sahil Satpaty) resolve unambiguously', () => {
+test('Newly added and updated teachers (Monalisa Chakrabarty, Sashikanta Sethi, Saurav Kumar Pati, Susmita Barala, Madhusmita Nayak, Sahil Satpaty, Hemant Pattanaik) resolve unambiguously', () => {
   for (const query of ['Dr. Monalisa Chakrabarty', 'Monalisa Chakrabarty', 'Monalisa', 'Chakrabarty']) {
     const matches = window.TEJAS_NAMES.findMatches(query, faculty);
     assert.equal(matches.length, 1);
@@ -78,6 +78,11 @@ test('Newly added and updated teachers (Monalisa Chakrabarty, Sashikanta Sethi, 
     const matches = window.TEJAS_NAMES.findMatches(query, faculty);
     assert.equal(matches.length, 1);
     assert.equal(matches[0].id, 31);
+  }
+  for (const query of ['Hemant Pattanaik', 'Hemant Patnaik', 'Hemant Pattnaik', 'Hemant', 'Pattanaik', 'Patnaik', 'Pattnaik', 'Hemant Sir', 'Mr. Hemant Pattanaik']) {
+    const matches = window.TEJAS_NAMES.findMatches(query, faculty);
+    assert.equal(matches.length, 1);
+    assert.equal(matches[0].id, 32);
   }
 });
 test('Leadership names resolve unambiguously and retain the supplied titles without invented emails', () => {
