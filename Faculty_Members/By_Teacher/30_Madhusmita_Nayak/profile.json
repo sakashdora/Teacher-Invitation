@@ -1,0 +1,17 @@
+{
+  "id": 30,
+  "name": "Madhusmita Nayak",
+  "designation": "Assistant Professor",
+  "email": "",
+  "institution": "Srusti Academy of Management & Technology",
+  "safe_name": "Madhusmita_Nayak",
+  "folder_name": "30_Madhusmita_Nayak",
+  "original_photo_filename": "30_Madhusmita_Nayak.png",
+  "labeled_photo_filename": "30_Madhusmita_Nayak.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/30_Madhusmita_Nayak.png",
+    "labeled_photo": "Photos_With_Name_Overlay/30_Madhusmita_Nayak.png",
+    "teacher_folder": "By_Teacher/30_Madhusmita_Nayak"
+  },
+  "source": "Name and photograph supplied by the project owner on 28 October 2026."
+}

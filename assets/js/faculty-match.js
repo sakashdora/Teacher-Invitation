@@ -8,6 +8,8 @@
     .replace(/[^\p{L}\p{N}\s]/gu, ' ')
     .trim()
     .replace(/^(?:(?:dr|doctor|prof|professor|mr|mrs|ms|er)\s+)+/, '')
+    .replace(/(?:\s+(?:sir|madam|ma\s*am|mam))+$/, '')
+    .replace(/\bsatpathy\b/g, 'satpaty')
     .replace(/\s+/g, ' ');
 
   function findMatches(query, records) {

@@ -1,0 +1,17 @@
+{
+  "id": 31,
+  "name": "Sahil Satpaty",
+  "designation": "Assistant Professor",
+  "email": "",
+  "institution": "Srusti Academy of Management & Technology",
+  "safe_name": "Sahil_Satpaty",
+  "folder_name": "31_Sahil_Satpaty",
+  "original_photo_filename": "31_Sahil_Satpaty.png",
+  "labeled_photo_filename": "31_Sahil_Satpaty.png",
+  "relative_paths": {
+    "original_photo": "Photos_Original/31_Sahil_Satpaty.png",
+    "labeled_photo": "Photos_With_Name_Overlay/31_Sahil_Satpaty.png",
+    "teacher_folder": "By_Teacher/31_Sahil_Satpaty"
+  },
+  "source": "Name and photograph supplied by the project owner on 28 October 2026."
+}

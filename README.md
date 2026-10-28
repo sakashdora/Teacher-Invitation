@@ -71,8 +71,9 @@ Music preference and playback position are kept in this browser tab's session st
 - Faculty and leadership profiles come from `Faculty_Members/faculty_list.json`. The original records were cross-checked against `22 faculty members shown.docx`. Dr. Susmita Parija (former ID 6) was removed from the active directory at the project owner's request on 16 October 2026. Other profile IDs are preserved; the removed ID is not reused.
 - Namrata Sahoo (Deputy Director – Strategy, ID 23) and Er. Saroj K. Sahoo (Chairman, ID 24) were added from the project owner's names, titles and photographs supplied on 16 October 2026. Their photographs are preserved unchanged. No email addresses were supplied, so their profiles omit email links.
 - Soumya Ranjan Swain (Assistant Professor, ID 25) was added from the project owner's supplied name, title and photograph on 16 October 2026. His original portrait is preserved and no email address is invented.
+- Saurav Kumar Pati (Assistant Professor, ID 28) has his verified original photograph replacing the earlier image. Madhusmita Nayak (Assistant Professor, ID 30) and Sahil Satpaty (Assistant Professor, ID 31) were added on 28 October 2026 with their supplied original portraits.
 - Display-only role corrections are `Trainning` → `Training`, `Vice- Principal` → `Vice-Principal`, and `FIC-placement` → `FIC-Placement`. Source records remain unchanged.
-- The project owner confirmed **30 October 2026** and supplied the eleven-item agenda: introduction of freshers and song, fun games, solo performance, group/duo dance, games, solo performances, games, mimicry, freshers’ title announcement, vote of thanks, and DJ. Game names follow the supplied list, with spelling and punctuation tidied.
+- The project owner confirmed **30 October 2026** and supplied the ten-item agenda: introduction of freshers and song, fun games, solo performance, group/duo dance, games, solo performances, games, mimicry, freshers’ title announcement, and vote of thanks. Game names follow the supplied list, with spelling and punctuation tidied.
 - Event times and activity durations are intentionally unpublished. The home page, profiles, invitation artwork, accessible invitation description and calendar download omit them. The calendar is a transparent date-only reminder for 30 October; its exclusive end date is 31 October.
 - Agenda artwork is decorative; it does not claim to show confirmed performers. The faculty group photograph and faculty portraits are the supplied originals.
 
@@ -89,7 +90,7 @@ Update the canonical JSON and run `npm run sync:faculty` to refresh faculty data
 - Auto-play starts after the intro and pauses while the carousel is hovered, focused, off screen, a dialog is open, or the page is hidden. Reduced-motion settings remove transitions and prevent automatic start; manual navigation still works.
 - Visible faculty counts have been removed. Active faculty profiles are available under “Esteemed Teachers.”
 - The full faculty group photograph appears between the teacher gallery and the agenda. Its original proportions preserve everyone in the frame on desktop and mobile. The image and “View full-size photo” link open the original photograph in a new tab for closer viewing.
-- The agenda presents the eleven activities in order, numbered 01–11, with the game names visible. Navigation anchors, direct agenda links, and the date-only calendar download work locally.
+- The agenda presents the ten activities in order, numbered 01–10, with the game names visible. Navigation anchors, direct agenda links, and the date-only calendar download work locally.
 - Layouts adapt down to 320 CSS pixels. Semantic headings, visible keyboard focus, and a skip link are provided.
 
 Google Fonts is the only external presentation dependency; local serif, cursive, and sans-serif fallbacks are configured. Page content, photographs, and interactions are local. No analytics, registration backend, or third-party scripts are included.
@@ -100,7 +101,7 @@ Google Fonts is the only external presentation dependency; local serif, cursive,
 npm run check
 ```
 
-Checks validate name matching (including ambiguity and unknown names), all faculty records and photos, the eleven agenda items and their order, the date-only calendar, absence of published event times, local assets, and JavaScript syntax. Browser QA covers the intro, personalized centering, automatic rotation, desktop/mobile layouts, faculty navigation, search, profile dialogs, agenda, calendar download, and the home-to-invitation flow. Invitation checks cover actual PNG downloads, every supplied portrait, long names, recipient changes, invalid links, and portrait failure/retry. See local reports under `artifacts/`.
+Checks validate name matching (including ambiguity and unknown names), all faculty records and photos, the ten agenda items and their order, the date-only calendar, absence of published event times, local assets, and JavaScript syntax. Browser QA covers the intro, personalized centering, automatic rotation, desktop/mobile layouts, faculty navigation, search, profile dialogs, agenda, calendar download, and the home-to-invitation flow. Invitation checks cover actual PNG downloads, every supplied portrait, long names, recipient changes, invalid links, and portrait failure/retry. See local reports under `artifacts/`.
 
 ## Earlier versions
 

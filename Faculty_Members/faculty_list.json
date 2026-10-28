@@ -422,20 +422,20 @@
   },
   {
     "id": 28,
-    "name": "Saurav Sir",
+    "name": "Saurav Kumar Pati",
     "designation": "Assistant Professor",
     "email": "",
     "institution": "Srusti Academy of Management & Technology",
-    "safe_name": "Saurav_Sir",
-    "folder_name": "28_Saurav_Sir",
-    "original_photo_filename": "28_Saurav_Sir.png",
-    "labeled_photo_filename": "28_Saurav_Sir.png",
+    "safe_name": "Saurav_Kumar_Pati",
+    "folder_name": "28_Saurav_Kumar_Pati",
+    "original_photo_filename": "28_Saurav_Kumar_Pati.png",
+    "labeled_photo_filename": "28_Saurav_Kumar_Pati.png",
     "relative_paths": {
-      "original_photo": "Photos_Original/28_Saurav_Sir.png",
-      "labeled_photo": "Photos_With_Name_Overlay/28_Saurav_Sir.png",
-      "teacher_folder": "By_Teacher/28_Saurav_Sir"
+      "original_photo": "Photos_Original/28_Saurav_Kumar_Pati.png",
+      "labeled_photo": "Photos_With_Name_Overlay/28_Saurav_Kumar_Pati.png",
+      "teacher_folder": "By_Teacher/28_Saurav_Kumar_Pati"
     },
-    "source": "Name and designation supplied by the project owner on 21 October 2026."
+    "source": "Name and original photograph supplied by the project owner on 28 October 2026."
   },
   {
     "id": 29,
@@ -453,5 +453,39 @@
       "teacher_folder": "By_Teacher/29_Mrs_Susmita_Barala"
     },
     "source": "Name and designation supplied by the project owner on 21 October 2026."
+  },
+  {
+    "id": 30,
+    "name": "Madhusmita Nayak",
+    "designation": "Assistant Professor",
+    "email": "",
+    "institution": "Srusti Academy of Management & Technology",
+    "safe_name": "Madhusmita_Nayak",
+    "folder_name": "30_Madhusmita_Nayak",
+    "original_photo_filename": "30_Madhusmita_Nayak.png",
+    "labeled_photo_filename": "30_Madhusmita_Nayak.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/30_Madhusmita_Nayak.png",
+      "labeled_photo": "Photos_With_Name_Overlay/30_Madhusmita_Nayak.png",
+      "teacher_folder": "By_Teacher/30_Madhusmita_Nayak"
+    },
+    "source": "Name and photograph supplied by the project owner on 28 October 2026."
+  },
+  {
+    "id": 31,
+    "name": "Sahil Satpaty",
+    "designation": "Assistant Professor",
+    "email": "",
+    "institution": "Srusti Academy of Management & Technology",
+    "safe_name": "Sahil_Satpaty",
+    "folder_name": "31_Sahil_Satpaty",
+    "original_photo_filename": "31_Sahil_Satpaty.png",
+    "labeled_photo_filename": "31_Sahil_Satpaty.png",
+    "relative_paths": {
+      "original_photo": "Photos_Original/31_Sahil_Satpaty.png",
+      "labeled_photo": "Photos_With_Name_Overlay/31_Sahil_Satpaty.png",
+      "teacher_folder": "By_Teacher/31_Sahil_Satpaty"
+    },
+    "source": "Name and photograph supplied by the project owner on 28 October 2026."
   }
 ]

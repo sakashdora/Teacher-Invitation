@@ -48,7 +48,7 @@ test('Removed teacher cannot be found or selected by the former profile ID', asy
   const csv = await readFile(new URL('Faculty_Members/faculty_list.csv', root), 'utf8');
   assert.doesNotMatch(csv, /Parija|drsusmita|^6,/im);
 });
-test('Newly added teachers (Monalisa Chakrabarty, Sashikanta Sethi, Saurav Sir, Susmita Barala) resolve unambiguously', () => {
+test('Newly added and updated teachers (Monalisa Chakrabarty, Sashikanta Sethi, Saurav Kumar Pati, Susmita Barala, Madhusmita Nayak, Sahil Satpaty) resolve unambiguously', () => {
   for (const query of ['Dr. Monalisa Chakrabarty', 'Monalisa Chakrabarty', 'Monalisa', 'Chakrabarty']) {
     const matches = window.TEJAS_NAMES.findMatches(query, faculty);
     assert.equal(matches.length, 1);
@@ -59,7 +59,7 @@ test('Newly added teachers (Monalisa Chakrabarty, Sashikanta Sethi, Saurav Sir, 
     assert.equal(matches.length, 1);
     assert.equal(matches[0].id, 27);
   }
-  for (const query of ['Saurav Sir', 'Mr. Saurav', 'Saurav']) {
+  for (const query of ['Saurav Kumar Pati', 'Saurav Pati', 'Saurav Sir', 'Mr. Saurav', 'Saurav', 'Pati']) {
     const matches = window.TEJAS_NAMES.findMatches(query, faculty);
     assert.equal(matches.length, 1);
     assert.equal(matches[0].id, 28);
@@ -68,6 +68,16 @@ test('Newly added teachers (Monalisa Chakrabarty, Sashikanta Sethi, Saurav Sir, 
     const matches = window.TEJAS_NAMES.findMatches(query, faculty);
     assert.equal(matches.length, 1);
     assert.equal(matches[0].id, 29);
+  }
+  for (const query of ['Madhusmita Nayak', 'Madhusmita', 'Nayak', 'Ms. Madhusmita Nayak', 'Madhusmita Ma’am']) {
+    const matches = window.TEJAS_NAMES.findMatches(query, faculty);
+    assert.equal(matches.length, 1);
+    assert.equal(matches[0].id, 30);
+  }
+  for (const query of ['Sahil Satpaty', 'Sahil', 'Satpaty', 'Sahil Satpathy', 'Satpathy', 'Mr. Sahil Satpaty']) {
+    const matches = window.TEJAS_NAMES.findMatches(query, faculty);
+    assert.equal(matches.length, 1);
+    assert.equal(matches[0].id, 31);
   }
 });
 test('Leadership names resolve unambiguously and retain the supplied titles without invented emails', () => {
@@ -98,12 +108,12 @@ test('Soumya Ranjan Swain resolves to the supplied Assistant Professor profile',
   }
   assert.equal(window.TEJAS_NAMES.findMatches('Swain', faculty).length, 2);
 });
-test('The eleven agenda items follow the confirmed celebration programme design without times or durations', async () => {
+test('The ten agenda items follow the confirmed celebration programme design without times or durations', async () => {
   assert.deepEqual(Array.from(event.programme, entry => entry.title), [
     'Welcome', 'Fun Games', 'Solo Performance', 'Group / Duo Performance',
-    'Games', 'Solo Performance', 'Games', 'Mimicry', 'Freshers’ Title Announcement', 'Vote of Thanks', 'DJ'
+    'Games', 'Solo Performance', 'Games', 'Mimicry', 'Freshers’ Title Announcement', 'Vote of Thanks'
   ]);
-  assert.equal(new Set(event.programme.map(entry => entry.id)).size, 11);
+  assert.equal(new Set(event.programme.map(entry => entry.id)).size, 10);
   assert.equal(event.date, '2026-10-30'); assert.equal(event.timezone, 'Asia/Kolkata');
   assert.equal(event.programme[0].subtitle, 'Introduction of Freshers & Song');
   for (const entry of event.programme) {

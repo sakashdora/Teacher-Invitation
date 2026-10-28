@@ -2,9 +2,9 @@
 
 All 22 faculty members from `22 faculty members shown.docx` (Srusti Academy of Management) have been extracted, properly named, organized into structured folders, and processed with high-resolution labeled photo cards.
 
-Namrata Sahoo (Deputy Director – Strategy), Er. Saroj K. Sahoo (Chairman), and Soumya Ranjan Swain (Assistant Professor) were added on 16 October 2026. Dr. Monalisa Chakrabarty (Assistant Professor – Placement), Mr. Sashikanta Sethi (Assistant Professor), Saurav Sir (Assistant Professor), and Mrs. Susmita Barala (Assistant Professor) were added on 21 October 2026 using verified faculty records with high-resolution portraits and matching labeled cards.
+Namrata Sahoo (Deputy Director – Strategy), Er. Saroj K. Sahoo (Chairman), and Soumya Ranjan Swain (Assistant Professor) were added on 16 October 2026. Dr. Monalisa Chakrabarty (Assistant Professor – Placement), Mr. Sashikanta Sethi (Assistant Professor), Saurav Sir (Assistant Professor), and Mrs. Susmita Barala (Assistant Professor) were added on 21 October 2026. On 28 October 2026, Saurav Sir's profile was updated to Saurav Kumar Pati with his original photograph replacing the AI image, and Madhusmita Nayak (Assistant Professor) and Sahil Satpaty (Assistant Professor) were added with their verified photographs and matching labeled cards.
 
-The active directory contains 28 profiles. Dr. Susmita Parija (former ID 6) was removed at the project owner's request on 16 October 2026. The source photographs and extracted profile folders remain archived here; only entries in `faculty_list.json` and `faculty_list.csv` belong to the active directory. Other profile IDs are unchanged, and ID 6 is not reassigned.
+The active directory contains 30 profiles. Dr. Susmita Parija (former ID 6) was removed at the project owner's request on 16 October 2026. The source photographs and extracted profile folders remain archived here; only entries in `faculty_list.json` and `faculty_list.csv` belong to the active directory. Other profile IDs are unchanged, and ID 6 is not reassigned.
 
 ---
 
@@ -27,13 +27,13 @@ c:\Teacher_Fresher\
     │   ├── 01_Dr_Umakanta_Dash.jpeg
     │   ├── 02_Dr_Gangadhar_Mishra.jpeg
     │   ├── 03_Dr_Pragyan_Parimita_Sarangi.jpeg
-    │   └── ... (29 original photos)
+    │   └── ... (31 original photos)
     │
     ├── Photos_With_Name_Overlay/           # High-resolution cards with Teacher Name, Role & Email
     │   ├── 01_Dr_Umakanta_Dash.png
     │   ├── 02_Dr_Gangadhar_Mishra.png
     │   ├── 03_Dr_Pragyan_Parimita_Sarangi.png
-    │   └── ... (26 files)
+    │   └── ... (28 files)
     │
     └── By_Teacher/                         # Individual folders for each teacher
         ├── 01_Dr_Umakanta_Dash/
@@ -42,7 +42,7 @@ c:\Teacher_Fresher\
         │   ├── profile.txt                 # Formatted profile details
         │   └── profile.json                # JSON profile
         ├── 02_Dr_Gangadhar_Mishra/
-        └── ... (29 profile folders)
+        └── ... (31 profile folders)
 ```
 
 ---
@@ -77,8 +77,10 @@ c:\Teacher_Fresher\
 | 25 | **Soumya Ranjan Swain** | Assistant Professor | Not supplied |
 | 26 | **Dr. Monalisa Chakrabarty** | Assistant Professor – Placement | Not supplied |
 | 27 | **Mr. Sashikanta Sethi** | Assistant Professor | Not supplied |
-| 28 | **Saurav Sir** | Assistant Professor | Not supplied |
+| 28 | **Saurav Kumar Pati** | Assistant Professor | Not supplied |
 | 29 | **Mrs. Susmita Barala** | Assistant Professor | Not supplied |
+| 30 | **Madhusmita Nayak** | Assistant Professor | Not supplied |
+| 31 | **Sahil Satpaty** | Assistant Professor | Not supplied |
 
 ---
 

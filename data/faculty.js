@@ -184,10 +184,10 @@ window.TEJAS_FACULTY = [
   },
   {
     "id": 28,
-    "name": "Saurav Sir",
+    "name": "Saurav Kumar Pati",
     "role": "Assistant Professor",
     "email": "",
-    "photo": "Faculty_Members/Photos_Original/28_Saurav_Sir.png"
+    "photo": "Faculty_Members/Photos_Original/28_Saurav_Kumar_Pati.png"
   },
   {
     "id": 29,
@@ -195,5 +195,19 @@ window.TEJAS_FACULTY = [
     "role": "Assistant Professor",
     "email": "",
     "photo": "Faculty_Members/Photos_Original/29_Mrs_Susmita_Barala.png"
+  },
+  {
+    "id": 30,
+    "name": "Madhusmita Nayak",
+    "role": "Assistant Professor",
+    "email": "",
+    "photo": "Faculty_Members/Photos_Original/30_Madhusmita_Nayak.png"
+  },
+  {
+    "id": 31,
+    "name": "Sahil Satpaty",
+    "role": "Assistant Professor",
+    "email": "",
+    "photo": "Faculty_Members/Photos_Original/31_Sahil_Satpaty.png"
   }
 ];

@@ -87,14 +87,6 @@ window.TEJAS_EVENT = {
       title: 'Vote of Thanks',
       subtitle: '',
       description: 'A heartfelt thank you to everyone who made this celebration possible.'
-    },
-    {
-      id: 'dj',
-      number: '11',
-      category: 'The Finale',
-      title: 'DJ',
-      subtitle: '',
-      description: 'Music, meeting and memorable moments to close the celebration.'
     }
   ]
 };
